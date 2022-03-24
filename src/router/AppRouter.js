@@ -3,9 +3,12 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Events from '../components/Events'
 import Home from '../components/Home'
 import LoadPage from '../components/LoadPage'
+import Location from '../components/Location'
 import Login from '../components/login/Login'
 import Register from '../components/login/Register'
-import RoadsHome from '../components/RoadsHome'
+import MyRoutes from '../components/MyRoutes'
+import Profile from '../components/Profile'
+import RoutesHome from '../components/RoutesHome'
 
 const AppRouter = () => {
   return (
@@ -16,8 +19,11 @@ const AppRouter = () => {
                 <Route  path='/login'  element={<Login/>} />
                 <Route  path='/register'  element={<Register/>} />
                 <Route  path='/home'  element={<Home/>} />
-                <Route  path='/roads'  element={<RoadsHome/>} />
+                <Route  path='/routes'  element={<RoutesHome/>} />
+                <Route  path='/myroutes'  element={<MyRoutes/>} />
                 <Route  path='/events'  element={<Events/>} />
+                <Route  path='/location'  element={<Location/>} />
+                <Route  path='/profile'  element={<Profile/>} />
             </Routes>
         </BrowserRouter>
     </div>

@@ -10,11 +10,11 @@ const Home = () => {
        <Naveg/>
       <DivAuth>       
         <ContHome>
-          <Button variant='warning' ><Link to={'/location'} > Ingresa tu ubicación </Link></Button>
+          <Button variant='warning' ><Link to={'/location'} style={{textDecoration:'none'}} > Ingresa tu ubicación </Link></Button>
           <hr></hr>
-          <Button variant='warning' ><Link to={'/roads'} > Rutas Populares </Link></Button>
+          <Button variant='warning' ><Link to={'/routes'} style={{textDecoration:'none'}} > Rutas Populares </Link></Button>
           <hr></hr>
-          <Button variant='warning' ><Link to={'/events'} > Próximos eventos </Link></Button>
+          <Button variant='warning' ><Link to={'/events'} style={{textDecoration:'none'}} > Próximos eventos </Link></Button>
         </ContHome>
       </DivAuth>
     </div>

@@ -8,9 +8,9 @@ const Naveg = () => {
                 <Container>
                     <Navbar.Brand href="/home">Road Connect</Navbar.Brand>
                     <Nav className="me-auto">
-                        <Nav.Link href="#home">mi perfil</Nav.Link>
-                        <Nav.Link href="#features">Rutas</Nav.Link>
-                        <Nav.Link href="#pricing">mis eventos</Nav.Link>
+                        <Nav.Link href="/profile">Mi Perfil</Nav.Link>
+                        <Nav.Link href="/myroutes">Mis Rutas</Nav.Link>
+                        <Nav.Link href="/events">Eventos</Nav.Link>
                     </Nav>
                 </Container>
             </Navbar>

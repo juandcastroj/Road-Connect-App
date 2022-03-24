@@ -2,14 +2,13 @@ import React from 'react'
 import { Button, Card } from 'react-bootstrap'
 import { ContHomeRoad } from '../styles/styles'
 import Naveg from './Naveg'
-import Naveg2 from './Naveg2'
 
 const Events = () => {
     return (
         <div>
              <Naveg/>
-             <Naveg2/>
             <ContHomeRoad>
+            <h2 style={{color: 'yellow'}} >Próximos Eventos</h2>
                 <Card className="text-center">
                     <Card.Header>Evento</Card.Header>
                     <Card.Body>

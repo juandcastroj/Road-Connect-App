@@ -2,15 +2,15 @@ import React from 'react'
 import { Card, Col, Row } from 'react-bootstrap'
 import { ContHomeRoad } from '../styles/styles'
 import Naveg from './Naveg'
-import Naveg2 from './Naveg2'
+import NavRoutes from './NavRoutes'
 
-const RoadsHome = () => {
+const RoutesHome = () => {
     return (
         <div>
              <Naveg/>
-             <Naveg2/>
+             <NavRoutes/>
              <ContHomeRoad>
-            <h2 style={{color: 'yellow'}} >Rutas populares</h2>
+            <h2 style={{color: 'yellow'}} >Rutas Populares</h2>
             <hr></hr>
             <Row xs={1} md={4} className="g-4">
                 {Array.from({ length: 12 }).map((_, idx) => (
@@ -32,4 +32,4 @@ const RoadsHome = () => {
     )
 }
 
-export default RoadsHome
+export default RoutesHome
