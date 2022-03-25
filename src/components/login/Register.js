@@ -34,7 +34,7 @@ const Register = () => {
                     <Label htmlFor="inputEmail">
                         Teléfono
                         <Input
-                            type="number"
+                            type="text"
                             name="phone"
                             id="inputPhone"
                             placeholder="Ingrese su numero de teléfono"

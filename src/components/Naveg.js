@@ -9,7 +9,7 @@ const Naveg = () => {
                     <Navbar.Brand href="/home">Road Connect</Navbar.Brand>
                     <Nav className="me-auto">
                         <Nav.Link href="/profile">Mi Perfil</Nav.Link>
-                        <Nav.Link href="/myroutes">Mis Rutas</Nav.Link>
+                        <Nav.Link href="/myRoutes">Mis Rutas</Nav.Link>
                         <Nav.Link href="/events">Eventos</Nav.Link>
                     </Nav>
                 </Container>

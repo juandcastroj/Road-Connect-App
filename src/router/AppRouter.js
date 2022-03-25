@@ -1,5 +1,6 @@
 import React from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import AddRoute from '../components/AddRoute'
 import Events from '../components/Events'
 import Home from '../components/Home'
 import LoadPage from '../components/LoadPage'
@@ -24,6 +25,7 @@ const AppRouter = () => {
                 <Route  path='/events'  element={<Events/>} />
                 <Route  path='/location'  element={<Location/>} />
                 <Route  path='/profile'  element={<Profile/>} />
+                <Route  path='/addRoute'  element={<AddRoute/>} />
             </Routes>
         </BrowserRouter>
     </div>
