@@ -54,7 +54,23 @@ const Events = () => {
                     </Card.Body>
                     <Card.Footer className="text-muted">Publicado hace un mes</Card.Footer>
                 </Card>
-            </ContHomeRoad>
+          
+            <hr></hr>
+            <Card className="text-center">
+                    <Card.Header>Organizado por: IDRD</Card.Header>
+                    <Card.Body>
+                        <Card.Title>Evento Infantil 
+                        </Card.Title>
+                        <Image src={event1} width={600}></Image>
+                        <Card.Text>
+                            With supporting text below as a natural lead-in to additional content.
+                            With supporting text below as a natural lead-in to additional content.
+                        </Card.Text>
+                        <Button variant="warning">Participar</Button>
+                    </Card.Body>
+                    <Card.Footer className="text-muted"> publicado hace 5 dias</Card.Footer>
+                </Card>
+                </ContHomeRoad>
         </div>
     )
 }
