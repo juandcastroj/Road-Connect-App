@@ -55,7 +55,7 @@ const RoutesHome = () => {
                         <Row xs={1} md={4} className="g-4">
                             {filter.map((e, i) => (
                                 <Col key={i} >
-                                    <Card>
+                                    <Card style={{heigth: '700px'}} >
                                         <Card.Img variant="top" src={e.img} />
                                         <Card.Body>
                                             <Card.Title>{e.name}</Card.Title>

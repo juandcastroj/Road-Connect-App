@@ -13,7 +13,7 @@ const Events = () => {
             <ContHomeRoad>
             <h2 style={{color: 'yellow'}} >Próximos Eventos</h2>
                 <Card className="text-center">
-                    <Card.Header>Evento</Card.Header>
+                    <Card.Header>Organizado por: IDRD</Card.Header>
                     <Card.Body>
                         <Card.Title>Evento Infantil 
                         </Card.Title>
@@ -28,7 +28,7 @@ const Events = () => {
                 </Card>
                 <hr></hr>
                 <Card className="text-center">
-                    <Card.Header>Evento</Card.Header>
+                    <Card.Header>Organizado por: Escarabajos Bogotá</Card.Header>
                     <Card.Body>
                         <Card.Title>Carrera ruta Senior</Card.Title>
                         <Image src={event2} width={600}></Image>
@@ -42,7 +42,7 @@ const Events = () => {
                 </Card>
                 <hr></hr>
                 <Card className="text-center">
-                    <Card.Header>Evento</Card.Header>
+                    <Card.Header>Organizado por: Parceros MTB Chía</Card.Header>
                     <Card.Body>
                         <Card.Title>Evento rodada MTB</Card.Title>
                         <Image src={event3} width={600}></Image>
