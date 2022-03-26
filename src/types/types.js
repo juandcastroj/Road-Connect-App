@@ -1,4 +1,7 @@
-
+export const types ={
+    login : 'login',
+    register : 'register'
+}
 
 export const typeRoutes = {
     registerRoute: 'registerRoute',

@@ -1,11 +1,34 @@
 import React from 'react'
 import { Button } from 'react-bootstrap'
 import { DivAuth, Form, Header, Input, Label, Separator } from '../../styles/styles'
+import { useDispatch } from 'react-redux';
+import { registroEmailPasswordNombre } from '../../actions/actionRegister';
+import { Link } from "react-router-dom";
+import useForm from '../../hooks/useForm';
 
-const Register = () => {
+
+
+export const Register = () => {
+
+    const dispatch = useDispatch();
+
+    const [formValues, handleInputChange] = useForm({
+        nombre: '',
+        apellido: '',
+        telefono: '',
+        email: '',
+        pass1: '',
+        
+    });
+    const { nombre, apellido, telefono, email, pass1 } = formValues;
+
+    const handleRegistro = (e) => {
+        e.preventDefault();
+       dispatch(registroEmailPasswordNombre(email,pass1,nombre))
+    }
     return (
         <div>
-            <DivAuth>
+            <DivAuth onSubmit={handleRegistro}>
             <Header>
                 <h2 style={{color: 'yellow'}} >Registra tu usuario</h2>
             </Header>
@@ -19,6 +42,8 @@ const Register = () => {
                             id="inputName"
                             placeholder="Ingrese su nombre"
                             required
+                            value={nombre}
+                            onChange={handleInputChange}
                         />
                     </Label>
                     <Label htmlFor="inputEmail">
@@ -29,6 +54,8 @@ const Register = () => {
                             id="inputName"
                             placeholder="Ingrese su nombre apellido"
                             required
+                            value={apellido}
+                        onChange={handleInputChange}
                         />
                     </Label>
                     <Label htmlFor="inputEmail">
@@ -39,6 +66,8 @@ const Register = () => {
                             id="inputPhone"
                             placeholder="Ingrese su numero de teléfono"
                             required
+                            value={telefono}
+                            onChange={handleInputChange}
                         />
                         </Label>
                     <Label htmlFor="inputEmail">
@@ -49,6 +78,8 @@ const Register = () => {
                             id="inputEmail"
                             placeholder="Ingrese su correo electrónico"
                             required
+                            value={email}
+                            onChange={handleInputChange}
                         />
                     </Label>
                     <Label htmlFor="inputPassword">
@@ -59,6 +90,8 @@ const Register = () => {
                             id="inputPassword"
                             placeholder="Ingrese su contraseña"
                             required
+                            value={pass1}
+                            onChange={handleInputChange}
                         />
                     </Label>
                     <Label htmlFor="inputPassword">
@@ -71,7 +104,7 @@ const Register = () => {
                             required
                         />
                     </Label>
-                    <Button variant="warning" >Registrarse</Button>
+                    <Button variant="warning" type="submit" >Registrarse</Button>
                 </Form>
                 <br></br>
                 <br></br>
