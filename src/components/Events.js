@@ -1,7 +1,10 @@
 import React from 'react'
-import { Button, Card } from 'react-bootstrap'
+import { Button, Card, Image } from 'react-bootstrap'
 import { ContHomeRoad } from '../styles/styles'
 import Naveg from './Naveg'
+import event1 from '../images/evento1.jpg'
+import event2 from '../images/event02.jpg'
+import event3 from '../images/evento3.jpg'
 
 const Events = () => {
     return (
@@ -12,40 +15,44 @@ const Events = () => {
                 <Card className="text-center">
                     <Card.Header>Evento</Card.Header>
                     <Card.Body>
-                        <Card.Title>Special title treatment</Card.Title>
+                        <Card.Title>Evento Infantil 
+                        </Card.Title>
+                        <Image src={event1} width={600}></Image>
                         <Card.Text>
                             With supporting text below as a natural lead-in to additional content.
                             With supporting text below as a natural lead-in to additional content.
                         </Card.Text>
-                        <Button variant="warning">participar</Button>
+                        <Button variant="warning">Participar</Button>
                     </Card.Body>
-                    <Card.Footer className="text-muted">2 days ago</Card.Footer>
+                    <Card.Footer className="text-muted"> publicado hace 5 dias</Card.Footer>
                 </Card>
                 <hr></hr>
                 <Card className="text-center">
                     <Card.Header>Evento</Card.Header>
                     <Card.Body>
-                        <Card.Title>Special title treatment</Card.Title>
+                        <Card.Title>Carrera ruta Senior</Card.Title>
+                        <Image src={event2} width={600}></Image>
                         <Card.Text>
                             With supporting text below as a natural lead-in to additional content.
                             With supporting text below as a natural lead-in to additional content.
                         </Card.Text>
-                        <Button variant="warning">participar</Button>
+                        <Button variant="warning">Participar</Button>
                     </Card.Body>                    
-                    <Card.Footer className="text-muted">2 days ago</Card.Footer>
+                    <Card.Footer className="text-muted"> publicado hace una semana</Card.Footer>
                 </Card>
                 <hr></hr>
                 <Card className="text-center">
                     <Card.Header>Evento</Card.Header>
                     <Card.Body>
-                        <Card.Title>Special title treatment</Card.Title>
+                        <Card.Title>Evento rodada MTB</Card.Title>
+                        <Image src={event3} width={600}></Image>
                         <Card.Text>
                             With supporting text below as a natural lead-in to additional content.
                             With supporting text below as a natural lead-in to additional content.
                         </Card.Text>
                         <Button variant="warning">participar</Button>
                     </Card.Body>
-                    <Card.Footer className="text-muted">2 days ago</Card.Footer>
+                    <Card.Footer className="text-muted">Publicado hace un mes</Card.Footer>
                 </Card>
             </ContHomeRoad>
         </div>

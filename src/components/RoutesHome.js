@@ -1,54 +1,69 @@
 import React, { useEffect, useState } from 'react'
-import { Card, Col, Row } from 'react-bootstrap'
+import { Button, Card, Col, Row } from 'react-bootstrap'
 import { ContHomeRoad } from '../styles/styles'
 import Naveg from './Naveg'
-import NavRoutes from './NavRoutes'
 
 const RoutesHome = () => {
 
     const initialState = []
-    const api = 'https://roadconntact.herokuapp.com/Rutas'
+    const api = 'https://demoaday.herokuapp.com/Rutas'
     const [data, setData] = useState(initialState)
     const [loading, setLoading] = useState(false)
-    //const [filter, setFilter] = useState(data)
+    const [filter, setFilter] = useState(data)
 
     const getData = async () => {
         setLoading(true)
         const resp = await fetch(api)
-        const data = await resp.json()
-        //const rutas = await resp.json()
-        //console.log(rutas);
-        setData(data)
-        //setFilter(await resp.json())
+        //const data = await resp.json()
+        setData(await resp.clone().json())
+        setFilter(await resp.json())
         setLoading(false)
-        console.log(data);
     }
 
     useEffect(() => {
         getData()
     }, [])
 
-    const Loading = () => <h3>Loading...</h3>
+    const Loading = () => <h3 style={{ padding: '25% 30%' }} >Cargando...</h3>
+
+    const filterRoute = (dif) => {
+        const updateList = data.filter((x)  => x.Dificultad === dif )
+        setFilter(updateList)
+    }
 
     const ShowRoutes = () => {
         
         return (
-            <>
-                <div>
+                < >
                     <Naveg />
-                    <NavRoutes />
                     <ContHomeRoad>
-                        <h2 style={{ color: 'yellow' }} >Rutas Populares</h2>
-                        <hr></hr>
-                        <Row xs={1} md={3} className="g-4">
-                            {data.map((e, i) => (
+                    {/* <h2 style={{ color: 'yellow' }} >Rutas Populares</h2> */}
+                        
+                <div style={{ padding: '1rem' }}  >
+                    <Button variant='warning' style={{ margin: '1rem' }} 
+                    onClick={() => setFilter(data)} > Todas </Button>
+                    <Button variant='warning' style={{ margin: '1rem' }}
+                    onClick={ () => filterRoute( "Principiante" ) } > Principiante </Button>
+                    <Button variant='warning' style={{ margin: '1rem' }} 
+                     onClick={ () => filterRoute( "Avanzado" ) }> Avanzado </Button>
+                    <Button variant='warning' style={{ margin: '1rem' }} 
+                     onClick={ () => filterRoute( "Experto" ) }> Experto </Button>
+                    <Button variant='warning' style={{ margin: '1rem' }} 
+                     onClick={ () => filterRoute( "Elite" ) }> Elite </Button>
+                </div>
+                <hr></hr>
+                        <Row xs={1} md={4} className="g-4">
+                            {filter.map((e, i) => (
                                 <Col key={i} >
                                     <Card>
                                         <Card.Img variant="top" src={e.img} />
                                         <Card.Body>
                                             <Card.Title>{e.name}</Card.Title>
                                             <Card.Text>
-                                               {e.position}
+                                               distancia: <h6>{e.Distancia}</h6>
+                                               {/* Desnivel: <h6>{e.Desnivel}</h6> */}
+                                               tiempo promedio: <h6>{e.Tiempo}</h6>
+                                               dificultad: <h6>{e.Dificultad}</h6>
                                             </Card.Text>
                                         </Card.Body>
                                     </Card>
@@ -56,17 +71,14 @@ const RoutesHome = () => {
                             ))}
                         </Row>
                     </ContHomeRoad>
-                </div>
-            </>
+                </>       
         )
     }
 
     return (
-        <div>
-            <div className='container' >
+            <div >
                 {loading ? <Loading /> : <ShowRoutes/>}
-            </div>
-        </div>          
+            </div>         
     )
 }
 
