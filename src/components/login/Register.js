@@ -3,7 +3,7 @@ import { Button } from 'react-bootstrap'
 import { DivAuth, Form, Header, Input, Label, Separator } from '../../styles/styles'
 import { useDispatch } from 'react-redux';
 import { registroEmailPasswordNombre } from '../../actions/actionRegister';
-import { Link } from "react-router-dom";
+
 import useForm from '../../hooks/useForm';
 
 
