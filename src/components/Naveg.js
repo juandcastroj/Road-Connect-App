@@ -12,6 +12,7 @@ const Naveg = () => {
                         <Nav.Link href="/profile">Mi Perfil</Nav.Link>
                         <Nav.Link href="/myRoutes">Mis Rutas</Nav.Link>
                         <Nav.Link href="/events">Eventos</Nav.Link>
+                        <Nav.Link href="/login">Log In</Nav.Link>
                     </Nav>
                 </Container>
             </Navbar>
