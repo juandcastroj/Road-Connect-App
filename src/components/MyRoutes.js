@@ -10,7 +10,7 @@ const MyRoutes = () => {
 
     const dispatch = useDispatch()
     const { routes } = useSelector(store => store.routes)
-    const [loading, setLoading] = useState(false)
+    const [loading] = useState(false)
 
     useEffect(() => {
         dispatch(listRouteAsync())
@@ -36,9 +36,9 @@ const MyRoutes = () => {
                                     <Card.Body>
                                         <h4>{e.nombre}</h4>
                                         <Card.Text>
-                                            <h6>distancia: {e.distancia}</h6>
-                                            <h6>desnivel positivo: {e.desnivel}</h6>
-                                            <h6>tiempo promedio: {e.tiempo}</h6>
+                                            <p>distancia:</p> <h6> {e.distancia}</h6>
+                                             <p>desnivel positivo:</p> <h6> {e.desnivel}</h6>
+                                             <p>tiempo promedio:</p> <h6> {e.tiempo}</h6>
                                         </Card.Text>
                                         <Button variant='outline-danger' onClick={() => dispatch(deleteAsync(e.nombre))} >Eliminar</Button>
                                     </Card.Body>

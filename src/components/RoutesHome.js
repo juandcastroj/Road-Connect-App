@@ -37,8 +37,6 @@ const RoutesHome = () => {
                 < >
                     <Naveg />
                     <ContHomeRoad>
-                    {/* <h2 style={{ color: 'yellow' }} >Rutas Populares</h2> */}
-                        
                 <div style={{ padding: '1rem' }}  >
                     <Button variant='warning' style={{ margin: '1rem' }} 
                     onClick={() => setFilter(data)} > Todas </Button>
