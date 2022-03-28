@@ -20,6 +20,7 @@ import {
 } from "../../actions/actionLogin";
 import { useDispatch } from "react-redux";
 import useForm from "../../hooks/useForm.js";
+import Naveg from "../Naveg.js";
 
 function Login() {
   const dispatch = useDispatch();
@@ -45,6 +46,7 @@ function Login() {
 
   return (
     <div>
+      <Naveg/>
       <DivAuth >
         <Link to={"/home"}>Home</Link>
         <Header>
