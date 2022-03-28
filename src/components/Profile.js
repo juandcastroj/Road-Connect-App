@@ -5,10 +5,11 @@ import '../styles/style.css'
 
 const Profile = () => {
 
-    return (
+  return (
 
         <div>
             <Naveg />
+
             <ContHomeRoad>
                 <h2 style={{ color: 'yellow' }} >Mi Perfil</h2>
                 <div class="page-content page-container" id="page-content">

@@ -3,9 +3,8 @@ import { Button } from 'react-bootstrap'
 import { DivAuth, Form, Header, Input, Label, Separator } from '../../styles/styles'
 import { useDispatch } from 'react-redux';
 import { registroEmailPasswordNombre } from '../../actions/actionRegister';
-
 import useForm from '../../hooks/useForm';
-
+import { fileUpload } from '../../helpers/fileUpload';
 
 
 export const Register = () => {
@@ -17,14 +16,27 @@ export const Register = () => {
         apellido: '',
         telefono: '',
         email: '',
-        pass1: '',
+        password: '',
+        imagen:'',
         
     });
-    const { nombre, apellido, telefono, email, pass1 } = formValues;
+    const { nombre, apellido, telefono, email, password, imagen} = formValues;
 
     const handleRegistro = (e) => {
         e.preventDefault();
-       dispatch(registroEmailPasswordNombre(email,pass1,nombre))
+       dispatch(registroEmailPasswordNombre(email,password,nombre))
+    }
+
+    const handleFileChange =(e)=>{
+        const file = e.target.files[0]
+        fileUpload(file)
+            .then(resp =>{
+               formValues.imagen = resp
+                console.log(resp)
+            })
+            .catch(error =>{
+                console.log(error.message)
+            })
     }
     return (
         <div>
@@ -38,7 +50,7 @@ export const Register = () => {
                         Nombre
                         <Input
                             type="text"
-                            name="name"
+                            name="nombre"
                             id="inputName"
                             placeholder="Ingrese su nombre"
                             required
@@ -50,7 +62,7 @@ export const Register = () => {
                         Apellido
                         <Input
                             type="text"
-                            name="name"
+                            name="apellido"
                             id="inputName"
                             placeholder="Ingrese su nombre apellido"
                             required
@@ -62,7 +74,7 @@ export const Register = () => {
                         Teléfono
                         <Input
                             type="text"
-                            name="phone"
+                            name="telefono"
                             id="inputPhone"
                             placeholder="Ingrese su numero de teléfono"
                             required
@@ -90,7 +102,7 @@ export const Register = () => {
                             id="inputPassword"
                             placeholder="Ingrese su contraseña"
                             required
-                            value={pass1}
+                            value={password}
                             onChange={handleInputChange}
                         />
                     </Label>
@@ -98,11 +110,12 @@ export const Register = () => {
                         Foto
                         <Input
                             type="file"
-                            name="image"
+                            name="imagen"
                             id="image"
                             placeholder="Agrega tu foto"
                             required
-                        />
+                            value={imagen}
+                            onChange={handleFileChange}/>
                     </Label>
                     <Button variant="warning" type="submit" >Registrarse</Button>
                 </Form>
