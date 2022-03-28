@@ -183,3 +183,10 @@ export const ButtonGoogle = styled.button`
         margin: 0px 10px;
     }
 `
+
+//Detalle Ruta
+
+export const DetailContainer = styled.div`
+  color: white;
+  display: inline-block
+`
