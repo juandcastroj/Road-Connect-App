@@ -5,6 +5,7 @@ import '../styles/style.css'
 
 const Profile = () => {
 
+    
   return (
     
     <div>
