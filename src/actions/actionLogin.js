@@ -27,7 +27,8 @@ export const loginGoogle= () =>{
         const auth =getAuth()
         signInWithPopup(auth,google)
         .then(({user}) =>{
-            dispatch(loginSincrono(user.uid.user.displayName))
+            dispatch(loginSincrono(user.uid, user.displayName))
+            alert("holaa "+ user.displayName);
         })
         .catch(e=>{
             console.log(e)

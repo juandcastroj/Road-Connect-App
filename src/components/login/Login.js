@@ -25,7 +25,7 @@ import Naveg from "../Naveg.js";
 function Login() {
   const dispatch = useDispatch();
 
-  const [values, handleInputChange, reset] = useForm({
+  const [values, handleInputChange ] = useForm({
     email: "",
     password: "",
   });
@@ -54,12 +54,10 @@ function Login() {
           <h3 style={{ color: "yellow" }}>Iniciar sesión</h3>
         </Header>
         <DivForm>
-          
           <Button variant="danger" bg="dark" onClick={handleGoogle}>
             {" "}
             Continuar con Google{" "}
           </Button>
-
           <br></br>
           <Button variant="dark" onClick={handleFacebook}> Continuar con Facebook </Button>
           <Separator />
