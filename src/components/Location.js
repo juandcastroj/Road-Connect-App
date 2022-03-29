@@ -22,9 +22,13 @@ import {
 } from "@react-google-maps/api";
 import { useRef, useState } from "react";
 
+
 const center = { lat: 4.735311, lng: -74.101978 };
 
+
 function Location() {
+ 
+  
   const { isLoaded } = useJsApiLoader({
     googleMapsApiKey: process.env.REACT_APP_GOOGLE_MAPS_API_KEY,
     libraries: ["places"],

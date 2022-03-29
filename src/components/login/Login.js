@@ -9,6 +9,7 @@ import {
   Input,
   Separator,
   DivForm,
+  Icon
 } from "../../styles/styles.js";
 import { Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
@@ -20,12 +21,13 @@ import {
 } from "../../actions/actionLogin";
 import { useDispatch } from "react-redux";
 import useForm from "../../hooks/useForm.js";
-import Naveg from "../Naveg.js";
+
+
 
 function Login() {
   const dispatch = useDispatch();
 
-  const [values, handleInputChange ] = useForm({
+  const [values, handleInputChange, reset] = useForm({
     email: "",
     password: "",
   });
@@ -46,7 +48,6 @@ function Login() {
 
   return (
     <div>
-      <Naveg/>
       <DivAuth >
         <Link to={"/home"}>Home</Link>
         <Header>
@@ -54,12 +55,17 @@ function Login() {
           <h3 style={{ color: "yellow" }}>Iniciar sesión</h3>
         </Header>
         <DivForm>
+          
           <Button variant="danger" bg="dark" onClick={handleGoogle}>
+          <Icon src='https://i.ibb.co/mRP4XhZ/5847f9cbcef1014c0b5e48c8.png' alt="Logo" />
             {" "}
+            
             Continuar con Google{" "}
           </Button>
           <br></br>
-          <Button variant="dark" onClick={handleFacebook}> Continuar con Facebook </Button>
+         
+          <Button variant="dark" onClick={handleFacebook}> 
+          <Icon src=' https://i.ibb.co/K9b54B9/800px-Facebook-logo-square.png' alt="Logo" />Continuar con Facebook </Button>
           <Separator />
           <Form action="" onSubmit={handleLogin}>
             <Label htmlFor="inputEmail">
@@ -97,7 +103,7 @@ function Login() {
           <br></br>
           <p>
             ¿No tienes una cuenta?{" "}
-            <Link to="/register" style={{ color: "yellow" }}>
+            <Link to="/register" style={{ color: "yellow"}} >
               Registrate
             </Link>
           </p>

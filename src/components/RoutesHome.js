@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import { Button, Card, Col, Row } from 'react-bootstrap'
 import { NavLink } from 'react-router-dom'
-import { ContHomeRoad } from '../styles/styles'
+import { ContHomeRoad, Logos } from '../styles/styles'
 import Naveg from './Naveg'
+import logo from "../images/cicla.png";
 
 const RoutesHome = () => {
 
@@ -25,7 +26,7 @@ const RoutesHome = () => {
         getData()
     }, [])
 
-    const Loading = () => <h3 style={{ padding: '25% 30%' }} >Cargando...</h3>
+    const Loading = () =><Logos src={logo} alt="Logo" />
 
     const filterRoute = (dif) => {
         const updateList = data.filter((x)  => x.Dificultad === dif )

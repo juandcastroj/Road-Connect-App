@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
-import { ContHomeRoad, DetailContainer } from '../styles/styles'
+import { ContHomeRoad, DetailContainer,Logos } from '../styles/styles'
 import Naveg from './Naveg'
+import logo from "../images/cicla.png";
 
 const DetailRoute = () => {
 
@@ -20,7 +21,7 @@ const DetailRoute = () => {
         getRoutes()
     }, [])
 
-    const Loading = () => <h3 style={{ padding: '25% 30%' }} >Cargando...</h3>
+    const Loading = () => <Logos src={logo} alt="Logo" />
 
     const ShowRoute = () => {
         return (

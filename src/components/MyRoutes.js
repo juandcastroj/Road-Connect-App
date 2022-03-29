@@ -3,8 +3,9 @@ import { Button, Card, Col, Row } from 'react-bootstrap'
 import { useDispatch, useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
 import { deleteAsync, listRouteAsync } from '../actions/actionRoutes'
-import { ContHomeRoad } from '../styles/styles'
+import { ContHomeRoad ,Logos} from '../styles/styles'
 import Naveg from './Naveg'
+import logo from "../images/cicla.png";
 
 const MyRoutes = () => {
 
@@ -16,7 +17,7 @@ const MyRoutes = () => {
         dispatch(listRouteAsync())
     }, [dispatch])
 
-    const Loading = () => <h2 style={{ padding: '30%' }} >Cargando...</h2>
+    const Loading = () => <Logos src={logo} alt="Logo" />
 
     const ShowMyRoutes = () => {
         return (
