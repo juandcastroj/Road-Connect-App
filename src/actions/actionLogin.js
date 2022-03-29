@@ -4,7 +4,7 @@ import { types } from "../types/types";
 import { signInWithPopup } from "firebase/auth";
 import { db } from "../firebase/firebaseConfig";
 import { v4 } from "uuid";
-import { collection, setDoc, doc } from "firebase/firestore";
+import { setDoc, doc } from "firebase/firestore";
 
 export const loginEmailPassword = (email, password) => {
     return (dispatch) => {
