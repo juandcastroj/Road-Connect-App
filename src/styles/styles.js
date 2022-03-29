@@ -4,7 +4,7 @@ import styled from 'styled-components'
 
 export const ContFirst = styled.div`
     height:100vh;
-    background-color:#0030b7;
+    background-color:#0045AD;
     background-position: center;
 `
 export const LogoStyle = styled.img`
@@ -16,7 +16,7 @@ export const LogoStyle = styled.img`
 
 export const ContHomeRoad = styled.div`
     height:100%;
-    background-color:#0030b7;
+    background-color:#0045AD;
     background-position: center;
     text-align: center;
     padding: 2% 10%
