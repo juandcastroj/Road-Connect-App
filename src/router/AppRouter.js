@@ -9,6 +9,7 @@ import Location from '../components/Location'
 import Login from '../components/login/Login'
 import Register from '../components/login/Register'
 import MyRoutes from '../components/MyRoutes'
+import PageFooter from '../components/PageFooter'
 import Profile from '../components/Profile'
 import RoutesHome from '../components/RoutesHome'
 
@@ -21,6 +22,7 @@ const AppRouter = () => {
                 <Route  path='/login'  element={<Login/>} />
                 <Route  path='/register'  element={<Register/>} />
                 <Route  path='/home'  element={<Home/>} />
+                <Route  path='/footer'  element={<PageFooter/>} />
                 <Route  path='/routes'  element={<RoutesHome/>} />
                 <Route  path='/routes/:id'  element={<DetailRoute/>} />
                 <Route  path='/myroutes'  element={<MyRoutes/>} />

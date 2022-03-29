@@ -62,22 +62,25 @@ export const Icon = styled.img`
   width: 27px;
   padding: 2px;
   margin-right: 6px;
-  `
+`;
 
 export const Label = styled.label`
   width: 100%;
   max-width: 480px;
-`
+`;
 
 export const Input = styled.input`
-
   width: 100%;
   padding: 10px;
   margin: 8px 0px;
   border-radius: 4px;
-  border: 10px;  
-  
-`
+  border: 10px;
+  &:hover {
+    color: white;
+    border-color: transparent;
+    box-shadow: 0px 5px 11px -5px;
+  }
+`;
 
 export const ALink = styled.a`
   color: var(--color-green);
@@ -89,8 +92,8 @@ export const DivForm = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 90%; 
-`
+  width: 90%;
+`;
 
 export const Form = styled.form`
   display: flex;
@@ -98,7 +101,7 @@ export const Form = styled.form`
   align-items: center;
   justify-content: center;
   width: 100%;
-`
+`;
 export const InputSubmit = styled.input`
   padding: 10px;
   width: 100%;
@@ -112,7 +115,7 @@ export const InputSubmit = styled.input`
   &:hover {
     cursor: pointer;
   }
-`
+`;
 
 export const Header = styled.header`
   text-align: center;
@@ -127,11 +130,12 @@ export const DivLink = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  >p {
-  &:hover{
-  font-weight: bold;
-  }}
-`
+  > p {
+    &:hover {
+      font-weight: bold;
+    }
+  }
+`;
 
 export const DivFile = styled.div`
   display: flex;
@@ -166,7 +170,7 @@ export const ButtonGoogle = styled.button`
   padding: 10px;
   width: 100%;
   max-width: 480px;
-  border-radius: 6px;
+  border-radius: 8px;
   border: none;
   display: flex;
   align-items: center;
@@ -175,7 +179,6 @@ export const ButtonGoogle = styled.button`
   color: var(--color-white);
   font-size: 14px;
   font-weight: bold;
-
   &:hover {
     width: 75px;
     height: 75px;
@@ -185,18 +188,17 @@ export const ButtonGoogle = styled.button`
   & > * {
     margin: 0px 10px;
   }
-`
+`;
 
 export const Logos = styled.img`
-border-radius: 50%;
-box-shadow: 0px 0px 20px 20px;
--webkit-box-shadow: 0px 0px 10px 10px #0030b7;
-padding: 1rem;
-background-color: #0030b7;
-width: 130px;
-margin: 20% 45%;
-`
-
+  border-radius: 50%;
+  box-shadow: 0px 0px 20px 20px;
+  -webkit-box-shadow: 0px 0px 10px 10px #0030b7;
+  padding: 1rem;
+  background-color: #0030b7;
+  width: 130px;
+  margin: 20% 45%;
+`;
 //Detalle Ruta
 
 export const DetailContainer = styled.div`
@@ -204,3 +206,96 @@ export const DetailContainer = styled.div`
   display: inline-block;
 `;
 
+///Footer///
+export const FooterSocial = styled.div`
+  align-self: center;
+  margin: 35px 0;
+  color: white;
+`;
+// export const Icon= styled.img`
+// border: 1px solid white;
+// border-radius: 50%;
+// padding: 2px;
+// border: solid 1px white;
+
+//                 &:hover{
+//                     color: #2038d4;;
+
+//                 }
+// `
+export const Footer = styled.footer`
+  width: 100%;
+  height:50%;
+  padding: 1rem 1rem;
+  background-color: #f4d03f;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-around;
+  font-family: "Raleway", sans-serif;
+  font-size: 17px;
+  position: relative;
+
+  > img {
+    width: 80px;
+    position: absolute;
+    left: 7%;
+    margin-top: 5%;
+    border-radius: 50%;
+    box-shadow: 0px 0px 20px 20px;
+    -webkit-box-shadow: 0px 0px 10px 10px #0030b7;
+    padding: 1rem;
+    background-color: #0030b7;
+  }
+  > div {
+    
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    div,
+    a {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: flex-start;
+      margin-bottom: 15px;
+      margin-left: 30px;
+      &:hover {
+        color: #2038d4;
+      }
+    }
+    p,
+    > a {
+      color: white;
+      text-decoration: none;
+      max-width: 300px;
+      margin-left: 15px;
+      &:hover {
+        color: #2038d4;
+      }
+    }
+    > a:hover {
+      font-weight: bold;
+    }
+  }
+  @media screen and (max-width: 800px) {
+    padding-top: 170px;
+    flex-direction: column;
+    img {
+      position: relative;
+    }
+    > div {
+      margin: 15px 5%;
+      &:last-child {
+        width: 100%;
+        margin: 15px 0;
+        div {
+          width: 100%;
+          justify-content: center;
+        }
+      }
+    }
+  }
+`;

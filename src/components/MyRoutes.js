@@ -17,7 +17,7 @@ const MyRoutes = () => {
         dispatch(listRouteAsync())
     }, [dispatch])
 
-    const Loading = () => <Logos src={logo} alt="Logo" />
+    const Loading = () =>  <Logos src={logo} alt="Logo" />
 
     const ShowMyRoutes = () => {
         return (

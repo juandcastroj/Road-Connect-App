@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Button, Card, Col, Row } from 'react-bootstrap'
 import { NavLink } from 'react-router-dom'
-import { ContHomeRoad, Logos } from '../styles/styles'
+import { ContHomeRoad, LogoStyle } from '../styles/styles'
 import Naveg from './Naveg'
 import logo from "../images/cicla.png";
 
@@ -26,7 +26,7 @@ const RoutesHome = () => {
         getData()
     }, [])
 
-    const Loading = () =><Logos src={logo} alt="Logo" />
+    const Loading = () => <LogoStyle alt='first-logo' src={logo} />
 
     const filterRoute = (dif) => {
         const updateList = data.filter((x)  => x.Dificultad === dif )
