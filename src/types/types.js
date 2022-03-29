@@ -1,11 +1,11 @@
 export const types ={
     login : 'login',
-    register : 'register'
+    register : 'register',
+    logout: 'logout'
 }
 
 export const typeRoutes = {
     registerRoute: 'registerRoute',
     listRoute: 'listRoute',
-    deleteRoute: 'deleteRoute',
-    editRoute: 'editRoute'
+    deleteRoute: 'deleteRoute'
 }
