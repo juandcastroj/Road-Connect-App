@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { ContHome, DivAuth } from '../styles/styles'
 import { Button } from 'react-bootstrap'
 import Naveg from './Naveg'
+import PageFooter from './PageFooter'
 
 const Home = () => {
   return (
@@ -16,6 +17,7 @@ const Home = () => {
           <hr></hr>
           <Button variant='warning' ><Link to={'/events'} style={{textDecoration:'none'}} > Próximos eventos </Link></Button>
         </ContHome>
+        <PageFooter/>
       </DivAuth>
     </div>
   )
