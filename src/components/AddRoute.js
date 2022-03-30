@@ -6,6 +6,7 @@ import { registerRouteAsync } from '../actions/actionRoutes'
 import { fileUpload } from '../helpers/fileUpload'
 import useForm from '../hooks/useForm'
 import { DivAuth, Form, Header, Input, Label, Separator } from '../styles/styles'
+import Footer from './Footer'
 import Naveg from './Naveg'
 
 const AddRoute = () => {
@@ -113,6 +114,7 @@ const AddRoute = () => {
                 <br></br>
                 <br></br>
             </DivAuth>
+            <Footer/>
     </div>
   )
 }

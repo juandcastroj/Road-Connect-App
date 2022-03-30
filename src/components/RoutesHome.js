@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react'
-import { Button, Card, Col, Row } from 'react-bootstrap'
+import { Button, Card, Col, Container, Nav, Navbar, Row } from 'react-bootstrap'
 import { NavLink } from 'react-router-dom'
 import { ContFirst, ContHomeRoad, LogoStyle } from '../styles/styles'
 import Naveg from './Naveg'
 import logo from "../images/cicla.png";
+import Footer from './Footer'
 
 const RoutesHome = () => {
 
@@ -44,19 +45,22 @@ const RoutesHome = () => {
         return (
             < >
                 <Naveg />
+                <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
+                <Container>
+                    <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+                    <Navbar.Collapse id="responsive-navbar-nav">
+                        <Nav className="me-auto">
+                            <Nav.Link onClick={() => setFilter(data)} >Todas</Nav.Link>
+                            <Nav.Link onClick={() => filterRoute("Principiante")} >Principiante</Nav.Link>
+                            <Nav.Link onClick={() => filterRoute("Avanzado")} >Avanzado</Nav.Link>  
+                            <Nav.Link onClick={() => filterRoute("Experto")} >Experto</Nav.Link>                   
+                            <Nav.Link onClick={() => filterRoute("Elite")} >Elite</Nav.Link>    
+                            <Nav.Link href="/myroutes">Mis Rutas</Nav.Link>                         
+                        </Nav>
+                    </Navbar.Collapse>
+                </Container>
+            </Navbar>
                 <ContHomeRoad>
-                    <div style={{ padding: '1rem' }}  >
-                        <Button variant='warning' style={{ margin: '1rem' }}
-                            onClick={() => setFilter(data)} > Todas </Button>
-                        <Button variant='warning' style={{ margin: '1rem' }}
-                            onClick={() => filterRoute("Principiante")} > Principiante </Button>
-                        <Button variant='warning' style={{ margin: '1rem' }}
-                            onClick={() => filterRoute("Avanzado")}> Avanzado </Button>
-                        <Button variant='warning' style={{ margin: '1rem' }}
-                            onClick={() => filterRoute("Experto")}> Experto </Button>
-                        <Button variant='warning' style={{ margin: '1rem' }}
-                            onClick={() => filterRoute("Elite")}> Elite </Button>
-                    </div>
                     <hr></hr>
                     <Row xs={1} md={4} className="g-4">
                         {filter.map((e, i) => (
@@ -65,13 +69,14 @@ const RoutesHome = () => {
                                     <Card.Img variant="top" src={e.img} />
                                     <Card.Body>
                                         <Card.Title>{e.name}</Card.Title>
-                                        <NavLink to={`/routes/${e.id}`} className='btn btn-outline-warning'  >Detalle</NavLink>
+                                        <NavLink to={`/routes/${e.id}`} className='btn btn-outline-warning'  >Detalles </NavLink>
                                     </Card.Body>
                                 </Card>
                             </Col>
                         ))}
                     </Row>
                 </ContHomeRoad>
+                <Footer/>
             </>
         )
     }

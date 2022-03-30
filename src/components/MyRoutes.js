@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react'
-import { Button, Card, Col, Row } from 'react-bootstrap'
+import { Button, Card, Col, Container, Nav, Navbar, Row } from 'react-bootstrap'
 import { useDispatch, useSelector } from 'react-redux'
-import { Link } from 'react-router-dom'
 import { deleteAsync, listRouteAsync } from '../actions/actionRoutes'
 import { ContHomeRoad ,Logos} from '../styles/styles'
 import Naveg from './Naveg'
 import logo from "../images/cicla.png";
+import Footer from './Footer'
 
 const MyRoutes = () => {
 
@@ -23,18 +23,23 @@ const MyRoutes = () => {
         return (
             <div>
                 <Naveg />
+                <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
+                <Container>
+                    <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+                    <Navbar.Collapse id="responsive-navbar-nav">
+                        <Nav className="me-auto">   
+                            <Nav.Link href="/addRoute">Agregar Nueva ruta</Nav.Link>                         
+                        </Nav>
+                    </Navbar.Collapse>
+                </Container>
+            </Navbar>
                 <ContHomeRoad>
-                    <h2 style={{ color: 'yellow' }} >Mis Rutas</h2>
-                    <hr></hr>
-                    <Button variant='warning' ><Link to={'/addRoute'} style={{ textDecoration: 'none' }} >Agregar nueva ruta</Link></Button>
-                    <br></br>
-                    <br></br>
                     <Row xs={1} md={3} className="g-4">
                         {routes.map((e, i) => (
                             <Col key={i} >
                                 <Card>
-                                    <Card.Img variant="top" src={e.imagen} />
-                                    <Card.Body>
+                                    <Card.Img variant="top" src={e.imagen}  style={{display:'inline-block'}} />
+                                    <Card.Body style={{display:'inline-block'}} >
                                         <h4>{e.nombre}</h4>
                                         <Card.Text>
                                             <p>distancia:</p> <h6> {e.distancia}</h6>
@@ -48,6 +53,7 @@ const MyRoutes = () => {
                         ))}
                     </Row>
                 </ContHomeRoad>
+                <Footer/>
             </div>
         )
     }
