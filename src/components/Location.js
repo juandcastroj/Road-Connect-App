@@ -1,4 +1,5 @@
 import React from "react";
+import '../styles/style.css'
 import { ContHomeRoad } from "../styles/styles";
 import Naveg from "./Naveg";
 import {
@@ -24,158 +25,135 @@ import { useRef, useState } from "react";
 import Footer from "./Footer";
 
 
-const center = { lat: 4.735311, lng: -74.101978 };
-
+const center = { lat: 4.735311, lng: -74.101978 }
 
 function Location() {
- 
-  
   const { isLoaded } = useJsApiLoader({
     googleMapsApiKey: process.env.REACT_APP_GOOGLE_MAPS_API_KEY,
-    libraries: ["places"],
-  });
+    libraries: ['places'],
+  })
 
-  const [map, setmap] = useState(/**@type google.maps.GoogleMap*/ (null));
-  const [directionResponse, setDirectionsRenponse] = useState(null);
-  const [distance, setDistance] = useState("");
-  const [duration, setDuration] = useState("");
+  const [map, setMap] = useState(/** @type google.maps.Map */ (null))
+  const [directionsResponse, setDirectionsResponse] = useState(null)
+  const [distance, setDistance] = useState('')
 
-  const originRef = useRef();
 
-  const destinationRef = useRef();
-  const [posicion, setPosicion] = useState({
-    center: {
-      lat: 0,
-      lng: 0,
-    },
-    zoom: 0,
-  });
+  /** @type React.MutableRefObject<HTMLInputElement> */
+  const originRef = useRef()
+  /** @type React.MutableRefObject<HTMLInputElement> */
+  const destiantionRef = useRef()
 
   if (!isLoaded) {
-    return <SkeletonText />;
+    return <SkeletonText />
   }
 
   async function calculateRoute() {
-    if (originRef.currentvalue === "" || destinationRef.current.values === "") {
-      return;
+    if (originRef.current.value === '' || destiantionRef.current.value === '') {
+      return
     }
-    //eslint-disable-next-line no-undef
-    const directionService = new google.map.DirectionService();
-    const results = await directionService.route({
+    // eslint-disable-next-line no-undef
+    const directionsService = new google.maps.DirectionsService()
+    const results = await directionsService.route({
       origin: originRef.current.value,
-      destination: destinationRef.current.value,
-      //eslint-disable-next-line no-undef
+      destination: destiantionRef.current.value,
+      // eslint-disable-next-line no-undef
       travelMode: google.maps.TravelMode.DRIVING,
-    });
-    setDirectionsRenponse(results);
-    setDistance(results.routes[0].legs[0].distance.text);
-    setDuration(results.routes[0].legs[0].duration.text);
-  }
-  function clearRoute() {
-    setDirectionsRenponse(null);
-    setDistance("");
-    setDuration("");
-    originRef.current.value = "";
-    destinationRef.current.value = "";
+    })
+    setDirectionsResponse(results)
+    setDistance(results.routes[0].legs[0].distance.text)
+   
   }
 
-  navigator.geolocation.getCurrentPosition(
-    function (position) {
-      setPosicion({
-        center: {
-          lat: position.coords.latitude,
-          lng: position.coords.longitude,
-        },
-        zoom: 15,
-      });
-    },
-    function (error) {
-      console.error("Error Code = " + error.code + " - " + error.message);
-    },
-    {
-      enableHighAccuracy: true,
-    }
-  );
+  function clearRoute() {
+    setDirectionsResponse(null)
+    setDistance('')
+    
+    originRef.current.value = ''
+    destiantionRef.current.value = ''
+  }
+
   return (
     <div>
       <Naveg />
       <ContHomeRoad>
-        <Flex
-          position="relative"
-          flexDirection="column"
-          alignItems="center"
-          h="100vh"
-          w="100vw"
+      <Flex
+      position='relative'
+      flexDirection='column'
+      alignItems='center'
+      h='100vh'
+      w='100vw'
+    >
+      <Box position='absolute' left={0} top={0} h='100%' w='100%'>
+        {/* Google Map Box */}
+        <GoogleMap
+          center={center}
+          zoom={15}
+          mapContainerStyle={{ width: '80%', height: '90%' }}
+          options={{
+            zoomControl: false,
+            streetViewControl: false,
+            mapTypeControl: false,
+            fullscreenControl: false,
+          }}
+          onLoad={map => setMap(map)}
         >
-          <Box position="absolute" left={0} top={0} h="80%" w="80%">
-            {/* Google Map Box */}
-            <GoogleMap
-              center={center}
-              zoom={15}
-              mapContainerStyle={{ width: "100%", height: "100%" }}
-              options={{
-                zoomControl: false,
-                streetViewControl: false,
-                mapTypeControl: false,
-                fullscreenControl: false,
-              }}
-              onLoad={(map) => setmap(map)}
-            >
-              <Marker position={center} />
-              {directionResponse && (
-                <DirectionsRenderer directions={directionResponse} />
-              )}
-            </GoogleMap>
+          <Marker position={center} />
+          {directionsResponse && (
+            <DirectionsRenderer directions={directionsResponse} />
+          )}
+        </GoogleMap>
+      </Box>
+      <Box
+        p={4}
+        borderRadius='lg'
+        m={4}
+        bgColor='white'
+        shadow='base'
+        minW='container.md'
+        zIndex='1'
+      >
+        <HStack spacing={2} justifyContent='space-between'>
+          <Box flexGrow={1} >
+            <Autocomplete>
+              <Input className='origin' type='text' placeholder='Origin' ref={originRef} />
+            </Autocomplete>
           </Box>
-          <Box
-            p={4}
-            borderRadius="lg"
-            m={4}
-            bgColor="white"
-            shadow="base"
-            minW="container.md"
-            zIndex="modal"
-          >
-            <HStack spacing={4}>
-              <Autocomplete>
-                <Input type="text" placeholder="Origin" ref={originRef} />
-              </Autocomplete>
-              <Autocomplete>
-                <Input
-                  type="text"
-                  placeholder="Destination"
-                  ref={destinationRef}
-                />
-              </Autocomplete>
-              <ButtonGroup>
-                <Button
-                  colorScheme="pink"
-                  type="submit"
-                  onClick={calculateRoute}
-                >
-                  Calcular Ruta
-                </Button>
-                <IconButton
-                  aria-label="center back"
-                  icon={<FaTimes />}
-                  npm
-                  start
-                  onClick={clearRoute}
-                />
-              </ButtonGroup>
-            </HStack>
-            <HStack spacing={4} mt={4} justifyContent="space-between">
-              <Text>Distance:{distance} </Text>
-              <Text>Duration:{duration}</Text>
-              <IconButton
-                aria-label="center back"
-                icon={<FaLocationArrow />}
-                isRound
-                onClick={() => map.panTo(center)}
+          <Box flexGrow={1}>
+            <Autocomplete>
+              <Input
+              className='origin'
+                type='text'
+                placeholder='Destination'
+                ref={destiantionRef}
               />
-            </HStack>
+            </Autocomplete>
           </Box>
-        </Flex>
+
+          <ButtonGroup>
+            <Button colorScheme='pink' type='submit' className='calculate' onClick={calculateRoute}>
+              Calcular Ruta
+            </Button>
+            <IconButton className='icon'
+              aria-label='center back'
+              icon={<FaTimes />}
+              onClick={clearRoute}
+            />
+          </ButtonGroup>
+        </HStack>
+        <HStack spacing={4} mt={4} justifyContent='space-between'>
+          <Text className='duration'>Distancia: {distance} </Text>
+          <IconButton className='icon'
+            aria-label='center back'
+            icon={<FaLocationArrow />}
+            isRound
+            onClick={() => {
+              map.panTo(center)
+              map.setZoom(15)
+            }}
+          />
+        </HStack>
+      </Box>
+    </Flex>
       </ContHomeRoad>
       <Footer/>
     </div>
