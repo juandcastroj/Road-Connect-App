@@ -12,7 +12,7 @@ const DetailRoute = () => {
 
     const getRoutes = async () => {
         setLoading(true)
-        const resp = await fetch(`https://demoaday.herokuapp.com/Rutas/${id}`)
+        const resp = await fetch(`https://project-demoday.herokuapp.com/Rutas/${id}`)
         setRuta(await resp.json())
         setLoading(false)
     }
@@ -34,7 +34,8 @@ const DetailRoute = () => {
             <div>
                 <ContHomeRoad>
                     <div >
-                        <img alt='map' width={400} src={ruta.img} style={{ display: 'inline-block' }} />
+                        <img alt='map' width={600} src={ruta.img1} style={{ display: 'inline-block' }} />
+                        <img alt='map' width={600} src={ruta.img}  />
                         <DetailContainer  >
                             <h4>{ruta.name}</h4>
                             <hr></hr>

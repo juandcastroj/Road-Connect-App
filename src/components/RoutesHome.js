@@ -9,7 +9,8 @@ import Footer from './Footer'
 const RoutesHome = () => {
 
     const initialState = []
-    const api = 'https://demoaday.herokuapp.com/Rutas'
+    //const api = 'https://demoaday.herokuapp.com/Rutas'
+    const api = 'https://project-demoday.herokuapp.com/Rutas'
     const [data, setData] = useState(initialState)
     const [loading, setLoading] = useState(false)
     const [filter, setFilter] = useState(data)
@@ -17,9 +18,8 @@ const RoutesHome = () => {
     const getData = async () => {
         setLoading(true)
         const resp = await fetch(api)
-        //const data = await resp.json()
-        setData(await resp.clone().json())
-        setFilter(await resp.json())
+         setData(await resp.clone().json())
+         setFilter(await resp.json())
         setLoading(false)
     }
 
@@ -66,7 +66,7 @@ const RoutesHome = () => {
                         {filter.map((e, i) => (
                             <Col key={i} >
                                 <Card style={{ heigth: '700px' }} >
-                                    <Card.Img variant="top" src={e.img} />
+                                    <Card.Img variant="top" src={e.img1} />
                                     <Card.Body>
                                         <Card.Title>{e.name}</Card.Title>
                                         <NavLink to={`/routes/${e.id}`} className='btn btn-outline-warning'  >Detalles </NavLink>
