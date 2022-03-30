@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
-import { ContHomeRoad, DetailContainer , Logos} from '../styles/styles'
+import { ContFirst, ContHomeRoad, DetailContainer , LogoStyle} from '../styles/styles'
 import Naveg from './Naveg'
 import logo from "../images/cicla.png";
 const DetailRoute = () => {
@@ -20,7 +20,13 @@ const DetailRoute = () => {
         getRoutes()
     }, [])
 
-    const Loading = () =>  <Logos src={logo} alt="Logo" />
+    const Loading = () => {
+        return (
+            <ContFirst>
+                <LogoStyle alt='first-logo' src={logo} />
+            </ContFirst>
+        )
+    }
 
     const ShowRoute = () => {
         return (
