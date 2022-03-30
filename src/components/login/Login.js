@@ -9,7 +9,7 @@ import {
   Input,
   Separator,
   DivForm,
-  Icon
+  Icons
 } from "../../styles/styles.js";
 import { Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
@@ -21,7 +21,6 @@ import {
 } from "../../actions/actionLogin";
 import { useDispatch } from "react-redux";
 import useForm from "../../hooks/useForm.js";
-
 
 
 function Login() {
@@ -54,10 +53,11 @@ function Login() {
           <Logo src={logo} alt="Logo" />
           <h3 style={{ color: "yellow" }}>Iniciar sesión</h3>
         </Header>
+       
         <DivForm>
           
           <Button variant="danger" bg="dark" onClick={handleGoogle}>
-          <Icon src='https://i.ibb.co/mRP4XhZ/5847f9cbcef1014c0b5e48c8.png' alt="Logo" />
+          <Icons src='https://i.ibb.co/mRP4XhZ/5847f9cbcef1014c0b5e48c8.png' alt="Logo" />
             {" "}
             
             Continuar con Google{" "}
@@ -65,7 +65,7 @@ function Login() {
           <br></br>
          
           <Button variant="dark" onClick={handleFacebook}> 
-          <Icon src=' https://i.ibb.co/K9b54B9/800px-Facebook-logo-square.png' alt="Logo" />Continuar con Facebook </Button>
+          <Icons src=' https://i.ibb.co/K9b54B9/800px-Facebook-logo-square.png' alt="Logo" />Continuar con Facebook </Button>
           <Separator />
           <Form action="" onSubmit={handleLogin}>
             <Label htmlFor="inputEmail">

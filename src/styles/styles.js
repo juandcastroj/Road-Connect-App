@@ -59,7 +59,7 @@ export const Logo = styled.img`
   margin: 2% 0 5% 0;
 `;
 
-export const Icon = styled.img`
+export const Icons = styled.img`
   width: 27px;
   padding: 2px;
   margin-right: 6px;
@@ -206,3 +206,4 @@ export const DetailContainer = styled.div`
   color: white;
   display: inline-block;
 `;
+
