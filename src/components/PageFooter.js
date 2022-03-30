@@ -4,6 +4,7 @@ import { Footer, FooterSocial, IconSocial, Contact } from "../styles/styles";
 
 const PageFooter = () => {
   return (
+   
     <Footer>
       <img src="https://i.ibb.co/Gpbfykx/cicla.png" alt="" width="130px" />
       <div></div>
