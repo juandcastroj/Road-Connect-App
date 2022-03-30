@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
-import { ContFirst, ContHomeRoad, DetailContainer , LogoStyle} from '../styles/styles'
+import { ContFirst, ContHomeRoad, DetailContainer, LogoStyle } from '../styles/styles'
 import Naveg from './Naveg'
 import logo from "../images/cicla.png";
 import Footer from './Footer';
+import { Button } from 'react-bootstrap';
 const DetailRoute = () => {
 
     const { id } = useParams()
@@ -34,8 +35,10 @@ const DetailRoute = () => {
             <div>
                 <ContHomeRoad>
                     <div >
-                        <img alt='map' width={600} src={ruta.img1} style={{ display: 'inline-block' }} />
-                        <img alt='map' width={600} src={ruta.img}  />
+                        <div style={{ padding: '0.4rem' }} >
+                            <img alt='map' width={600} src={ruta.img1} style={{ margin: '20px' }} />
+                            <img alt='map' width={600} src={ruta.img} />
+                        </div>
                         <DetailContainer  >
                             <h4>{ruta.name}</h4>
                             <hr></hr>
@@ -44,11 +47,12 @@ const DetailRoute = () => {
                                 Desnivel: <h6>{ruta.Desnivel}</h6>
                                 tiempo promedio: <h6>{ruta.Tiempo}</h6>
                                 dificultad: <h6>{ruta.Dificultad}</h6>
+                                <Button variant='warning' href='/location' style={{ padding: '1rem' }} >Empezar</Button>
                             </div>
                         </DetailContainer>
                     </div>
                 </ContHomeRoad>
-                <Footer/>
+                <Footer />
             </div>
         )
     }
