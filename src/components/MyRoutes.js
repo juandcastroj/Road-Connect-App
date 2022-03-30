@@ -46,7 +46,7 @@ const MyRoutes = () => {
                                              <p>desnivel positivo:</p> <h6> {e.desnivel}</h6>
                                              <p>tiempo promedio:</p> <h6> {e.tiempo}</h6>
                                         </Card.Text>
-                                        <Button variant='outline-danger' onClick={() => dispatch(deleteAsync(e.nombre))} >Eliminar</Button>
+                                        <Button variant='outline-warning' onClick={() => dispatch(deleteAsync(e.nombre))} >Quitar</Button>
                                     </Card.Body>
                                 </Card>
                             </Col>
