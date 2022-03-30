@@ -141,7 +141,7 @@ body {
 
 
 /* ---- ----- ----- Contenedor Principal y Flechas ----- ----- ----- */
-.rutas-recomendadas {
+/* .rutas-recomendadas {
 	margin-bottom: 70px;
   }
   
@@ -376,4 +376,44 @@ body {
   
   .pelicula-principal .boton i {
 	margin-right: 1.25em;
-  }
+  } */
+
+
+  /* ---- ----- ----- Location ----- ----- ----- */
+
+
+
+  
+.calculate{
+  padding: 10px;
+  width: 100%;
+  max-width: 480px;
+  border-radius: 6px;
+  background-color: #f4d03f;
+  color: var(--color-white);
+  font-size: 14px;
+  font-weight: bold;
+}
+  
+.origin{
+  border-radius: 3px;
+  padding: 0.4rem;
+  font-family:'Times New Roman', Times, serif;
+  font-size: 14px;
+}
+.duration{
+  margin: 2%;
+  font-family:'Times New Roman', Times, serif;
+  font-size:large;
+}
+
+.icon{
+  color:#0030b7;
+  background-color: white;
+ 
+}
+.icom.hover{
+  font-weight: bold;
+  color:#0030b7;
+}
+
