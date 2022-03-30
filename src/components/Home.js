@@ -1,24 +1,20 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
-import { ContHome, DivAuth } from '../styles/styles'
-import { Button } from 'react-bootstrap'
+import { ContHomeRoad, DivAuth } from '../styles/styles'
 import Naveg from './Naveg'
 import Footer from './Footer'
+import Carrusel from './Carrusel'
 
 const Home = () => {
   return (
     <div>
       <Naveg />
       <DivAuth>
-        <ContHome>
-          <Button variant='warning' ><Link to={'/location'} style={{ textDecoration: 'none' }} > Ingresa tu ubicación </Link></Button>
-          <hr></hr>
-          <Button variant='warning' ><Link to={'/routes'} style={{ textDecoration: 'none' }} > Rutas Populares </Link></Button>
-          <hr></hr>
-          <Button variant='warning' ><Link to={'/events'} style={{ textDecoration: 'none' }} > Próximos eventos </Link></Button>
-        </ContHome>
-      <Footer/>
-      </DivAuth>
+        <ContHomeRoad>
+        <Carrusel/>
+        </ContHomeRoad>
+          <Footer />
+          </DivAuth>    
+     
     </div>
   )
 }
