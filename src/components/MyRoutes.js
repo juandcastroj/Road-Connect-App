@@ -40,13 +40,15 @@ const MyRoutes = () => {
                                 <Card>
                                     <Card.Img variant="top" src={e.imagen}  style={{display:'inline-block'}} />
                                     <Card.Body style={{display:'inline-block'}} >
+                                  
                                         <h4>{e.nombre}</h4>
                                         <Card.Text>
-                                            <p>distancia:</p> <h6> {e.distancia}</h6>
-                                             <p>desnivel positivo:</p> <h6> {e.desnivel}</h6>
-                                             <p>tiempo promedio:</p> <h6> {e.tiempo}</h6>
+                                            <h6>distancia:</h6> <h5> {e.distancia}</h5>
+                                             <h6>desnivel positivo:</h6> <h5> {e.desnivel}</h5>
+                                             <h6>tiempo promedio:</h6> <h5> {e.tiempo}</h5>
                                         </Card.Text>
-                                        <Button variant='outline-warning' onClick={() => dispatch(deleteAsync(e.nombre))} >Quitar</Button>
+                                        <Button variant='outline-danger' onClick={() => dispatch(deleteAsync(e.nombre))} >Quitar</Button>
+                                        <Button variant='warning' href='/location' >Empezar</Button>
                                     </Card.Body>
                                 </Card>
                             </Col>

@@ -68,8 +68,7 @@ const RoutesHome = () => {
                                 <Card style={{ heigth: '700px' }} >
                                     <Card.Img variant="top" src={e.img1} />
                                     <Card.Body>
-                                        <Card.Title>{e.name}</Card.Title>
-                                        <NavLink to={`/routes/${e.id}`} className='btn btn-outline-warning'  >Detalles </NavLink>
+                                        <NavLink to={`/routes/${e.id}`}  style={{textDecoration: 'none'}} ><Card.Title>{e.name}</Card.Title> </NavLink>
                                     </Card.Body>
                                 </Card>
                             </Col>
