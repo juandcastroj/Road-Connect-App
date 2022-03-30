@@ -1,4 +1,4 @@
-import { Card } from "react-bootstrap";
+import { Button } from "react-bootstrap";
 import styled from "styled-components";
 
 //LoadPage styles
@@ -30,7 +30,7 @@ export const ContHomeRoad = styled.div`
 //RoadsHome style
 
 export const ContHome = styled.div`
-  height: 100vh;
+  height: 60vh;
   background-color: #0030b7;
   background-position: center;
   padding: 10%;
@@ -207,3 +207,8 @@ export const DetailContainer = styled.div`
   display: inline-block;
 `;
 
+//Buttons home
+
+export const BtnHomeStyle = styled(Button)`
+  padding: 1.4rem;
+`

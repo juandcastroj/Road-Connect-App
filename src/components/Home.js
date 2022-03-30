@@ -1,20 +1,23 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import { ContHome, DivAuth} from "../styles/styles";
-import Naveg from "./Naveg";
-import "../styles/style.css";
-import Footer from "./Footer";
+import React from 'react'
+import { ContHomeRoad, DivAuth } from '../styles/styles'
+import Naveg from './Naveg'
+import Footer from './Footer'
+import Carrusel from './Carrusel'
 
 const Home = () => {
   return (
     <div>
       <Naveg />
-      <DivAuth/>
-        <ContHome>
-
-          </ContHome>
-  <Footer/>
+      <DivAuth>
+        <ContHomeRoad>
+        <Carrusel/>
+        </ContHomeRoad>
+          <Footer />
+          </DivAuth>    
+     
     </div>
+
+ 
     
   );
 };
