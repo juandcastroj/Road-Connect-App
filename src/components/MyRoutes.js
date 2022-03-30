@@ -23,7 +23,7 @@ const MyRoutes = () => {
         return (
             <div>
                 <Naveg />
-                <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
+                <Navbar collapseOnSelect expand="lg" bg="warning" variant="light">
                 <Container>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">

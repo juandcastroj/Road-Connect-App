@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Button, Card, Col, Container, Nav, Navbar, Row } from 'react-bootstrap'
+import { Card, Col, Container, Nav, Navbar, Row } from 'react-bootstrap'
 import { NavLink } from 'react-router-dom'
 import { ContFirst, ContHomeRoad, LogoStyle } from '../styles/styles'
 import Naveg from './Naveg'
@@ -45,7 +45,7 @@ const RoutesHome = () => {
         return (
             < >
                 <Naveg />
-                <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
+                <Navbar collapseOnSelect expand="lg" bg="warning" variant="light">
                 <Container>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
