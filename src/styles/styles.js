@@ -211,22 +211,27 @@ export const FooterSocial = styled.div`
   align-self: center;
   margin: 35px 0;
   color: white;
-`;
-// export const Icon= styled.img`
-// border: 1px solid white;
-// border-radius: 50%;
-// padding: 2px;
-// border: solid 1px white;
+`
+export const IconSocial = styled.img`
+ border: 1px solid white;
+ border-radius: 50%;
+ padding: 3px;
+ border: solid 1px white;
+ margin:1%;
+ &:hover {
+        color: #2038d4;
+      }
 
-//                 &:hover{
-//                     color: #2038d4;;
+ `
+export const Contact = styled.p`
+padding-top: 2rem;
+text-align: center;
+`
 
-//                 }
-// `
 export const Footer = styled.footer`
   width: 100%;
   height:50%;
-  padding: 1rem 1rem;
+  padding: 1rem 0,7rem;
   background-color: #f4d03f;
   display: flex;
   flex-direction: row;
@@ -235,7 +240,7 @@ export const Footer = styled.footer`
   font-family: "Raleway", sans-serif;
   font-size: 17px;
   position: relative;
-
+  
   > img {
     width: 80px;
     position: absolute;
@@ -253,15 +258,18 @@ export const Footer = styled.footer`
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
-
+    align-items: center;
+    
+  
     div,
     a {
       display: flex;
       flex-direction: row;
-      align-items: flex-start;
+      align-items: center;
       justify-content: flex-start;
       margin-bottom: 15px;
       margin-left: 30px;
+
       &:hover {
         color: #2038d4;
       }
@@ -271,7 +279,9 @@ export const Footer = styled.footer`
       color: white;
       text-decoration: none;
       max-width: 300px;
+      align-items: center;
       margin-left: 15px;
+      margin-top: 10px;
       &:hover {
         color: #2038d4;
       }

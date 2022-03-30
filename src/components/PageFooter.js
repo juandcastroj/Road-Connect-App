@@ -1,45 +1,105 @@
-import React from 'react'
-import { Footer, FooterSocial, Icon} from '../styles/styles'
+import React from "react";
+import { Link } from "react-router-dom";
+import { Footer, FooterSocial, IconSocial, Contact } from "../styles/styles";
 
 const PageFooter = () => {
   return (
     <Footer>
-        <img src='https://i.ibb.co/Gpbfykx/cicla.png' alt='' width="130px"/>
+      <img src="https://i.ibb.co/Gpbfykx/cicla.png" alt="" width="130px" />
+      <div></div>
+      <div>
         <div>
-            
+          <img src="{phoneIcon}" alt="" />
+          <strong>
+            <p>Desarrolladores</p>
+          </strong>
         </div>
         <div>
-            <div>
-                <img  src="{phoneIcon}" alt="" />
-                <p>+57-300-794-8872</p>
-                </div>
-                <div>
-                <p>+57-320-484-6725</p>
-            </div>
-            <div>
-                <img src="{emailIcon} "alt=''/>
-                <p>bike@roadconnect.com</p>
-            </div>
+          <center>
+            <p>Alejandra Moreno</p>
+          </center>
+          <div></div>
+          <IconSocial
+            src="https://i.ibb.co/T2cPS20/icons8-github-30-1.png"
+            alt=""
+            width="30px"
+          />
+          <IconSocial
+            src="https://i.ibb.co/vh710HQ/icons8-linkedin-30.png"
+            alt=""
+            width="30px"
+          />
+          <IconSocial
+            src="https://i.ibb.co/s6sCWM4/icons8-slack-nuevo-32.png"
+            alt=""
+            width="30px"
+          />
+          <IconSocial
+            src="https://i.ibb.co/cQt0JNR/icons8-facebook-30.png"
+            alt=""
+            width="30px"
+          />
+          <IconSocial
+            src="https://i.ibb.co/021QyHd/icons8-instagram-30.png"
+            alt=""
+            width="30px"
+          />
+          <IconSocial
+            src="https://i.ibb.co/Q6PNL0j/icons8-twitter-30.png"
+            alt=""
+            width="30px"
+          />
         </div>
         <div>
-            <a href='#root'>About us</a>
-           
+          <center>
+            <p>Juan David Castro</p>
+          </center>
+          <div></div>
+          <IconSocial
+            src="https://i.ibb.co/T2cPS20/icons8-github-30-1.png"
+            alt=""
+            width="30px"
+          />
+          <IconSocial
+            src="https://i.ibb.co/vh710HQ/icons8-linkedin-30.png"
+            alt=""
+            width="30px"
+          />
+          <IconSocial
+            src="https://i.ibb.co/s6sCWM4/icons8-slack-nuevo-32.png"
+            alt=""
+            width="30px"
+          />
+          <IconSocial
+            src="https://i.ibb.co/cQt0JNR/icons8-facebook-30.png"
+            alt=""
+            width="30px"
+          />
+          <IconSocial
+            src="https://i.ibb.co/021QyHd/icons8-instagram-30.png"
+            alt=""
+            width="30px"
+          />
+          <IconSocial
+            src="https://i.ibb.co/Q6PNL0j/icons8-twitter-30.png"
+            alt=""
+            width="30px"
+          />
         </div>
-        <div>
-            <a href='#root'>Contact us</a>
-       
-        </div>
-        <div>
       </div>
-      <FooterSocial>
-        <Icon className="fab fa-facebook-f socials__icon"></Icon>
-        <Icon className="fab fa-twitter socials__icon"></Icon>
-        <Icon className="fab fa-instagram socials__icon"></Icon>
-               
-      </FooterSocial>
-    
+      <div>
+        <a href="#root">Contact us</a>
+        <Contact>bike@roadconnect.com</Contact>
+      </div>
+      <div>
+        <a href="#root">About us</a>
+        <Contact>
+          Road Connect
+          <br></br> Red para Deportistas
+        </Contact>
+      </div>
     </Footer>
-  )
-}
+  );
+};
 
-export default PageFooter
+export default PageFooter;
