@@ -3,21 +3,21 @@ import { Link } from 'react-router-dom'
 import { ContHome, DivAuth } from '../styles/styles'
 import { Button } from 'react-bootstrap'
 import Naveg from './Naveg'
-import PageFooter from './PageFooter'
+import Footer from './Footer'
 
 const Home = () => {
   return (
     <div>
-       <Naveg/>
-      <DivAuth>       
+      <Naveg />
+      <DivAuth>
         <ContHome>
-          <Button variant='warning' ><Link to={'/location'} style={{textDecoration:'none'}} > Ingresa tu ubicación </Link></Button>
+          <Button variant='warning' ><Link to={'/location'} style={{ textDecoration: 'none' }} > Ingresa tu ubicación </Link></Button>
           <hr></hr>
-          <Button variant='warning' ><Link to={'/routes'} style={{textDecoration:'none'}} > Rutas Populares </Link></Button>
+          <Button variant='warning' ><Link to={'/routes'} style={{ textDecoration: 'none' }} > Rutas Populares </Link></Button>
           <hr></hr>
-          <Button variant='warning' ><Link to={'/events'} style={{textDecoration:'none'}} > Próximos eventos </Link></Button>
+          <Button variant='warning' ><Link to={'/events'} style={{ textDecoration: 'none' }} > Próximos eventos </Link></Button>
         </ContHome>
-        <PageFooter/>
+      <Footer/>
       </DivAuth>
     </div>
   )

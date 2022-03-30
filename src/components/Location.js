@@ -21,6 +21,7 @@ import {
   DirectionsRenderer,
 } from "@react-google-maps/api";
 import { useRef, useState } from "react";
+import Footer from "./Footer";
 
 
 const center = { lat: 4.735311, lng: -74.101978 };
@@ -176,6 +177,7 @@ function Location() {
           </Box>
         </Flex>
       </ContHomeRoad>
+      <Footer/>
     </div>
   );
 }

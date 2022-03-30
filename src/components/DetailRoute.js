@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom'
 import { ContFirst, ContHomeRoad, DetailContainer , LogoStyle} from '../styles/styles'
 import Naveg from './Naveg'
 import logo from "../images/cicla.png";
+import Footer from './Footer';
 const DetailRoute = () => {
 
     const { id } = useParams()
@@ -46,6 +47,7 @@ const DetailRoute = () => {
                         </DetailContainer>
                     </div>
                 </ContHomeRoad>
+                <Footer/>
             </div>
         )
     }
