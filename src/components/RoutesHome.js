@@ -54,8 +54,7 @@ const RoutesHome = () => {
                             <Nav.Link onClick={() => filterRoute("Principiante")} >Principiante</Nav.Link>
                             <Nav.Link onClick={() => filterRoute("Avanzado")} >Avanzado</Nav.Link>  
                             <Nav.Link onClick={() => filterRoute("Experto")} >Experto</Nav.Link>                   
-                            <Nav.Link onClick={() => filterRoute("Elite")} >Elite</Nav.Link>    
-                            <Nav.Link href="/myroutes">Mis Rutas</Nav.Link>                         
+                            <Nav.Link onClick={() => filterRoute("Elite")} >Elite</Nav.Link>                            
                         </Nav>
                     </Navbar.Collapse>
                 </Container>
@@ -65,7 +64,7 @@ const RoutesHome = () => {
                     <Row xs={1} md={4} className="g-4">
                         {filter.map((e, i) => (
                             <Col key={i} >
-                                <Card style={{ heigth: '700px' }} >
+                                <Card style={{ backgroundColor: '#DAA520' }} >
                                     <Card.Img variant="top" src={e.img1} />
                                     <Card.Body>
                                         <NavLink to={`/routes/${e.id}`}  style={{textDecoration: 'none'}} ><Card.Title>{e.name}</Card.Title> </NavLink>

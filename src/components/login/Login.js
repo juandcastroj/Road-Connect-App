@@ -21,12 +21,14 @@ import {
 } from "../../actions/actionLogin";
 import { useDispatch } from "react-redux";
 import useForm from "../../hooks/useForm.js";
+import Footer from "../Footer.js";
+import Naveg from "../Naveg.js";
 
 
 function Login() {
   const dispatch = useDispatch();
 
-  const [values, handleInputChange, reset] = useForm({
+  const [values, handleInputChange] = useForm({
     email: "",
     password: "",
   });
@@ -47,8 +49,8 @@ function Login() {
 
   return (
     <div>
+      <Naveg/>
       <DivAuth >
-        <Link to={"/home"}>Home</Link>
         <Header>
           <Logo src={logo} alt="Logo" />
           <h3 style={{ color: "yellow" }}>Iniciar sesión</h3>
@@ -67,7 +69,7 @@ function Login() {
           <Button variant="dark" onClick={handleFacebook}> 
           <Icons src=' https://i.ibb.co/K9b54B9/800px-Facebook-logo-square.png' alt="Logo" />Continuar con Facebook </Button>
           <Separator />
-          <Form action="" onSubmit={handleLogin}>
+          <Form onSubmit={handleLogin}>
             <Label htmlFor="inputEmail">
               Correo electrónico
               <Input
@@ -93,7 +95,7 @@ function Login() {
               />
             </Label>
             <br></br>
-            <Button variant="warning">Iniciar Sesion</Button>
+            <Button variant="warning" type="submit" >Iniciar Sesion</Button>
           </Form>
         </DivForm>
         <DivLink>
@@ -109,6 +111,7 @@ function Login() {
           </p>
         </DivLink>
       </DivAuth>
+      <Footer/>
     </div>
   );
 }

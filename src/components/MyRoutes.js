@@ -43,9 +43,9 @@ const MyRoutes = () => {
                                   
                                         <h4>{e.nombre}</h4>
                                         <Card.Text>
-                                            <h6>distancia:</h6> <h5> {e.distancia}</h5>
-                                             <h6>desnivel positivo:</h6> <h5> {e.desnivel}</h5>
-                                             <h6>tiempo promedio:</h6> <h5> {e.tiempo}</h5>
+                                            <h6>Distancia:</h6> <h5> {e.distancia}</h5>
+                                             <h6>Desnivel positivo:</h6> <h5> {e.desnivel}</h5>
+                                             <h6>Tiempo promedio:</h6> <h5> {e.tiempo}</h5>
                                         </Card.Text>
                                         <Button variant='outline-danger' onClick={() => dispatch(deleteAsync(e.nombre))} >Quitar</Button>
                                         <Button variant='warning' href='/location' >Empezar</Button>

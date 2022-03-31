@@ -9,7 +9,7 @@ const LoadPage = () => {
     const navigate = useNavigate()
     
     setTimeout(() => {
-        navigate('/login')
+        navigate('/home')
     }, 3000)   
     
   return (

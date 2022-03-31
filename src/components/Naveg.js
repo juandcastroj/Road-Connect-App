@@ -1,8 +1,21 @@
 import React from 'react'
 import { Container, Nav, Navbar } from 'react-bootstrap'
+import { useDispatch } from 'react-redux'
+import { useNavigate } from 'react-router-dom'
+import { logout } from '../actions/actionLogin'
 import logoNav from '../images/cicla.png'
+import Identification from './Identification'
 
 const Naveg = () => {
+
+    const dispatch = useDispatch()
+    const navigate = useNavigate()
+
+    const handleLogout = () => {
+        dispatch(logout());
+        navigate("/login")
+    }
+
     return (
         <div>
             <Navbar bg="dark" variant="dark">
@@ -11,9 +24,12 @@ const Naveg = () => {
                     <Nav className="me-auto">
                         <Nav.Link href="/profile">Mi Perfil</Nav.Link>
                         <Nav.Link href="/myRoutes">Mis Rutas</Nav.Link>
-                        <Nav.Link href="/events">Eventos</Nav.Link>
-                        <Nav.Link href="/login">Login</Nav.Link>
+                        <Nav.Link href="/routes">Rutas Sugeridas</Nav.Link>                        
+                        <Nav.Link href="/events">Eventos</Nav.Link>                                          
                     </Nav>
+                   {/* <Identification/>    */}
+                    <Nav.Link href="/login" > <h5 >Login</h5>  </Nav.Link>
+                    <Nav.Link href="/login" > <h5 style={{color:'red'}} onClick={()=> {handleLogout()}} >Logout</h5>  </Nav.Link>
                 </Container>
             </Navbar>
         </div>
