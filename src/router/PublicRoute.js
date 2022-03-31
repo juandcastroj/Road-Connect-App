@@ -4,5 +4,5 @@ export const PublicRoute = ({isAuthenticated, children}) => {
 
     return  !isAuthenticated
     ? children
-    : <Navigate to="/*"/>
+    : <Navigate to="/home"/>
 }

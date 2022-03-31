@@ -54,31 +54,31 @@ const AppRouter = () => {
       <BrowserRouter>
         <Routes>
           <Route path="/login" element={
-            <PublicRoute isAuthenticated={isLoggedIn} redirect="/home">
+            <PublicRoute isAuthenticated={isLoggedIn} >
               <Login />
             </PublicRoute>
           } />
 
           <Route path="/register" element={
-            <PublicRoute isAuthenticated={isLoggedIn} redirect="/home" >
+            <PublicRoute isAuthenticated={isLoggedIn}  >
               <Register />
             </PublicRoute>
           } />
 
           <Route path="/addRoute" element={
-            <PrivateRoute isAuthenticated={isLoggedIn} redirect="/login"  >
+            <PrivateRoute isAuthenticated={isLoggedIn}  >
               <AddRoute />
             </PrivateRoute>
             }/>
 
           <Route path="/myroutes" element={
-            <PrivateRoute isAuthenticated={isLoggedIn} redirect="/login"  >
+            <PrivateRoute isAuthenticated={isLoggedIn}  >
               <MyRoutes />
             </PrivateRoute>}
           />
 
           <Route path="/profile" element={
-            <PrivateRoute isAuthenticated={isLoggedIn} redirect="/login"  >
+            <PrivateRoute isAuthenticated={isLoggedIn}  >
               <Profile />
             </PrivateRoute>}
           />
@@ -89,7 +89,6 @@ const AppRouter = () => {
           <Route path='/routes/:id' element={<DetailRoute />} />
           <Route path='/events' element={<Events />} />
           <Route path='/location' element={<Location />} />
-          <Route path='/*' element={<Home/>}/>
         </Routes>
       </BrowserRouter>
     </div>

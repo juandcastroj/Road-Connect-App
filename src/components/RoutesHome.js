@@ -54,8 +54,7 @@ const RoutesHome = () => {
                             <Nav.Link onClick={() => filterRoute("Principiante")} >Principiante</Nav.Link>
                             <Nav.Link onClick={() => filterRoute("Avanzado")} >Avanzado</Nav.Link>  
                             <Nav.Link onClick={() => filterRoute("Experto")} >Experto</Nav.Link>                   
-                            <Nav.Link onClick={() => filterRoute("Elite")} >Elite</Nav.Link>    
-                            <Nav.Link href="/myroutes">Mis Rutas</Nav.Link>                         
+                            <Nav.Link onClick={() => filterRoute("Elite")} >Elite</Nav.Link>                            
                         </Nav>
                     </Navbar.Collapse>
                 </Container>

@@ -43,10 +43,10 @@ const DetailRoute = () => {
                             <h4>{ruta.name}</h4>
                             <hr></hr>
                             <div>
-                                distancia: <h6>{ruta.Distancia}</h6>
-                                Desnivel: <h6>{ruta.Desnivel}</h6>
-                                tiempo promedio: <h6>{ruta.Tiempo}</h6>
-                                dificultad: <h6>{ruta.Dificultad}</h6>
+                                Distancia: <h5>{ruta.Distancia}</h5>
+                                Desnivel: <h5>{ruta.Desnivel}</h5>
+                                Tiempo promedio: <h5>{ruta.Tiempo}</h5>
+                                Dificultad: <h5>{ruta.Dificultad}</h5>
                                 <Button variant='warning' href='/location' style={{ padding: '1rem' }} >Empezar</Button>
                             </div>
                         </DetailContainer>

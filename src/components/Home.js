@@ -10,15 +10,14 @@ const Home = () => {
       <Naveg />
       <DivAuth>
         <ContHomeRoad>
-        <Carrusel/>
+          <Carrusel />
         </ContHomeRoad>
-          <Footer />
-          </DivAuth>    
-     
+        <Footer />
+      </DivAuth>
     </div>
 
- 
-    
+
+
   );
 };
 

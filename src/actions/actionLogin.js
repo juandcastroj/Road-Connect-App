@@ -15,7 +15,7 @@ export const loginEmailPassword = (email, password) => {
           alert("Bienvenid@, "+ user.displayName);
         })
         .catch((e) => {
-          //alert("El usuario no existe");
+          //console.log("El usuario no existe");
         });
     };
   };
@@ -66,7 +66,6 @@ export const loginSincrono =(id, displayname) =>{
                 id,
                 displayname
             }
-
     }
 
 }
@@ -77,7 +76,7 @@ export const logout = () => {
   return(dispatch) => {
       const auth = getAuth();
       signOut(auth)
-      .then(user => {
+      .then(() => {
           dispatch(logoutSync())
       })
       .catch(error => {

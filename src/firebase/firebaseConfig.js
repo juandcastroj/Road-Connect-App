@@ -10,15 +10,6 @@ import { GoogleAuthProvider, FacebookAuthProvider } from "firebase/auth";
     messagingSenderId: "252227685394",
     appId: "1:252227685394:web:084ae3569f7b4f9fe75ccb"
   };
-
-  // const firebaseConfig = {
-  //   apiKey: "AIzaSyAK1VxYTxpZeFrFrnYfw5j8O2vmtD1-meA",
-  //   authDomain: "roadconnect-42585.firebaseapp.com",
-  //   projectId: "roadconnect-42585",
-  //   storageBucket: "roadconnect-42585.appspot.com",
-  //   messagingSenderId: "691316355632",
-  //   appId: "1:691316355632:web:7e9f409b5d6e69b8dab3f5"
-  // };
   
 const app = initializeApp(firebaseConfig);
 const google =  new GoogleAuthProvider();
