@@ -15,7 +15,7 @@ const Events = () => {
             <h2 style={{color: 'yellow'}} >Próximos Eventos</h2>
                 <Card className="text-center">
                     <Card.Header>Organizado por: IDRD</Card.Header>
-                    <Card.Body>
+                    <Card.Body style={{ backgroundColor: '#DAA520' }} >
                         <Card.Title>Evento Infantil 
                         </Card.Title>
                         <Image src={event1} width={600}></Image>
@@ -23,35 +23,35 @@ const Events = () => {
                             With supporting text below as a natural lead-in to additional content.
                             With supporting text below as a natural lead-in to additional content.
                         </Card.Text>
-                        <Button variant="warning">Participar</Button>
+                        <Button variant="primary">Participar</Button>
                     </Card.Body>
                     <Card.Footer className="text-muted"> publicado hace 5 dias</Card.Footer>
                 </Card>
                 <hr></hr>
                 <Card className="text-center">
                     <Card.Header>Organizado por: Escarabajos Bogotá</Card.Header>
-                    <Card.Body>
+                    <Card.Body style={{ backgroundColor: '#DAA520' }} >
                         <Card.Title>Carrera ruta Senior</Card.Title>
                         <Image src={event2} width={600}></Image>
                         <Card.Text>
                             With supporting text below as a natural lead-in to additional content.
                             With supporting text below as a natural lead-in to additional content.
                         </Card.Text>
-                        <Button variant="warning">Participar</Button>
+                        <Button variant="primary">Participar</Button>
                     </Card.Body>                    
                     <Card.Footer className="text-muted"> publicado hace una semana</Card.Footer>
                 </Card>
                 <hr></hr>
                 <Card className="text-center">
                     <Card.Header>Organizado por: Parceros MTB Chía</Card.Header>
-                    <Card.Body>
+                    <Card.Body style={{ backgroundColor: '#DAA520' }} >
                         <Card.Title>Evento rodada MTB</Card.Title>
                         <Image src={event3} width={600}></Image>
                         <Card.Text>
                             With supporting text below as a natural lead-in to additional content.
                             With supporting text below as a natural lead-in to additional content.
                         </Card.Text>
-                        <Button variant="warning">participar</Button>
+                        <Button variant="primary">participar</Button>
                     </Card.Body>
                     <Card.Footer className="text-muted">Publicado hace un mes</Card.Footer>
                 </Card>

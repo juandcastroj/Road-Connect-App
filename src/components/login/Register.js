@@ -5,6 +5,8 @@ import { useDispatch } from 'react-redux';
 import { registroEmailPasswordNombre } from '../../actions/actionRegister';
 import useForm from '../../hooks/useForm';
 import { fileUpload } from '../../helpers/fileUpload';
+import Footer from '../Footer';
+import Naveg from '../Naveg';
 
 
 export const Register = () => {
@@ -20,7 +22,7 @@ export const Register = () => {
         imagen:'',
         
     });
-    const { nombre, apellido, telefono, email, password, imagen} = formValues;
+    const { nombre, apellido, email, password, imagen} = formValues;
 
     const handleRegistro = (e) => {
         e.preventDefault();
@@ -40,6 +42,7 @@ export const Register = () => {
     }
     return (
         <div>
+            <Naveg/>
             <DivAuth onSubmit={handleRegistro}>
             <Header>
                 <h2 style={{color: 'yellow'}} >Registra tu usuario</h2>
@@ -58,7 +61,7 @@ export const Register = () => {
                             onChange={handleInputChange}
                         />
                     </Label>
-                    <Label htmlFor="inputEmail">
+                     <Label htmlFor="inputEmail">
                         Apellido
                         <Input
                             type="text"
@@ -70,18 +73,6 @@ export const Register = () => {
                         onChange={handleInputChange}
                         />
                     </Label>
-                    <Label htmlFor="inputEmail">
-                        Teléfono
-                        <Input
-                            type="text"
-                            name="telefono"
-                            id="inputPhone"
-                            placeholder="Ingrese su numero de teléfono"
-                            required
-                            value={telefono}
-                            onChange={handleInputChange}
-                        />
-                        </Label>
                     <Label htmlFor="inputEmail">
                         Correo electrónico
                         <Input
@@ -122,6 +113,7 @@ export const Register = () => {
                 <br></br>
                 <br></br>
             </DivAuth>
+            <Footer/>
         </div>
     )
 }
