@@ -11,7 +11,7 @@ import Register from '../components/login/Register'
 import MyRoutes from '../components/MyRoutes'
 import Profile from '../components/Profile'
 import RoutesHome from '../components/RoutesHome'
-
+import LocationRoute from '../components/LocationRoute'
 const AppRouter = () => {
   return (
     <div>
@@ -27,7 +27,11 @@ const AppRouter = () => {
                 <Route  path='/events'  element={<Events/>} />
                 <Route  path='/location'  element={<Location/>} />
                 <Route  path='/profile'  element={<Profile/>} />
-                <Route  path='/addRoute'  element={<AddRoute/>} />             
+                <Route  path='/addRoute'  element={<AddRoute/>} />  
+                <Route  path='/locationRoute'  element={<LocationRoute/>} />  
+
+               
+
             </Routes>
         </BrowserRouter>
     </div>
