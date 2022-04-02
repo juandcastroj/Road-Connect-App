@@ -1,10 +1,4 @@
 import React from "react";
-import {
-  useJsApiLoader,
-  GoogleMap,
-  Marker,
-  DirectionsRenderer,
-} from "@react-google-maps/api";
 import '../styles/style.css'
 import { Button } from 'react-bootstrap';
 import { ContFirst, ContHomeRoad, LogoStyle } from "../styles/styles";
@@ -14,6 +8,12 @@ import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import Footer from "./Footer";
 import logo from "../images/cicla.png";
+import {
+  useJsApiLoader,
+  GoogleMap,
+  Marker,
+  DirectionsRenderer,
+} from "@react-google-maps/api";
 
 const location1 = { lat: 4.7001320, lng: -74.1281660 }
 const location2 = { lat: 4.735311, lng: -74.101978 }
@@ -31,8 +31,8 @@ function Location() {
     libraries: ['places'],
   })
 
-  const [map, setMap] = useState(/** @type google.maps.Map */(null))
-  const [directionsResponse, setDirectionsResponse] = useState(null)
+  const [setMap] = useState(/** @type google.maps.Map */(null))
+  const [directionsResponse] = useState(null)
 
   if (!isLoaded) {
     return (
@@ -45,6 +45,7 @@ function Location() {
   const contact = () => {
     navigate('/profile')
   }
+  
 
   return (
     <div>
@@ -82,18 +83,8 @@ function Location() {
               )}
             </GoogleMap>
           </Box>
-          {/* <Box
-        p={4}
-        borderRadius='lg'
-        m={4}
-        bgColor='white'
-        shadow='base'
-        minW='container.md'
-        zIndex='1'
-      >
-      </Box> */}
         </Flex>
-        <Button variant='warning' href='/' style={{ padding: '0.8rem' }} >Compartir</Button>
+        <Button variant='warning' href='/' style={{ padding: '0.8rem' }} >Compartir mi Ubicación</Button>
       </ContHomeRoad>
       <Footer />
     </div>

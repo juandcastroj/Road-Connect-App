@@ -47,7 +47,7 @@ const DetailRoute = () => {
                                 Desnivel: <h5>{ruta.Desnivel}</h5>
                                 Tiempo promedio: <h5>{ruta.Tiempo}</h5>
                                 Dificultad: <h5>{ruta.Dificultad}</h5>
-                                <Button variant='warning' href='/location' style={{ padding: '1rem' }} >Empezar</Button>
+                                <Button variant='warning' href='/Location' style={{ padding: '1rem' }} >Empezar</Button>
                             </div>
                         </DetailContainer>
                     </div>
