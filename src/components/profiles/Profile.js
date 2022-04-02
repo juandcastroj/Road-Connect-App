@@ -1,9 +1,10 @@
 import React from 'react'
-import { ContHomeRoad } from '../styles/styles'
-import Naveg from './Naveg'
-import Footer from './Footer'
-import profile from '../images/team2.jpg'
+
 import { Button, Card } from 'react-bootstrap'
+import { ContHomeRoad } from '../../styles/styles'
+import Footer from '../Footer'
+import Naveg from '../Naveg'
+import profile from '../../images/team2.jpg'
 
 const Profile = () => {
 
