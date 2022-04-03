@@ -21,7 +21,8 @@ const Profile2 = () => {
       <Naveg />
       <ContHomeRoad>
         <Card className="text-center" width="40%">
-          <Card.Header>MI PERFIL</Card.Header>
+<Card.Header>MI PERFIL</Card.Header>
+
           <CardProfile>
             <hr></hr>
             <img src={profile2} width="50%" alt="epa"></img>
