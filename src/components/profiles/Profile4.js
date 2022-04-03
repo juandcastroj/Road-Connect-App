@@ -21,7 +21,7 @@ const Profile4 = () => {
             <img src={profile} width="4%" alt="epa"></img>
             <h2>OSCAR HERNANDEZ</h2>
             <Birthday src={birthday} width="3%" alt="epa"></Birthday>
-            <h4   style={{display: 'inline-block'}}>Fecha de Nacimiento</h4>
+            <h4   style={{display: 'inline-block' ,margin:'5px'}}>Fecha de Nacimiento</h4>
             <p>13 Abril 2022</p>
             <p>Amo esta app porque puedo encontrar personas cerca y <br></br> conocer gente
                 estupenda llena de vida y alegria donde demuestran su disciplina

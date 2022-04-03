@@ -229,13 +229,10 @@ export const RoutCont = styled(Button)`
  
 `
 export const Birthday = styled.img`
-display: inline-block
+display: inline-block;
 
 `
 export const CardProfile = styled.div`
- 
   box-shadow: 0px 0px 20px 20px;
   -webkit-box-shadow: 0px 0px 10px 10px #0030b7;
 `
-
-

@@ -26,7 +26,7 @@ const Profile5 = () => {
             <img src={profile} width="4%" alt="epa"></img>
             <h2>FELIPE CASTRO</h2>
             <Birthday src={birthday} width="3%" alt="epa"></Birthday>
-            <h4 style={{ display: "inline-block" }}>Fecha de Nacimiento</h4>
+            <h4 style={{ display: "inline-block"  ,margin:'5px'}}>Fecha de Nacimiento</h4>
             <p>10 Noviembre 2022</p>
             <p>
               Ciclista de 28 años, me interesa salir con personas que mas que dar pedal; disfruten{" "}

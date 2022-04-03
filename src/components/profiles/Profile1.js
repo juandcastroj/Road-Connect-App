@@ -20,7 +20,7 @@ const Profile1 = () => {
             <img src={profile} width="4%" alt="epa"></img>
             <h2>ANNI BURGOS</h2>
             <Birthday src={birthday} width="3%" alt="epa"></Birthday>
-            <h4   style={{display: 'inline-block'}}>Fecha de Nacimiento</h4>
+            <h4   style={{display: 'inline-block' ,margin:'5px'}}>Fecha de Nacimiento</h4>
             <p>27 Enero 2022</p>
             <p>
             Hola mundo me encanta pedalear por carretera y competir. Pero en esas

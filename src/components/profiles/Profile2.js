@@ -26,7 +26,7 @@ const Profile2 = () => {
             <img src={profile} width="4%" alt="epa"></img>
             <h2>ANDREA MORENO</h2>
             <Birthday src={birthday} width="3%" alt="epa"></Birthday>
-            <h4 style={{ display: "inline-block" }}>Fecha de Nacimiento</h4>
+            <h4 style={{ display: "inline-block" ,margin:'5px' }}>Fecha de Nacimiento</h4>
             <p>27 Enero 2022</p>
             <p>
               Hijo de padres aficionados del ciclismo. Por tanto, esa pasión por

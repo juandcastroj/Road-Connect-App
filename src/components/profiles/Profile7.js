@@ -26,7 +26,7 @@ const Profile7 = () => {
             <img src={profile} width="4%" alt="epa"></img>
             <h2 >FERNANDO MONTES</h2>
             <Birthday src={birthday}  width="3%" alt="epa"></Birthday>
-            <h4  style={{display: 'inline-block'}} >Fecha de Nacimiento</h4>
+            <h4  style={{display: 'inline-block' ,margin:'5px'}} >Fecha de Nacimiento</h4>
             <p>25 Agosto 2022</p>
             <p>
               Soy una persona apasionada por las ciclas por los paisajes y por
@@ -36,8 +36,6 @@ const Profile7 = () => {
             <Rout variant="warning"> Rutas Realizadas</Rout>
             <Nav.Link href="/routes/11">Bogotá Tabio Bogotá</Nav.Link>
             <Nav.Link href="/routes/9">Bogota Bojaca Bogota</Nav.Link>
-
-           
             <hr></hr>
             <RoutCont variant="warning">Contactar</RoutCont>
           </CardProfile>
