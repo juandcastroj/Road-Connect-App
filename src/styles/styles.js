@@ -217,15 +217,20 @@ export const BtnHomeStyle = styled(Button)`
 ///porfile///7
 export const Rout = styled(Button)`
 margin:5px;
+font-weight: 500;
+background-color: white;
 &:hover {
     background-color: white;
-    font-weight: 600;
   }
 `
 
 export const RoutCont = styled(Button)`
-  padding: 1rem;
-  
+  padding: 0.8rem;
+  font-weight: 500;
+  &:hover {
+    font-weight: 700;
+  }
+
  
 `
 export const Birthday = styled.img`
@@ -234,5 +239,14 @@ display: inline-block;
 `
 export const CardProfile = styled.div`
   box-shadow: 0px 0px 20px 20px;
+  -webkit-box-shadow: 0px 0px 10px 10px #0030b7;
+`
+
+export const CardHeader = styled.div`
+padding:1.4rem;
+font-weight: 800;
+font-size:large;
+background-color:  #f4d03f;
+box-shadow: 0px 0px 20px 20px;
   -webkit-box-shadow: 0px 0px 10px 10px #0030b7;
 `

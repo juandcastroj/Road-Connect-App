@@ -5,6 +5,7 @@ import {
   CardProfile,
   ContHomeRoad,
   Rout,
+  CardHeader,
   RoutCont,
 } from "../../styles/styles";
 import Footer from "../Footer";
@@ -12,6 +13,7 @@ import Naveg from "../Naveg";
 import profile2 from "../../images/Profile2.jpg";
 import profile from "../../images/futurama-leela.png";
 import birthday from "../../images/icons8-fecha-de-nacimiento-50.png";
+import medalla from '../../images/ciclismo.png'
 
 const Profile2 = () => {
   return (
@@ -19,28 +21,43 @@ const Profile2 = () => {
       <Naveg />
       <ContHomeRoad>
         <Card className="text-center" width="40%">
-          <Card.Header>Mi Perfil</Card.Header>
+          <CardHeader>Mi Perfil</CardHeader>
           <CardProfile>
+            <hr></hr>
             <img src={profile2} width="50%" alt="epa"></img>
-            <hr></hr>
+
+            <br></br>
             <img src={profile} width="4%" alt="epa"></img>
-            <h2>ANDREA MORENO</h2>
+            <h2>MONICA MONTES</h2>
             <Birthday src={birthday} width="3%" alt="epa"></Birthday>
-            <h4 style={{ display: "inline-block" ,margin:'5px' }}>Fecha de Nacimiento</h4>
-            <p>27 Enero 2022</p>
+            <h4 style={{ display: "inline-block", margin: "5px" }}>
+              Fecha de Nacimiento
+            </h4>
+            <p>04 Marzo 2022</p>
             <p>
-              Hijo de padres aficionados del ciclismo. Por tanto, esa pasión por
-              las montañas <br></br>y el deporte me fue transmitido desde bien
-              pequeño, y ahora recorro cada lugar por donde ellos cruzarón.
+              Soy de Bogotá y recorro sus alrededores cada dia <br></br>
+              exigiendome mas y conociendo lugares y personas increibles.
             </p>
+
             <Rout variant="warning"> Rutas Realizadas</Rout>
-            <Nav.Link href="/routes/3">Patios Sopo Bogotá</Nav.Link>
-            <Nav.Link href="/routes/14">Bogotá Embalse San Rafael Bogotá</Nav.Link>
-            <Nav.Link href="/routes/5">Bogotá Tenjo Bogotá</Nav.Link>
+            <img style={{ margin:'3px' }} src={medalla} width="3.5%" alt="epa"></img>
+            <strong>
+              <Nav.Link  style={{color:'black'}} href="/routes/3">Patios Sopo Bogotá</Nav.Link>
+            </strong>
+            <strong>
+              <Nav.Link  style={{color:'black'}} href="/routes/14">
+                Bogotá Embalse San Rafael Bogotá
+              </Nav.Link>
+            </strong>
+            <strong>
+            
+              <Nav.Link style={{color:'black'}} href="/routes/5">Bogotá Tenjo Bogotá</Nav.Link>
+            </strong>
+            <br></br>
+            <RoutCont  variant="warning">Contactar</RoutCont>
             <hr></hr>
-            <RoutCont variant="warning">Contactar</RoutCont>
           </CardProfile>
-          <Card.Footer className="text-muted">MTB y Ruta</Card.Footer>
+          <CardHeader className="text-muted">MTB y Ruta</CardHeader>
         </Card>
       </ContHomeRoad>
       <Footer />

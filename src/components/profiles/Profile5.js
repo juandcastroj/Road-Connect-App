@@ -4,6 +4,7 @@ import {
   Birthday,
   CardProfile,
   ContHomeRoad,
+  CardHeader,
   Rout,
   RoutCont,
 } from "../../styles/styles";
@@ -12,6 +13,7 @@ import Naveg from "../Naveg";
 import profile5 from "../../images/Profile5.jpg";
 import profile from "../../images/futurama-fry-.png";
 import birthday from "../../images/icons8-fecha-de-nacimiento-50.png";
+import medalla from '../../images/ciclismo.png'
 
 const Profile5 = () => {
   return (
@@ -19,10 +21,11 @@ const Profile5 = () => {
       <Naveg />
       <ContHomeRoad>
         <Card className="text-center" width="40%">
-          <Card.Header>Mi Perfil</Card.Header>
+          <CardHeader>MI PERFIL</CardHeader>
           <CardProfile>
+          <hr></hr>
             <img src={profile5} width="50%" alt="epa"></img>
-            <hr></hr>
+            <br></br>
             <img src={profile} width="4%" alt="epa"></img>
             <h2>FELIPE CASTRO</h2>
             <Birthday src={birthday} width="3%" alt="epa"></Birthday>
@@ -34,14 +37,16 @@ const Profile5 = () => {
               lejos cada vez.
             </p>
             <Rout variant="warning"> Rutas Realizadas</Rout>
-            <Nav.Link href="/routes/13">Bogotá La Capilla Bogotá</Nav.Link>
-            <Nav.Link href="/routes/4">Bogotá Tenjo Bogotá</Nav.Link>
-            <Nav.Link href="/routes/1">Bogotá Altos de Patio</Nav.Link>
-            <Nav.Link href="/routes/2">Patios Sopó Bogotá</Nav.Link>
-            <hr></hr>
+            <img style={{ margin:'3px' }} src={medalla} width="3.5%" alt="epa"></img>
+            <strong><Nav.Link style={{color:'black'}} href="/routes/13">Bogotá La Capilla Bogotá</Nav.Link></strong>
+            <strong><Nav.Link style={{color:'black'}} href="/routes/4">Bogotá Tenjo Bogotá</Nav.Link></strong>
+            <strong><Nav.Link style={{color:'black'}} href="/routes/1">Bogotá Altos de Patio</Nav.Link></strong>
+            <strong><Nav.Link style={{color:'black'}} href="/routes/2">Patios Sopó Bogotá</Nav.Link></strong>
+            <br></br>
             <RoutCont variant="warning">Contactar</RoutCont>
+            <hr></hr>
           </CardProfile>
-          <Card.Footer className="text-muted">MTB y Ruta</Card.Footer>
+          <CardHeader className="text-muted">MTB y Ruta</CardHeader>
         </Card>
       </ContHomeRoad>
       <Footer />
