@@ -25,6 +25,7 @@ export const ContHomeRoad = styled.div`
   background-position: center;
   text-align: center;
   padding: 2% 10%;
+
 `;
 
 //RoadsHome style
@@ -212,3 +213,29 @@ export const DetailContainer = styled.div`
 export const BtnHomeStyle = styled(Button)`
   padding: 1.4rem;
 `
+
+///porfile///7
+export const Rout = styled(Button)`
+margin:5px;
+&:hover {
+    background-color: white;
+    font-weight: 600;
+  }
+`
+
+export const RoutCont = styled(Button)`
+  padding: 1rem;
+  
+ 
+`
+export const Birthday = styled.img`
+display: inline-block
+
+`
+export const CardProfile = styled.div`
+ 
+  box-shadow: 0px 0px 20px 20px;
+  -webkit-box-shadow: 0px 0px 10px 10px #0030b7;
+`
+
+
