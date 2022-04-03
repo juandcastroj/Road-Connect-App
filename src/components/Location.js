@@ -31,8 +31,8 @@ function Location() {
     libraries: ['places'],
   })
 
-  const [setMap] = useState(/** @type google.maps.Map */(null))
-  const [directionsResponse] = useState(null)
+  const [map, setMap] = useState(/** @type google.maps.Map */(null))
+  const [directionsResponse, setDirectionsResponse] = useState(null)
 
   if (!isLoaded) {
     return (
@@ -83,8 +83,18 @@ function Location() {
               )}
             </GoogleMap>
           </Box>
+          {/* <Box
+        p={4}
+        borderRadius='lg'
+        m={4}
+        bgColor='white'
+        shadow='base'
+        minW='container.md'
+        zIndex='1'
+      >
+      </Box> */}
         </Flex>
-        <Button variant='warning' href='/' style={{ padding: '0.8rem' }} >Compartir mi Ubicación</Button>
+        <Button variant='warning' href='/' style={{ padding: '0.8rem' }} >Compartir</Button>
       </ContHomeRoad>
       <Footer />
     </div>

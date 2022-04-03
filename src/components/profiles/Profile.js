@@ -22,7 +22,7 @@ const Profile = () => {
                             With supporting text below as a natural lead-in to additional content.
                             With supporting text below as a natural lead-in to additional content.
                         </Card.Text>
-                        <Button variant="warning">Go somewhere</Button>
+                        <Button variant="warning" href='/chat'  >Enviarle un mensaje</Button>
                     </Card.Body>
                     <Card.Footer className="text-muted">MTB y Ruta</Card.Footer>
                 </Card>

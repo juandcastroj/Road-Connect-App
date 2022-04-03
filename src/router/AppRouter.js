@@ -18,6 +18,7 @@ import { ContFirst, LogoStyle } from '../styles/styles'
 import { PrivateRoute } from './PrivateRouter'
 import { PublicRoute } from './PublicRoute'
 import logo from "../images/cicla.png"
+import Chat from '../components/Chat'
 
 const AppRouter = () => {
 
@@ -88,6 +89,7 @@ const AppRouter = () => {
           <Route path='/routes' element={<RoutesHome />} />
           <Route path='/routes/:id' element={<DetailRoute />} />
           <Route path='/events' element={<Events />} />
+          <Route path='/chat' element={<Chat/>} />
           <Route path='/location' element={<Location />} />
         </Routes>
       </BrowserRouter>
