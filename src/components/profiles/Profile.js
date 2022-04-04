@@ -5,8 +5,7 @@ import {
   CardHeader,
   CardProfile,
   ContHomeRoad,
-  Rout,
-  RoutCont,
+  Rout
 } from "../../styles/styles";
 import Footer from "../Footer";
 import Naveg from "../Naveg";
@@ -14,6 +13,7 @@ import profile8 from "../../images/Profile8.jpg";
 import profile from "../../images/futurama-leela.png";
 import birthday from "../../images/icons8-fecha-de-nacimiento-50.png";
 import medalla from '../../images/ciclismo.png'
+
 const Profile8 = () => {
   return (
     <div>
@@ -67,30 +67,7 @@ const Profile8 = () => {
   );
 };
 
-<<<<<<< HEAD
-        <div>
-            <Naveg />
-            <ContHomeRoad>
-                <Card className="text-center" width='40%' >
-                    <Card.Header>Mi Perfil</Card.Header>
-                    <Card.Body>
-                    <img src={profile} width='40%' alt='epa' ></img>
-                        <Card.Title>JHON GONZALES</Card.Title>
-                        <Card.Text>
-                            With supporting text below as a natural lead-in to additional content.
-                            With supporting text below as a natural lead-in to additional content.
-                        </Card.Text>
-                        <Button variant="warning" href='/chat'  >Enviarle un mensaje</Button>
-                    </Card.Body>
-                    <Card.Footer className="text-muted">MTB y Ruta</Card.Footer>
-                </Card>
-            </ContHomeRoad>
-            <Footer />
-        </div>
-    )
-}
 
-export default Profile
-=======
 export default Profile8;
->>>>>>> master
+
+

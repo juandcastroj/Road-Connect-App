@@ -17,9 +17,6 @@ import { ContFirst, LogoStyle } from '../styles/styles'
 import { PrivateRoute } from './PrivateRouter'
 import { PublicRoute } from './PublicRoute'
 import logo from "../images/cicla.png"
-<<<<<<< HEAD
-import Chat from '../components/Chat'
-=======
 import Profile1 from '../components/profiles/Profile1'
 import Profile2 from '../components/profiles/Profile2'
 import Profile3 from '../components/profiles/Profile3'
@@ -32,8 +29,6 @@ import InitialLocation from '../components/InitialLocation'
 import CreateRoute from '../components/CreateRoute'
 import ChatState from '../components/ChatState'
 
->>>>>>> master
-
 const AppRouter = () => {
 
   const dispatch = useDispatch();
@@ -45,7 +40,6 @@ const AppRouter = () => {
     const auth = getAuth();
     onAuthStateChanged(auth, (user) => {
       if (user?.uid) {
-        // console.log(user)
         dispatch(loginEmailPassword(user.uid, user.displayName));
         setIsLoggedIn(true);
       } else {
@@ -133,13 +127,11 @@ const AppRouter = () => {
             </PrivateRoute>}
           />
         
-
           <Route path='/' element={<LoadPage />} />
           <Route path='/home' element={<Home />} />
           <Route path='/routes' element={<RoutesHome />} />
           <Route path='/routes/:id' element={<DetailRoute />} />
           <Route path='/events' element={<Events />} />
-          <Route path='/chat' element={<Chat/>} />
           <Route path='/location' element={<Location />} />
           <Route path='/initallocation' element={<InitialLocation />} />
           <Route path='/createroute' element={<CreateRoute />} />
