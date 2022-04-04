@@ -38,7 +38,6 @@ const Profile2 = () => {
               Soy de Bogotá y recorro sus alrededores cada dia <br></br>
               exigiendome mas y conociendo lugares y personas increibles.
             </p>
-
             <Rout variant="warning"> Rutas Realizadas</Rout>
             <img style={{ margin:'3px' }} src={medalla} width="3.5%" alt="epa"></img>
             <strong>
