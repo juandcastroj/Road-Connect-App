@@ -1,6 +1,5 @@
 import React from "react";
 import '../styles/style.css'
-import { Button } from 'react-bootstrap';
 import { ContFirst, ContHomeRoad, LogoStyle } from "../styles/styles";
 import Naveg from "./Naveg";
 import { Box, Flex } from "@chakra-ui/react";
@@ -15,7 +14,6 @@ import {
   DirectionsRenderer,
 } from "@react-google-maps/api";
 
-
 const location  = { lat: 4.7103871, lng: -74.127597 }
 const location1 = { lat: 4.7001320, lng: -74.1281660 }
 const location2 = { lat: 4.7273116, lng: -74.101978 }
@@ -24,8 +22,6 @@ const location4 = { lat: 4.7139287, lng: -74.115346 }
 const location5 = { lat: 4.7002320, lng: -74.106597 }
 const location6 = { lat: 4.7003321, lng: -74.129984 }
 const location7 = { lat: 4.7232315, lng: -74.117597 }
-
-
 
 
 function Location() {
@@ -106,8 +102,6 @@ function Location() {
               <Marker onClick={contact7} position={location7} />
               <Marker onClick={contact} position={location} />
             
-       
-
               {directionsResponse && (
                 <DirectionsRenderer directions={directionsResponse} />
               )}
@@ -124,7 +118,10 @@ function Location() {
       >
       </Box> */}
         </Flex>
+<<<<<<< HEAD
         <Button variant='warning' href='/' style={{ padding: '0.8rem' }} >Compartir</Button>
+=======
+>>>>>>> master
       </ContHomeRoad>
       <Footer />
     </div>
