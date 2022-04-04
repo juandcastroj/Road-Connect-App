@@ -20,7 +20,6 @@ const Profile8 = () => {
       <Naveg />
       <ContHomeRoad>
         <Card className="text-center" width="40%">
-          <CardHeader>MI PERFIL</CardHeader>
           <CardProfile>
             <hr></hr>
             <img src={profile8} width="50%" alt="epa"></img>
@@ -37,30 +36,28 @@ const Profile8 = () => {
               las montañas <br></br>y el deporte me fue transmitido desde bien
               pequeño, y ahora recorro cada lugar por donde ellos cruzarón.
             </p>
-            <Rout variant="warning"> Rutas Realizadas</Rout>
-          
-            <img style={{ margin:'3px' }} src={medalla} width="3.5%" alt="epa"></img>
-            
-            <strong>
-              <Nav.Link style={{ color: "black" }} href="/routes/1">
-                Bogota Alto de Patios
-              </Nav.Link>
-           
-            </strong>
-            <strong>
-              <Nav.Link style={{ color: "black" }} href="/routes/0">
-                Bogota La Vega Bogota
-              </Nav.Link>
-            </strong>
-            <strong>
-              <Nav.Link style={{ color: "black" }} href="/routes/4">
-                {" "}
-                Bogota Embalse Sumapaz Bogota
-              </Nav.Link>
-            </strong>
-            <br></br>
-            <RoutCont variant="warning">Contactar</RoutCont>
-            <hr></hr>
+            <Rout variant="warning"> Rutas Realizadas
+
+              <img style={{ margin: '3px' }} src={medalla} width="3.5%" alt="epa"></img>
+
+              <strong>
+                <Nav.Link style={{ color: "black" }} href="/routes/1">
+                  Bogota Alto de Patios
+                </Nav.Link>
+
+              </strong>
+              <strong>
+                <Nav.Link style={{ color: "black" }} href="/routes/0">
+                  Bogota La Vega Bogota
+                </Nav.Link>
+              </strong>
+              <strong>
+                <Nav.Link style={{ color: "black" }} href="/routes/4">
+                  {" "}
+                  Bogota Embalse Sumapaz Bogota
+                </Nav.Link>
+              </strong>
+            </Rout>
           </CardProfile>
           <CardHeader className="text-muted">MTB y Ruta</CardHeader>
         </Card>

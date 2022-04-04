@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
-import { ContFirst, ContHomeRoad, DetailContainer, LogoStyle } from '../styles/styles'
+import { BtnHomeStyle, ContFirst, ContHomeRoad, DetailContainer, LogoStyle } from '../styles/styles'
 import Naveg from './Naveg'
 import logo from "../images/cicla.png";
 import Footer from './Footer';
@@ -47,7 +47,7 @@ const DetailRoute = () => {
                                 Desnivel: <h5>{ruta.Desnivel}</h5>
                                 Tiempo promedio: <h5>{ruta.Tiempo}</h5>
                                 Dificultad: <h5>{ruta.Dificultad}</h5>
-                                <Button variant='warning' href='/Location' style={{ padding: '1rem' }} >Empezar</Button>
+                                <BtnHomeStyle variant='warning' href='/createroute' style={{ padding: '1rem' }} >Empezar</BtnHomeStyle>
                             </div>
                         </DetailContainer>
                     </div>

@@ -1,7 +1,7 @@
 import React from "react";
 import "../styles/style.css";
 import { Button } from "react-bootstrap";
-import { ContFirst, ContHomeRoad, LogoStyle } from "../styles/styles";
+import { BtnHomeStyle, ContFirst, ContHomeRoad, LogoStyle } from "../styles/styles";
 import Naveg from "./Naveg";
 import { Box, Flex } from "@chakra-ui/react";
 import { useNavigate } from "react-router-dom";
@@ -43,6 +43,15 @@ function Location() {
     <div>
       <Naveg />
       <ContHomeRoad>
+      <BtnHomeStyle
+          variant="warning"
+          href="/Location"
+          style={{ padding: "0.8rem"}}
+        >
+          Encontrar ciclistas cercanos
+        </BtnHomeStyle>
+        <br></br>
+        <br></br>
         <Flex
           position="relative"
           flexDirection="column"
@@ -72,13 +81,7 @@ function Location() {
             </GoogleMap>
           </Box>
         </Flex>
-        <Button
-          variant="warning"
-          href="/Location"
-          style={{ padding: "0.8rem"}}
-        >
-          Compartir mi Ubicación
-        </Button>
+       
       </ContHomeRoad>
       <Footer />
     </div>

@@ -30,7 +30,7 @@ const Naveg = () => {
                         <Nav.Link style={{fontWeight:'800', margin:'6px'}} href="/events">Eventos</Nav.Link>                                          
                     </Nav>
                     <Nav.Link href="/login" > <h5 style={{fontWeight:'900', margin:'6px'}}>Login</h5>  </Nav.Link>
-                    <Nav.Link href="/login" > <h5 style={{fontWeight:'900', margin:'6px',color:'red'}}  onClick={()=> {handleLogout()}} >Logout</h5>  </Nav.Link>
+                    <Nav.Link href="/login" > <h5 style={{fontWeight:'900', margin:'6px'}}  onClick={()=> {handleLogout()}} >Logout</h5>  </Nav.Link>
                 </Container>
             </Navbar>
         </div>

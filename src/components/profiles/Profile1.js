@@ -20,7 +20,6 @@ const Profile1 = () => {
       <Naveg />
       <ContHomeRoad>
         <Card className="text-center" width="40%">
-          <CardHeader>MI PERFIL</CardHeader>
           <CardProfile>
             <hr></hr>
             <img src={profile1} width="50%" alt="epa"></img>
@@ -39,7 +38,7 @@ const Profile1 = () => {
               desafiar los trazados, también se vale compartir con la familia y
               con los amigos.
             </p>
-            <Rout variant="warning"> Rutas Realizadas</Rout>
+            <Rout variant="warning"> Rutas Realizadas
             <img style={{ margin:'3px' }} src={medalla} width="3.5%" alt="epa"></img>
             <strong>
               <Nav.Link  style={{color:'black'}} href="/routes/0">Patios Sopo Bogotá</Nav.Link>
@@ -61,8 +60,9 @@ const Profile1 = () => {
                 Bogota Embalse Sumapaz Bogota
               </Nav.Link>
             </strong>
+            </Rout>
             <br></br>
-            <RoutCont variant="warning">Contactar</RoutCont>
+            <RoutCont variant="warning"  href='/chat' >Contactar</RoutCont>
 
             <hr></hr>
           </CardProfile>

@@ -21,8 +21,6 @@ const Profile2 = () => {
       <Naveg />
       <ContHomeRoad>
         <Card className="text-center" width="40%">
-<Card.Header>MI PERFIL</Card.Header>
-
           <CardProfile>
             <hr></hr>
             <img src={profile2} width="50%" alt="epa"></img>
@@ -39,7 +37,7 @@ const Profile2 = () => {
               Soy de Bogotá y recorro sus alrededores cada dia <br></br>
               exigiendome mas y conociendo lugares y personas increibles.
             </p>
-            <Rout variant="warning"> Rutas Realizadas</Rout>
+            <Rout variant="warning"> Rutas Realizadas
             <img style={{ margin:'3px' }} src={medalla} width="3.5%" alt="epa"></img>
             <strong>
               <Nav.Link  style={{color:'black'}} href="/routes/3">Patios Sopo Bogotá</Nav.Link>
@@ -53,9 +51,11 @@ const Profile2 = () => {
             
               <Nav.Link style={{color:'black'}} href="/routes/5">Bogotá Tenjo Bogotá</Nav.Link>
             </strong>
+            </Rout>
             <br></br>
-            <RoutCont  variant="warning">Contactar</RoutCont>
+            <RoutCont  variant="warning" href='/chat' >Contactar</RoutCont>
             <hr></hr>
+           
           </CardProfile>
           <CardHeader className="text-muted">MTB y Ruta</CardHeader>
         </Card>

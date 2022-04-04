@@ -1,6 +1,6 @@
 import React from "react";
 import { Button, Card, Image } from "react-bootstrap";
-import { CardEvent, ContHomeRoad } from "../styles/styles";
+import { BtnHomeStyle, CardEvent, ContHomeRoad } from "../styles/styles";
 import Naveg from "./Naveg";
 import event1 from "../images/evento1.jpg";
 import event2 from "../images/event02.jpg";
@@ -10,10 +10,10 @@ import swal from "sweetalert";
 
 const Events = () => {
 
-    
   const mostrarAlerta = () => {
     swal(" Felicidades prontó el Organizador se pondra en contacto contigo!!!");
-  };
+  }
+
   return (
     <div>
       <Naveg />
@@ -33,16 +33,16 @@ const Events = () => {
               width={600}
             ></Image>
             <Card.Text>
-            <h2 style={{ margin: "25px" }}>
-              Villapinzón  Nacimiento del Río Bogotá
+              <h2 style={{ margin: "25px" }}>
+                Villapinzón  Nacimiento del Río Bogotá
               </h2>
               <p>Fecha de Salida 02 Mayo 2022</p>
               <strong><p>
-              Distancia: 18,88 km,
-      Desnivel positivo: 828 m,
-      Tiempo: 4 horas,
-      Dificultad: Avanzado
-      </p></strong>
+                Distancia: 18,88 km,
+                Desnivel positivo: 828 m,
+                Tiempo: 4 horas,
+                Dificultad: Avanzado
+              </p></strong>
               <p>
                 Todo el trayecto estarás acompañado por ciclomontañistas
                 experimentados quienes estarán atentos a los requerimientos de
@@ -61,16 +61,15 @@ const Events = () => {
               ></img>
               <br></br>
             </Card.Text>
-           
-            <Button onClick={() => mostrarAlerta()} variant="primary">Participar</Button>
+
+            <BtnHomeStyle onClick={() => mostrarAlerta()} variant="primary">Participar</BtnHomeStyle>
           </Card.Body>
           <CardEvent className="text-muted">
             {" "}
             Publicado hace una semana
           </CardEvent>
 
-
-        </Card>
+       </Card>
         <hr></hr>
         <Card className="text-center">
           <CardEvent>Organizado por: Escarabajos Bogotá</CardEvent>
@@ -92,11 +91,11 @@ const Events = () => {
               </h4>
               <p>Fecha de Salida 22 Abril 2022</p>
               <strong><p>
-              Distancia:190,62 km,
-      Desnivel positivo: 5.856 m,
-      Tiempo: 8 horas,
-      Dificultad: Experto
-      </p></strong>
+                Distancia:190,62 km,
+                Desnivel positivo: 5.856 m,
+                Tiempo: 8 horas,
+                Dificultad: Experto
+              </p></strong>
               <p>
                 Todo el trayecto estarás acompañado por ciclomontañistas
                 experimentados quienes estarán atentos a los requerimientos de
@@ -114,7 +113,7 @@ const Events = () => {
               ></img>
               <br></br>
             </Card.Text>
-            <Button onClick={() => mostrarAlerta()} variant="primary">Participar</Button>
+            <BtnHomeStyle onClick={() => mostrarAlerta()} variant="primary">Participar</BtnHomeStyle>
           </Card.Body>
           <CardEvent className="text-muted">
             {" "}
@@ -126,22 +125,22 @@ const Events = () => {
         <Card className="text-center">
           <CardEvent>Organizado por: Parceros MTB Chía</CardEvent>
           <Card.Body >
-          <Card.Title
+            <Card.Title
               style={{ margin: "20px", padding: "1rem", fontWeight: "900" }}
             >
-            EVENTO RODADA MTB</Card.Title>
+              EVENTO RODADA MTB</Card.Title>
             <Image style={{ webkitBoxShadow: "0px 0px 10px 10px #0030b7" }} src={event3} width={600}></Image>
             <Card.Text>
               <h2 style={{ margin: "25px" }}>
-              Tobia, Utica, Quebradanegra, Tobia,
+                Tobia, Utica, Quebradanegra, Tobia,
               </h2>
               <p>Fecha de Salida 02 Mayo 2022</p>
               <strong><p>
-              Distancia: 43,22 km,
-      Desnivel positivo: 1.813 m,
-      Tiempo: 4 horas,
-      Dificultad: Experto"
-      </p></strong>
+                Distancia: 43,22 km,
+                Desnivel positivo: 1.813 m,
+                Tiempo: 4 horas,
+                Dificultad: Experto"
+              </p></strong>
               <p>
                 Todo el trayecto estarás acompañado por ciclomontañistas
                 experimentados quienes estarán atentos a los requerimientos de
@@ -151,8 +150,8 @@ const Events = () => {
                 acordado en Bogotá hasta el sitio de inicio de la ruta y el
                 regreso.
               </p>
-               <br></br>
-               <img
+              <br></br>
+              <img
                 style={{ margin: "3px" }}
                 src="https://i.ibb.co/xHRw9MN/pngbyte-com-Vector-silueta-de-ciclista-de-monta-a-silueta-de-bicicleta-de-monta-a-Png-Pic-ciclista-B.png"
                 width="25%"
@@ -160,7 +159,7 @@ const Events = () => {
               ></img>
               <br></br>
             </Card.Text>
-            <Button onClick={() => mostrarAlerta()} variant="primary">Participar</Button>
+            <BtnHomeStyle onClick={() => mostrarAlerta()} variant="primary">Participar</BtnHomeStyle>
           </Card.Body>
           <CardEvent className="text-muted">
             {" "}

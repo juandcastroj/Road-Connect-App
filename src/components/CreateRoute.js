@@ -1,7 +1,7 @@
 
 import React from "react";
 import '../styles/style.css'
-import { ContHomeRoad } from "../styles/styles";
+import { BtnHomeStyle, ContHomeRoad } from "../styles/styles";
 import Naveg from "./Naveg";
 import {
   Box,
@@ -77,6 +77,15 @@ function CreateRoute() {
     <div>
       <Naveg />
       <ContHomeRoad>
+      <BtnHomeStyle
+          variant="warning"
+          href="/Location"
+          style={{ padding: "0.8rem"}}
+        >
+          Encontrar ciclistas cercanos
+        </BtnHomeStyle>
+        <br></br>
+        <br></br>
       <Flex
       position='relative'
       flexDirection='column'
