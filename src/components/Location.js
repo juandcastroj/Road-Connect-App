@@ -107,21 +107,7 @@ function Location() {
               )}
             </GoogleMap>
           </Box>
-          {/* <Box
-        p={4}
-        borderRadius='lg'
-        m={4}
-        bgColor='white'
-        shadow='base'
-        minW='container.md'
-        zIndex='1'
-      >
-      </Box> */}
         </Flex>
-<<<<<<< HEAD
-        <Button variant='warning' href='/' style={{ padding: '0.8rem' }} >Compartir</Button>
-=======
->>>>>>> master
       </ContHomeRoad>
       <Footer />
     </div>

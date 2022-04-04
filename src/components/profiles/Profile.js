@@ -13,7 +13,6 @@ import profile8 from "../../images/Profile8.jpg";
 import profile from "../../images/futurama-leela.png";
 import birthday from "../../images/icons8-fecha-de-nacimiento-50.png";
 import medalla from '../../images/ciclismo.png'
-
 const Profile8 = () => {
   return (
     <div>
@@ -66,7 +65,6 @@ const Profile8 = () => {
     </div>
   );
 };
-
 
 export default Profile8;
 
