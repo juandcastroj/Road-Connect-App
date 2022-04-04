@@ -38,6 +38,7 @@ const Profile8 = () => {
               pequeño, y ahora recorro cada lugar por donde ellos cruzarón.
             </p>
             <Rout variant="warning"> Rutas Realizadas</Rout>
+          
             <img style={{ margin:'3px' }} src={medalla} width="3.5%" alt="epa"></img>
             
             <strong>

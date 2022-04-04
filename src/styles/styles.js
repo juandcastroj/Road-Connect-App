@@ -206,22 +206,28 @@ export const Logos = styled.img`
 export const DetailContainer = styled.div`
   color: white;
   display: inline-block;
-`;
+`
+
 
 //Buttons home
 
 export const BtnHomeStyle = styled(Button)`
+font-style: small;
   padding: 1.4rem;
+  font-weight: 500;
+  &:hover {
+    font-weight: bold;
+  }
 `
 
+
 ///porfile///7
-export const Rout = styled(Button)`
-margin:5px;
+export const Rout = styled.p`
+margin:40px 270px 7px 270px;
 font-weight: 500;
-background-color: white;
-&:hover {
-    background-color: white;
-  }
+box-shadow: 0px 0px 20px 20px;
+-webkit-box-shadow: 0px 0px 10px 10px #0030b7;
+padding:5px;
 `
 
 export const RoutCont = styled(Button)`
@@ -230,18 +236,14 @@ export const RoutCont = styled(Button)`
   &:hover {
     font-weight: 700;
   }
-
- 
 `
 export const Birthday = styled.img`
 display: inline-block;
-
 `
 export const CardProfile = styled.div`
   box-shadow: 0px 0px 20px 20px;
   -webkit-box-shadow: 0px 0px 10px 10px #0030b7;
 `
-
 export const CardHeader = styled.div`
 padding:1.4rem;
 font-weight: 800;
@@ -250,3 +252,6 @@ background-color:  #f4d03f;
 box-shadow: 0px 0px 20px 20px;
   -webkit-box-shadow: 0px 0px 10px 10px #0030b7;
 `
+
+
+

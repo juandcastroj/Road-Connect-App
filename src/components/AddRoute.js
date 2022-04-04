@@ -57,7 +57,7 @@ const AddRoute = () => {
                 <Form onSubmit={handleSubmit} >
                     <Label>
                         Nombre
-                        <Input
+                        <Input 
                             type="text"
                             name="nombre"
                             value={nombre}

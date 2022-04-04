@@ -175,8 +175,10 @@ body {
 
 .profile{
     background-color: #ee5a6f;
+}
 
-
-
+/* ---- ----- ----- Navbar ----- ----- ----- */
+.me-auto{
+    color:blue
 
 }
