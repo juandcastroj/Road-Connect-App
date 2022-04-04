@@ -26,7 +26,7 @@ const Footer = () => {
           </ul>
         </li>
         <li className="nav__item nav__item--extra">
-          <h2 className="nav__title">Technologia</h2>
+          <h2 className="nav__title">Tecnologia</h2>
           <ul className="nav__ul nav__ul--extra">
             <li>
               <a href="#home">Digital Signage</a>

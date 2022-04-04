@@ -25,6 +25,8 @@
     "router-dom": "^2.2.9",
     "scss": "^0.2.4",
     "styled-components": "^5.3.3",
+    "sweetalert": "^2.1.2",
+    "sweetalert2": "^11.4.8",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
