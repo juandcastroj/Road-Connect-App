@@ -276,7 +276,7 @@ export const Carrera = styled.div`
   background-color: #fff;
   border-radius: 18px;
   -webkit-box-shadow: 7px 7px 7px 7px #0f0f0e;
-  min-height: 39vh;
+  min-height: 20vh;
   &:hover {
     background-color: #f4d03f;
   }
