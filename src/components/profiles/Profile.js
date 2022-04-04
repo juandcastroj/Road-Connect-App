@@ -5,8 +5,7 @@ import {
   CardHeader,
   CardProfile,
   ContHomeRoad,
-  Rout,
-  RoutCont,
+  Rout
 } from "../../styles/styles";
 import Footer from "../Footer";
 import Naveg from "../Naveg";
@@ -67,4 +66,7 @@ const Profile8 = () => {
   );
 };
 
+
 export default Profile8;
+
+
