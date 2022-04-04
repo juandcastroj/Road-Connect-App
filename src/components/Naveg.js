@@ -18,7 +18,9 @@ const Naveg = () => {
     return (
         <div>
             <Navbar bg="dark" variant="dark">
+
                 <Container>
+
                    <a  href='/home' ><img alt='logoNav' src={logoNav} style={{marginRight:'15px'}} width={70} /></a>
                     <Nav className="me-auto">
                         <Nav.Link style={{fontWeight:'900', margin:'6px'}} href="/profile">Mi Perfil</Nav.Link>
