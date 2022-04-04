@@ -13,7 +13,7 @@ const DetailRoute = () => {
 
     const getRoutes = async () => {
         setLoading(true)
-        const resp = await fetch(`https://project-demoday.herokuapp.com/Rutas/${id}`)
+        const resp = await fetch(`https://routesdata.herokuapp.com/coordenadas/${id}`)
         setRuta(await resp.json())
         setLoading(false)
     }

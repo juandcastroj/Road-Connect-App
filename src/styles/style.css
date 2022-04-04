@@ -173,12 +173,9 @@ body {
 }
 
 
-.profile{
-    background-color: #ee5a6f;
-}
 
-/* ---- ----- ----- Navbar ----- ----- ----- */
-.me-auto{
-    color:blue
-
+/* ---- ----- -----CARD----- ----- ----- */
+.card_route{
+    border-radius: 40px;
+    color:black
 }

@@ -75,7 +75,7 @@ function Location() {
         <Button
           variant="warning"
           href="/Location"
-          style={{ padding: "0.8rem" }}
+          style={{ padding: "0.8rem"}}
         >
           Compartir mi Ubicación
         </Button>
