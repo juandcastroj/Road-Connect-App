@@ -18,16 +18,19 @@ const Naveg = () => {
     return (
         <div>
             <Navbar bg="dark" variant="dark">
+
                 <Container>
-                   <a  href='/home' ><img alt='logoNav' src={logoNav} width={70} /></a>
+
+                   <a  href='/home' ><img alt='logoNav' src={logoNav} style={{marginRight:'15px'}} width={70} /></a>
                     <Nav className="me-auto">
-                        <Nav.Link href="/profile">Mi Perfil</Nav.Link>
-                        <Nav.Link href="/myRoutes">Mis Rutas</Nav.Link>
-                        <Nav.Link href="/routes">Rutas Sugeridas</Nav.Link>                        
-                        <Nav.Link href="/events">Eventos</Nav.Link>                                          
+                        <Nav.Link style={{fontWeight:'900', margin:'6px'}} href="/profile">Mi Perfil</Nav.Link>
+                        <Nav.Link style={{fontWeight:'800', margin:'6px'}} href="/createroute">Crear Ruta</Nav.Link>
+                        <Nav.Link style={{fontWeight:'800', margin:'6px'}} href="/myRoutes">Mis Rutas</Nav.Link>
+                        <Nav.Link style={{fontWeight:'800', margin:'6px'}} href="/routes">Rutas Sugeridas</Nav.Link>                        
+                        <Nav.Link style={{fontWeight:'800', margin:'6px'}} href="/events">Eventos</Nav.Link>                                          
                     </Nav>
-                    <Nav.Link href="/login" > <h5 >Login</h5>  </Nav.Link>
-                    <Nav.Link href="/login" > <h5 style={{color:'red'}} onClick={()=> {handleLogout()}} >Logout</h5>  </Nav.Link>
+                    <Nav.Link href="/login" > <h5 style={{fontWeight:'900', margin:'6px'}}>Login</h5>  </Nav.Link>
+                    <Nav.Link href="/login" > <h5 style={{fontWeight:'900', margin:'6px'}}  onClick={()=> {handleLogout()}} >Logout</h5>  </Nav.Link>
                 </Container>
             </Navbar>
         </div>

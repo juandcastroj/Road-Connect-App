@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { Button, Card, Col, Container, Nav, Navbar, Row } from 'react-bootstrap'
 import { useDispatch, useSelector } from 'react-redux'
 import { deleteAsync, listRouteAsync } from '../actions/actionRoutes'
-import { ContHomeRoad ,Logos} from '../styles/styles'
+import { ContHomeRoad ,Logos, Carrera} from '../styles/styles'
 import Naveg from './Naveg'
 import logo from "../images/cicla.png";
 import Footer from './Footer'
@@ -28,7 +28,7 @@ const MyRoutes = () => {
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="me-auto">   
-                            <Nav.Link href="/addRoute">Agregar Nueva ruta</Nav.Link>                         
+                            <Nav.Link  style={{fontWeight:'900', margin:'10px'}}  href="/addRoute">Agregar Nueva ruta</Nav.Link>                         
                         </Nav>
                     </Navbar.Collapse>
                 </Container>
@@ -37,7 +37,7 @@ const MyRoutes = () => {
                     <Row xs={1} md={3} className="g-4">
                         {routes.map((e, i) => (
                             <Col key={i} >
-                                <Card>
+                                <Carrera>
                                     <Card.Img variant="top" src={e.imagen}  style={{display:'inline-block'}} />
                                     <Card.Body style={{display:'inline-block'}} >
                                   
@@ -50,7 +50,7 @@ const MyRoutes = () => {
                                         <Button variant='outline-danger' onClick={() => dispatch(deleteAsync(e.nombre))} >Quitar</Button>
                                         <Button variant='warning' href='/location' >Empezar</Button>
                                     </Card.Body>
-                                </Card>
+                                </Carrera>
                             </Col>
                         ))}
                     </Row>

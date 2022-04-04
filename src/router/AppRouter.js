@@ -12,13 +12,27 @@ import Location from '../components/Location'
 import Login from '../components/login/Login'
 import Register from '../components/login/Register'
 import MyRoutes from '../components/MyRoutes'
-import Profile from '../components/profiles/Profile'
 import RoutesHome from '../components/RoutesHome'
 import { ContFirst, LogoStyle } from '../styles/styles'
 import { PrivateRoute } from './PrivateRouter'
 import { PublicRoute } from './PublicRoute'
 import logo from "../images/cicla.png"
+<<<<<<< HEAD
 import Chat from '../components/Chat'
+=======
+import Profile1 from '../components/profiles/Profile1'
+import Profile2 from '../components/profiles/Profile2'
+import Profile3 from '../components/profiles/Profile3'
+import Profile4 from '../components/profiles/Profile4'
+import Profile5 from '../components/profiles/Profile5'
+import Profile6 from '../components/profiles/Profile6'
+import Profile7 from '../components/profiles/Profile7'
+import Profile from '../components/profiles/Profile'
+import InitialLocation from '../components/InitialLocation'
+import CreateRoute from '../components/CreateRoute'
+import ChatState from '../components/ChatState'
+
+>>>>>>> master
 
 const AppRouter = () => {
 
@@ -77,12 +91,48 @@ const AppRouter = () => {
               <MyRoutes />
             </PrivateRoute>}
           />
-
-          <Route path="/profile" element={
+           <Route path="/profile" element={
             <PrivateRoute isAuthenticated={isLoggedIn}  >
               <Profile />
             </PrivateRoute>}
           />
+          <Route path="/profile1" element={
+            <PrivateRoute isAuthenticated={isLoggedIn}  >
+              <Profile1 />
+            </PrivateRoute>}
+          />
+             <Route path="/profile2" element={
+            <PrivateRoute isAuthenticated={isLoggedIn}  >
+              <Profile2 />
+            </PrivateRoute>}
+          />
+               <Route path="/profile3" element={
+            <PrivateRoute isAuthenticated={isLoggedIn}  >
+              <Profile3 />
+            </PrivateRoute>}
+          />
+
+               <Route path="/profile4" element={
+            <PrivateRoute isAuthenticated={isLoggedIn}  >
+              <Profile4 />
+            </PrivateRoute>}
+          />
+               <Route path="/profile5" element={
+            <PrivateRoute isAuthenticated={isLoggedIn}  >
+              <Profile5/>
+            </PrivateRoute>}
+          />
+               <Route path="/profile6" element={
+            <PrivateRoute isAuthenticated={isLoggedIn}  >
+              <Profile6 />
+            </PrivateRoute>}
+          />
+               <Route path="/profile7" element={
+            <PrivateRoute isAuthenticated={isLoggedIn}  >
+              <Profile7 />
+            </PrivateRoute>}
+          />
+        
 
           <Route path='/' element={<LoadPage />} />
           <Route path='/home' element={<Home />} />
@@ -91,6 +141,9 @@ const AppRouter = () => {
           <Route path='/events' element={<Events />} />
           <Route path='/chat' element={<Chat/>} />
           <Route path='/location' element={<Location />} />
+          <Route path='/initallocation' element={<InitialLocation />} />
+          <Route path='/createroute' element={<CreateRoute />} />
+          <Route path='/chat' element={<ChatState/>} />
         </Routes>
       </BrowserRouter>
     </div>
