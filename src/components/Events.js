@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, Card, Image } from "react-bootstrap";
+import { Card, Image } from "react-bootstrap";
 import { BtnHomeStyle, CardEvent, ContHomeRoad } from "../styles/styles";
 import Naveg from "./Naveg";
 import event1 from "../images/evento1.jpg";
