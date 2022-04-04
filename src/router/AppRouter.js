@@ -26,6 +26,8 @@ import Profile6 from '../components/profiles/Profile6'
 import Profile7 from '../components/profiles/Profile7'
 import Profile from '../components/profiles/Profile'
 import InitialLocation from '../components/InitialLocation'
+import CreateRoute from '../components/CreateRoute'
+
 
 const AppRouter = () => {
 
@@ -134,6 +136,7 @@ const AppRouter = () => {
           <Route path='/events' element={<Events />} />
           <Route path='/location' element={<Location />} />
           <Route path='/initallocation' element={<InitialLocation />} />
+          <Route path='/createroute' element={<CreateRoute />} />
         </Routes>
       </BrowserRouter>
     </div>

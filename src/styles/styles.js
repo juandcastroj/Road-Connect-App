@@ -271,7 +271,7 @@ export const Location = styled(Button)`
 `;
 
 ///Route Home
-export const Cosa = styled.div`
+export const Carrera = styled.div`
   margin: 8px;
   background-color: #fff;
   border-radius: 18px;

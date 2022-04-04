@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Card, Col, Container, Nav, Navbar, Row } from 'react-bootstrap'
 import { NavLink } from 'react-router-dom'
-import { ContFirst, ContHomeRoad, LogoStyle,Cosa } from '../styles/styles'
+import { ContFirst, ContHomeRoad, LogoStyle,Carrera } from '../styles/styles'
 import Naveg from './Naveg'
 import logo from "../images/cicla.png";
 import Footer from './Footer'
@@ -63,12 +63,12 @@ const RoutesHome = () => {
                     <Row  xs={1} md={4} className="g-4">
                         {filter.map((e, i) => (
                             <Col key={i} >
-                                <Cosa>
+                                <Carrera>
                                     <Card.Img  variant="top" src={e.img1} />
                                     <Card.Body >
                                         <NavLink to={`/routes/${e.id}`}  style={{textDecoration: 'none'}} ><Card.Title>{e.name}</Card.Title> </NavLink>
                                     </Card.Body>
-                                </Cosa>
+                                </Carrera>
                             </Col>
                         ))}
                     </Row>

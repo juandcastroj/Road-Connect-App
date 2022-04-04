@@ -24,6 +24,7 @@ const Naveg = () => {
                    <a  href='/home' ><img alt='logoNav' src={logoNav} style={{marginRight:'15px'}} width={70} /></a>
                     <Nav className="me-auto">
                         <Nav.Link style={{fontWeight:'900', margin:'6px'}} href="/profile">Mi Perfil</Nav.Link>
+                        <Nav.Link style={{fontWeight:'800', margin:'6px'}} href="/createroute">Crear Ruta</Nav.Link>
                         <Nav.Link style={{fontWeight:'800', margin:'6px'}} href="/myRoutes">Mis Rutas</Nav.Link>
                         <Nav.Link style={{fontWeight:'800', margin:'6px'}} href="/routes">Rutas Sugeridas</Nav.Link>                        
                         <Nav.Link style={{fontWeight:'800', margin:'6px'}} href="/events">Eventos</Nav.Link>                                          
