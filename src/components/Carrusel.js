@@ -7,9 +7,9 @@ const Carrusel = () => {
         <div>
             <Carousel>
                 <Carousel.Item>
-                    <img
+                    <img 
                         className="d-block w-100"
-                        src="https://www.cycle-nco.fr/wp-content/uploads/2019/02/cylclenco-1.jpg"
+                        src="https://i.ibb.co/j4KKSdF/en-bici-por-death-valley.jpgg"
                         alt="First slide"
                     />
                     <Carousel.Caption>
@@ -19,7 +19,7 @@ const Carrusel = () => {
                 <Carousel.Item>
                     <img
                         className="d-block w-100"
-                        src="https://i.pinimg.com/originals/77/17/b5/7717b5ac1e5ac6d1354f001a4410aa6a.jpg"
+                        src="https://i.ibb.co/KGj9Pdr/thumb-1920-666213.jpg"
                         alt="Second slide"
                     />
 
@@ -30,7 +30,7 @@ const Carrusel = () => {
                 <Carousel.Item>
                     <img
                         className="d-block w-100"
-                        src="https://th.bing.com/th/id/R.98c072790be306dc6592e0bdada43169?rik=GBVFHW%2b8pYF4UA&riu=http%3a%2f%2fwww.todociclismoradio.com%2fuploads%2ftodociclismo%2f11933%2festampa-ciclista-la-de-cristina.jpg&ehk=HiW2OD7hqzwulyZ79FZmMVE%2fjXsG2KSOGOIXU%2fHZ1y8%3d&risl=&pid=ImgRaw&r=0"
+                        src="https://i.ibb.co/6B2f216/3478081600116200099.jpg"
                         alt="Third slide" width="80%"
                     />
 
