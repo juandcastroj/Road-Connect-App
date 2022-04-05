@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { Button, Card, Col, Container, Nav, Navbar, Row } from 'react-bootstrap'
 import { useDispatch, useSelector } from 'react-redux'
 import { deleteAsync, listRouteAsync } from '../actions/actionRoutes'
-import { ContHomeRoad ,Logos, Carrera} from '../styles/styles'
+import { ContHomeRoad ,Logos, Carrera, BtnHomeStyle} from '../styles/styles'
 import Naveg from './Naveg'
 import logo from "../images/cicla.png";
 import Footer from './Footer'
@@ -47,8 +47,8 @@ const MyRoutes = () => {
                                              <h6>Desnivel positivo:</h6> <h5> {e.desnivel}</h5>
                                              <h6>Tiempo promedio:</h6> <h5> {e.tiempo}</h5>
                                         </Card.Text>
-                                        <Button variant='outline-danger' onClick={() => dispatch(deleteAsync(e.nombre))} >Quitar</Button>
-                                        <Button variant='warning' href='/location' >Empezar</Button>
+                                        <BtnHomeStyle variant='outline-danger' onClick={() => dispatch(deleteAsync(e.nombre))} >Quitar de mi lista</BtnHomeStyle>
+                                        <BtnHomeStyle href='initallocation' >Empezar</BtnHomeStyle>
                                     </Card.Body>
                                 </Carrera>
                             </Col>

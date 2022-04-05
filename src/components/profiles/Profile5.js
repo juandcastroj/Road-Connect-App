@@ -22,20 +22,19 @@ const Profile5 = () => {
       <ContHomeRoad>
         <Card className="text-center" width="40%">
           <CardProfile>
-            <hr></hr>
             <img src={profile5} width="50%" alt="epa"></img>
             <br></br>
             <img src={profile} width="4%" alt="epa"></img>
             <h2>FELIPE CASTRO</h2>
             <Birthday src={birthday} width="3%" alt="epa"></Birthday>
             <h4 style={{ display: "inline-block", margin: '5px' }}>Fecha de Nacimiento</h4>
-            <p>10 Noviembre 2022</p>
-            <p>
+            <h3>10 Noviembre 1996</h3>
+            <h5>
               Ciclista de 28 años, me interesa salir con personas que mas que dar pedal; disfruten{" "}
               <br></br> del paisaje de cada ruta y el sudor de llegar mas
               lejos cada vez.
-            </p>
-            <Rout variant="warning"> Rutas Realizadas
+            </h5>
+            <Rout variant="warning"> <h5>Rutas Realizadas</h5>
               <img style={{ margin: '3px' }} src={medalla} width="3.5%" alt="epa"></img>
               <strong><Nav.Link style={{ color: 'black' }} href="/routes/13">Bogotá La Capilla Bogotá</Nav.Link></strong>
               <strong><Nav.Link style={{ color: 'black' }} href="/routes/4">Bogotá Tenjo Bogotá</Nav.Link></strong>

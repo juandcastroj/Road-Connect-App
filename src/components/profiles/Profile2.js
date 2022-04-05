@@ -22,9 +22,7 @@ const Profile2 = () => {
       <ContHomeRoad>
         <Card className="text-center" width="40%">
           <CardProfile>
-            <hr></hr>
             <img src={profile2} width="50%" alt="epa"></img>
-
             <br></br>
             <img src={profile} width="4%" alt="epa"></img>
             <h2>MONICA MONTES</h2>
@@ -32,12 +30,12 @@ const Profile2 = () => {
             <h4 style={{ display: "inline-block", margin: "5px" }}>
               Fecha de Nacimiento
             </h4>
-            <p>04 Marzo 2022</p>
-            <p>
+            <h3>04 Marzo 2000</h3>
+            <h5>
               Soy de Bogotá y recorro sus alrededores cada dia <br></br>
               exigiendome mas y conociendo lugares y personas increibles.
-            </p>
-            <Rout variant="warning"> Rutas Realizadas
+            </h5>
+            <Rout variant="warning"> <h5>Rutas Realizadas</h5>
             <img style={{ margin:'3px' }} src={medalla} width="3.5%" alt="epa"></img>
             <strong>
               <Nav.Link  style={{color:'black'}} href="/routes/3">Patios Sopo Bogotá</Nav.Link>
@@ -48,14 +46,12 @@ const Profile2 = () => {
               </Nav.Link>
             </strong>
             <strong>
-            
               <Nav.Link style={{color:'black'}} href="/routes/5">Bogotá Tenjo Bogotá</Nav.Link>
             </strong>
             </Rout>
             <br></br>
             <RoutCont  variant="warning" href='/chat' >Contactar</RoutCont>
             <hr></hr>
-           
           </CardProfile>
           <CardHeader className="text-muted">MTB y Ruta</CardHeader>
         </Card>

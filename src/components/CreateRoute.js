@@ -38,9 +38,9 @@ function CreateRoute() {
   const [directionsResponse, setDirectionsResponse] = useState(null)
   const [distance, setDistance] = useState('')
 
-
+ 
   /** @type React.MutableRefObject<HTMLInputElement> */
-  const originRef = useRef()
+  const originRef = { lat: 4.7103871, lng: -74.127597 }
   /** @type React.MutableRefObject<HTMLInputElement> */
   const destiantionRef = useRef()
 
@@ -69,7 +69,7 @@ function CreateRoute() {
     setDirectionsResponse(null)
     setDistance('')
     
-    originRef.current.value = ''
+     originRef.current.value = ''
     destiantionRef.current.value = ''
   }
 
@@ -98,9 +98,9 @@ function CreateRoute() {
         <GoogleMap
           center={center}
           zoom={15}
-          mapContainerStyle={{ width: '80%', height: '90%' }}
+          mapContainerStyle={{ width: '80%', height: '75%' }}
           options={{
-            zoomControl: false,
+            //zoomControl: false,
             streetViewControl: false,
             mapTypeControl: false,
             fullscreenControl: false,
@@ -125,7 +125,8 @@ function CreateRoute() {
         <HStack spacing={2} justifyContent='space-between'>
           <Box flexGrow={1} >
             <Autocomplete>
-              <Input className='origin' type='text' placeholder='Origin' ref={originRef} />
+              <Input className='origin' type='text' placeholder='Origin' ref={originRef} value='a 106-42
+Cl. 131b #106-14' />
             </Autocomplete>
           </Box>
           <Box flexGrow={1}>
