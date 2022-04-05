@@ -32,13 +32,13 @@ const Events = () => {
                 Villapinzón - Nacimiento del Río Bogotá
               </h2>
               <h4>Fecha: 02 Mayo 2022</h4>
-              <strong><h5>
+              <strong><h6>
                 Distancia: 18,88 km,
                 Desnivel positivo: 828 m,
                 Tiempo: 4 horas,
                 Dificultad: Avanzado
-              </h5></strong>
-              <h5>
+              </h6></strong>
+              <h6>
                 Todo el trayecto estarás acompañado por ciclomontañistas
                 experimentados quienes estarán atentos a los requerimientos de
                 los participantes. <br></br>TRANSPORTE: Se prestará el servicio
@@ -46,7 +46,7 @@ const Events = () => {
                 bicicletas.<br></br> La van saldrá en la mañana desde el punto
                 acordado en Bogotá hasta el sitio de inicio de la ruta y el
                 regreso.
-              </h5>
+              </h6>
             </Card.Text>
             <BtnHomeStyle onClick={() => mostrarAlerta()} variant="primary">Participar</BtnHomeStyle>
           </Card.Body>
@@ -70,13 +70,13 @@ const Events = () => {
                 Gutierrez, Guayabetal
               </h2>
               <h4>Fecha: 22 Abril 2022</h4>
-              <strong><h5>
+              <strong><h6>
                 Distancia:190,62 km,
                 Desnivel positivo: 5.856 m,
                 Tiempo: 8 horas,
                 Dificultad: Experto
-              </h5></strong>
-              <h5>
+              </h6></strong>
+              <h6>
                 Todo el trayecto estarás acompañado por ciclomontañistas
                 experimentados quienes estarán atentos a los requerimientos de
                 los participantes. <br></br>TRANSPORTE: Se prestará el servicio
@@ -84,7 +84,7 @@ const Events = () => {
                 bicicletas.<br></br> La van saldrá en la mañana desde el punto
                 acordado en Bogotá hasta el sitio de inicio de la ruta y el
                 regreso.
-              </h5>
+              </h6>
             </Card.Text>
             <BtnHomeStyle onClick={() => mostrarAlerta()} variant="primary">Participar</BtnHomeStyle>
           </Card.Body>
@@ -104,13 +104,13 @@ const Events = () => {
                 Tobia, Utica, Quebradanegra, Tobia,
               </h2>
               <h4>Fecha: 02 Mayo 2022</h4>
-              <strong><h5>
+              <strong><h6>
                 Distancia: 43,22 km,
                 Desnivel positivo: 1.813 m,
                 Tiempo: 4 horas,
                 Dificultad: Experto"
-              </h5></strong>
-              <h5>
+              </h6></strong>
+              <h6>
                 Todo el trayecto estarás acompañado por ciclomontañistas
                 experimentados quienes estarán atentos a los requerimientos de
                 los participantes. <br></br>TRANSPORTE: Se prestará el servicio
@@ -118,7 +118,7 @@ const Events = () => {
                 bicicletas.<br></br> La van saldrá en la mañana desde el punto
                 acordado en Bogotá hasta el sitio de inicio de la ruta y el
                 regreso.
-              </h5>
+              </h6>
             </Card.Text>
             <BtnHomeStyle onClick={() => mostrarAlerta()} variant="primary">Participar</BtnHomeStyle>
           </Card.Body>
