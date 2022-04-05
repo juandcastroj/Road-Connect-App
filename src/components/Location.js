@@ -54,7 +54,7 @@ function Location() {
     navigate('/profile3')
   }
   const contact4 = () => {
-    navigate('/profile4')
+    navigate('/profile')
   }
   const contact5 = () => {
     navigate('/profile5')
@@ -66,7 +66,7 @@ function Location() {
     navigate('/profile7')
   }
   const contact = () => {
-    navigate('/profile')
+    navigate('/profile4')
   }
   return (
     <div>

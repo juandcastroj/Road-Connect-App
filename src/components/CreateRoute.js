@@ -26,7 +26,7 @@ import { useRef, useState } from "react";
 import Footer from "./Footer";
 
 
-const center = { lat: 4.735311, lng: -74.101978 }
+const center = { lat: 4.7139287, lng: -74.115346 }
 
 function CreateRoute() {
   const { isLoaded } = useJsApiLoader({
@@ -40,7 +40,7 @@ function CreateRoute() {
 
  
   /** @type React.MutableRefObject<HTMLInputElement> */
-  const originRef = { lat: 4.7103871, lng: -74.127597 }
+  const originRef = { lat: 4.7139287, lng: -74.115346  }
   /** @type React.MutableRefObject<HTMLInputElement> */
   const destiantionRef = useRef()
 
@@ -125,8 +125,7 @@ function CreateRoute() {
         <HStack spacing={2} justifyContent='space-between'>
           <Box flexGrow={1} >
             <Autocomplete>
-              <Input className='origin' type='text' placeholder='Origin' ref={originRef} value='a 106-42
-Cl. 131b #106-14' />
+              <Input className='origin' type='text' placeholder='Origin' ref={originRef} value='calle 80 cra 104' />
             </Autocomplete>
           </Box>
           <Box flexGrow={1}>

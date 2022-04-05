@@ -25,7 +25,6 @@ import Profile5 from '../components/profiles/Profile5'
 import Profile6 from '../components/profiles/Profile6'
 import Profile7 from '../components/profiles/Profile7'
 import Profile from '../components/profiles/Profile'
-import InitialLocation from '../components/InitialLocation'
 import CreateRoute from '../components/CreateRoute'
 import ChatState from '../components/ChatState'
 
@@ -133,7 +132,6 @@ const AppRouter = () => {
           <Route path='/routes/:id' element={<DetailRoute />} />
           <Route path='/events' element={<Events />} />
           <Route path='/location' element={<Location />} />
-          <Route path='/initallocation' element={<InitialLocation />} />
           <Route path='/createroute' element={<CreateRoute />} />
           <Route path='/chat' element={<ChatState/>} />
         </Routes>
