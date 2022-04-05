@@ -99,16 +99,16 @@ function Login() {
           </Form>
         </DivForm>
         <DivLink>
-          <Link to="/register" style={{ color: "white" }}>
-            ¿Olvidaste tu contraseña?
+          <Link to="/register" style={{ color: "white" , textDecoration: 'none' }}>
+            <h5>¿Olvidaste tu contraseña?</h5>
           </Link>
           <br></br>
-          <p>
+          <h4>
             ¿No tienes una cuenta?{" "}
             <Link to="/register" style={{ color: "yellow"}} >
               Registrate
             </Link>
-          </p>
+          </h4>
         </DivLink>
       </DivAuth>
       <Footer/>

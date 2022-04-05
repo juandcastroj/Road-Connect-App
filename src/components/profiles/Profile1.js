@@ -30,15 +30,15 @@ const Profile1 = () => {
             <h4 style={{ display: "inline-block", margin: "5px" }}>
               Fecha de Nacimiento
             </h4>
-            <p>27 Enero 2022</p>
-            <p>
+            <h3>17 Diciembre 1999</h3>
+            <h4>
               Hola mundo me encanta pedalear por carretera y competir. Pero en
               esas
               <br></br> carreras no solo cuenta tener las ganas de salir a
               desafiar los trazados, también se vale compartir con la familia y
               con los amigos.
-            </p>
-            <Rout variant="warning"> Rutas Realizadas
+            </h4>
+            <Rout variant="warning"> <h5>Rutas Realizadas</h5>
             <img style={{ margin:'3px' }} src={medalla} width="3.5%" alt="epa"></img>
             <strong>
               <Nav.Link  style={{color:'black'}} href="/routes/0">Patios Sopo Bogotá</Nav.Link>

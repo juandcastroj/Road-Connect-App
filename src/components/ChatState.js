@@ -7,21 +7,31 @@ import Naveg from './Naveg'
 const ChatState = () => {
 
   const [message, setMessage] = useState([])
+  const [mostrar, setMostrar] = useState(false)
+ 
+  const handleInputChange = ( {target} ) => {
+    setMessage(target.value)    
+  }
 
-    const showMessage = () => {
-        setMessage("Hola Monica, ¿como estás?, me gustaría salir a rodar contigo...")
-    }
+  const handleSubmit = (e) => {
+    setMostrar(true)
+    setMessage(message)
+  }
 
   return (
     <div>
         <Naveg/>
-        <ContHomeRoad style={{padding: '30rem  20rem 5rem'}} >
-          <div  style={{backgroundColor:'gray' ,color:'white' ,padding:'1.5rem' ,borderRadius:'25px'}} ><h3  > Tú: <strong>{message}</strong></h3>
-          <br></br><p>ahora</p></div>
+        <ContHomeRoad style={{padding: '15rem  20rem 5rem'}} >          
+            { mostrar ?
+            <div style={{ backgroundColor:'#B0C4DE' ,color:'darkBlue' ,padding:'1.5rem' ,borderRadius:'25px'}}  >
+           <div ><h4>Tu:</h4><h2 >{message}</h2></div><br></br><p>Ahora</p> 
+           </div>
+            : "" 
+            }
           <br></br>          
-            <FormControl style={{padding:'2rem', borderRadius:'25px' }}  placeholder='Escribe un mensaje...' />
+            <FormControl style={{padding:'2rem', borderRadius:'25px' }}  placeholder='Escribe un mensaje...' onChange={handleInputChange} name='message' value={message} />
             <br></br>
-            <BtnHomeStyle variant='warning' onClick={showMessage} >Enviar mensaje</BtnHomeStyle>
+            <BtnHomeStyle variant='warning' onClick={handleSubmit}  >Enviar mensaje</BtnHomeStyle>
         </ContHomeRoad>
         <Footer/>
     </div>

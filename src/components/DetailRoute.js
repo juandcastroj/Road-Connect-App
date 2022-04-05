@@ -40,13 +40,13 @@ const DetailRoute = () => {
                             <img alt='map' width={600} src={ruta.img} />
                         </div>
                         <DetailContainer  >
-                            <h4>{ruta.name}</h4>
+                            <h2>{ruta.name}</h2>
                             <hr></hr>
                             <div>
-                                Distancia: <h5>{ruta.Distancia}</h5>
-                                Desnivel: <h5>{ruta.Desnivel}</h5>
-                                Tiempo promedio: <h5>{ruta.Tiempo}</h5>
-                                Dificultad: <h5>{ruta.Dificultad}</h5>
+                                Distancia: <h4>{ruta.Distancia}</h4>
+                                Desnivel: <h4>{ruta.Desnivel}</h4>
+                                Tiempo promedio: <h4>{ruta.Tiempo}</h4>
+                                Dificultad: <h4>{ruta.Dificultad}</h4>
                                 <BtnHomeStyle variant='warning' href='/createroute' style={{ padding: '1rem' }} >Empezar</BtnHomeStyle>
                             </div>
                         </DetailContainer>

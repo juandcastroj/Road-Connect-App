@@ -5,7 +5,7 @@ import { BtnHomeStyle } from '../styles/styles'
 const BtnHomeStylesHome = () => {
   return (
     <div>
-        <BtnHomeStyle variant='warning' ><Link to={'/initallocation'} style={{ textDecoration: 'none' }} > INGRESA TU UBICACIÓN </Link></BtnHomeStyle>
+        <BtnHomeStyle variant='warning' ><Link to={'/createroute'} style={{ textDecoration: 'none' }} >INICIA UNA RUTA </Link></BtnHomeStyle>
           <hr></hr>
           <BtnHomeStyle variant='warning' ><Link to={'/routes'} style={{ textDecoration: 'none' }} > RUTAS SUGERIDAS </Link></BtnHomeStyle>
           <hr></hr>

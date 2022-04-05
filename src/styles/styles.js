@@ -247,6 +247,7 @@ export const Birthday = styled.img`
 export const CardProfile = styled.div`
   box-shadow: 0px 0px 20px 20px;
   -webkit-box-shadow: 0px 0px 10px 10px #0030b7;
+  padding: 5%
 `;
 export const CardHeader = styled.div`
   padding: 1.4rem;
