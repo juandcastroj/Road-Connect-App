@@ -1,8 +1,8 @@
 # 🚴 Road Connect 🚴‍♀️
 
-_Social network that helps recreational cyclists to find company for a ride and create a community.
+Social network that helps recreational cyclists to find company for a ride and create a community.
 
-_Aplicación enfatizada a la seguridad para montar bicicleta deportivamente, ayudando a los biciusuarios a conseguir compañía, ya sea con comunidad de personas que vivan cerca a su residencia o con planes establecidos con anticipación, además de la posibilidad de compartir tu ubicación en tiempo real a tus contactos.
+Aplicación enfatizada a la seguridad para montar bicicleta deportivamente, ayudando a los biciusuarios a conseguir compañía, ya sea con comunidad de personas que vivan cerca a su residencia o con planes establecidos con anticipación, además de la posibilidad de compartir tu ubicación en tiempo real a tus contactos.
 
 ## Despliege 🚀
 
