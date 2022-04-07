@@ -39,7 +39,7 @@ const Profile1 = () => {
               con los amigos.
             </h4>
             <Rout variant="warning"> <h5>Rutas Realizadas</h5>
-            <img style={{ margin:'3px' }} src={medalla} width="3.5%" alt="epa"></img>
+            <img src={medalla} width="6%" alt="epa"></img>
             <strong>
               <Nav.Link  style={{color:'black'}} href="/routes/0">Patios Sopo Bogotá</Nav.Link>
             </strong>

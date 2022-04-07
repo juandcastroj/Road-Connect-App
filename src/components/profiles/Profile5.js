@@ -14,6 +14,7 @@ import profile5 from "../../images/Profile5.jpg";
 import profile from "../../images/futurama-fry-.png";
 import birthday from "../../images/icons8-fecha-de-nacimiento-50.png";
 import medalla from '../../images/ciclismo.png'
+import { Link } from "react-router-dom";
 
 const Profile5 = () => {
   return (
@@ -34,15 +35,13 @@ const Profile5 = () => {
               <br></br> del paisaje de cada ruta y el sudor de llegar mas
               lejos cada vez.
             </h5>
-            <Rout variant="warning"> <h5>Rutas Realizadas</h5>
+            <Rout variant="warning"> <h4>Rutas Realizadas</h4>
               <img style={{ margin: '3px' }} src={medalla} width="3.5%" alt="epa"></img>
-              <strong><Nav.Link style={{ color: 'black' }} href="/routes/13">Bogotá La Capilla Bogotá</Nav.Link></strong>
-              <strong><Nav.Link style={{ color: 'black' }} href="/routes/4">Bogotá Tenjo Bogotá</Nav.Link></strong>
-              <strong><Nav.Link style={{ color: 'black' }} href="/routes/1">Bogotá Altos de Patio</Nav.Link></strong>
-              <strong><Nav.Link style={{ color: 'black' }} href="/routes/2">Patios Sopó Bogotá</Nav.Link></strong>
+              <strong><Nav.Link style={{ color: 'black' }} href="/routes/13"><h5>Bogotá La Capilla Bogotá</h5></Nav.Link></strong>
+              <strong><Nav.Link style={{ color: 'black' }} href="/routes/4"><h5>Bogotá Tenjo Bogotá</h5></Nav.Link></strong>
             </Rout>
             <br></br>
-            <RoutCont variant="warning" href='/chat' >Contactar</RoutCont>
+            <RoutCont variant="warning" ><Link to={'/chat'} style={{textDecoration:'none'}}  >Contactar</Link></RoutCont>
             <hr></hr>
           </CardProfile>
           <CardHeader className="text-muted">MTB y Ruta</CardHeader>

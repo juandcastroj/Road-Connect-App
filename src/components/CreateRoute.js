@@ -24,6 +24,7 @@ import {
 } from "@react-google-maps/api";
 import { useRef, useState } from "react";
 import Footer from "./Footer";
+import { Link } from "react-router-dom";
 
 
 const center = { lat: 4.7139287, lng: -74.115346 }
@@ -79,10 +80,9 @@ function CreateRoute() {
       <ContHomeRoad>
       <BtnHomeStyle
           variant="warning"
-          href="/Location"
           style={{ padding: "0.8rem"}}
         >
-          Encontrar ciclistas cercanos
+         <Link to={'/location'} style={{textDecoration:'none'}}  > Encontrar ciclistas cercanos</Link>
         </BtnHomeStyle>
         <br></br>
         <br></br>

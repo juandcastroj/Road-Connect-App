@@ -20,7 +20,7 @@ const Profile8 = () => {
       <ContHomeRoad>
         <Card className="text-center" width="40%">
           <CardProfile>
-            <img src={profile8} width="50%" alt="epa"></img>
+            <img src={profile8} width="40%" alt="epa"></img>
             <br></br>
             <img src={profile} width="4%" alt="epa"></img>
             <h2>ANDREA MORENO</h2>
@@ -34,20 +34,20 @@ const Profile8 = () => {
               las montañas <br></br>y el deporte me fue transmitido desde muy niña,
                y ahora recorro cada lugar por donde ellos cruzarón pero busco compañía en mi zona.
             </h5>
-            <Rout variant="warning"> <h5>Rutas Realizadas</h5>
+            <Rout variant="warning"> <h4>Rutas Realizadas</h4>
 
-              <img style={{ margin: '3px' }} src={medalla} width="3.5%" alt="epa"></img>
+              <img src={medalla} width="7%" alt="epa"></img>
 
               <strong>
                 <Nav.Link style={{ color: "black" }} href="/routes/1">
-                  Bogota Alto de Patios
+                  <h5>Bogota Alto de Patios</h5>
                 </Nav.Link>
                 <Nav.Link style={{ color: "black" }} href="/routes/0">
-                  Bogota La Vega Bogota
+                  <h5>Bogota La Vega Bogota</h5>
                 </Nav.Link>
                 <Nav.Link style={{ color: "black" }} href="/routes/4">
                   {" "}
-                  Bogota Embalse Sumapaz Bogota
+                  <h5>Bogota Embalse Sumapaz Bogota</h5>
                 </Nav.Link>
               </strong>
             </Rout>

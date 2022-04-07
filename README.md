@@ -1,70 +1,56 @@
-# Getting Started with Create React App
+# Road Connect ⚙️
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+_Social network that helps recreational cyclists to find company for a ride and create a community.
 
-## Available Scripts
+_Aplicación enfatizada a la seguridad para montar bicicleta deportivamente, ayudando a los biciusuarios a conseguir compañía, ya sea con comunidad de personas que vivan cerca a su residencia o con planes establecidos con anticipación, además de la posibilidad de compartir tu ubicación en tiempo real a tus contactos.
 
-In the project directory, you can run:
+## Despliege 🚀
 
-### `npm start`
+* [Despliegue Firebase](https://frontend8-6efb3.firebaseapp.com/)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+##  Especificaciones técnicas 
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Dentro de los recursos técnicos utilizados para el desarrollo se encuentran:
+- Autentificación de usuarios por medio de Firebase Authentication con correo y contraseña, cuenta de Google y cuenta de Facebook.
+- En base a la autentificación del usuario, se ejecuta un sistema de protección de rutas por medio de _React-router-dom_. Dentro de las rutas públicas se encuentran la página principal y las rutas sugeridas para montar bicicleta al rededor de Bogotá. Dentro de las rutas públicas limitadas están la sección de Login y Sign Up (solo se accede a ellas en caso de que el usuario no esté autenticado). Dentro de las rutas privadas, se encuentran el perfil propio, mis rutas favoritas, las cuales se pueden subir a la app por medio de un Crud realizado con Firebase.
+- Uso de _componentes en función_ de React y de _hooks_ tales como _useState_, _useEffect_, _useParams_ y _useNavigate_ para el manejo de estados e intercambio de información entre componentes dentro de la aplicación. Así mismo para funcionalidades de búsqueda, filtrado y condiciones de carga del sitio.
+- Uso de almacenamiento externo (_backend_) por medio de una base de datos en Firebase. En esta base de datos se almacena la información de los productos y se accede a ella por medio de peticiones asíncronas en caso de modificación de información o sincronización de la información con el _almacenamiento local_.
+- Uso de almacenamiento local centralizado por medio de _Redux_. Se tienen dos estados dentro de la apliación: usuario y rutas propias. La información de usuario se maneja en relación con el estado de la autentificiación, la información de rutas es sincronizada con el almacenamiento de Firebase.
 
-### `npm test`
+### Instalación 🔧
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+_For run this proyect you have to have installed node js in your pc, and you need to install the next dependencies:
 
-### `npm run build`
+_npm install:
+ -React -bootstrap -React-Bootstrap -react-router-dom -redux -react-redux -redux-thunk -sweetAlert2 -react icons -styledComponents -firebase
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+_then you can run this repository with the command :  -npm start
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+_now you can enjoy it :)
+## Construido con 🛠️
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+_Menciona las herramientas que utilizaste para crear tu proyecto_
 
-### `npm run eject`
+* [ReactJs](https://reactjs.org/) - El framework web usado
+* [React-Bootstrap](https://react-bootstrap.github.io/) - Libreria de componentes
+* [Redux](https://redux.js.org/) - Contenedor de estados
+* [Firebase](https://firebase.google.com/) - Backend (autenticación, base de datos y despliegue)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Wiki 📖
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Puedes encontrar mucho más de cómo utilizar este proyecto en nuestra [Wiki](https://github.com/academia-geek/demo-day-projects-roadconnect/wiki/Road-Connect)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Versionado 📌
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Usamos [GitHub](http://github.com/) para el manejo de versiones.
 
-## Learn More
+## Autores ✒️
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+* **Alejandra Moreno** 
+* **Juan David Castro**   
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+También puedes mirar la lista de todos los [contribuyentes](https://github.com/academia-geek/demo-day-projects-roadconnect/graphs/contributors) quíenes han participado en este proyecto. 
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
+⌨️ con ❤️ por [Juan David Castro Jaramillo](https://github.com/juandjaramillo) 😊
