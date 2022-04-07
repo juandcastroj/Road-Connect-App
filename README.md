@@ -51,6 +51,9 @@ Usamos [GitHub](http://github.com/) para el manejo de versiones.
 
 También puedes mirar la lista de todos los [contribuyentes](https://github.com/academia-geek/demo-day-projects-roadconnect/graphs/contributors) quíenes han participado en este proyecto. 
 
+🏙 Proyecto realizado para nuestro Demoday (proyecto final) como Desarolladores Frontend React JS en **Academia Geek**
+
+## 👋 Gracias por visitar este repositorio
 
 ---
-⌨️ con ❤️ por [Juan David Castro Jaramillo](https://github.com/juandjaramillo) 😊
+⌨️ con ❤️ por [Juan David Castro Jaramillo](https://github.com/juandjaramillo) 
