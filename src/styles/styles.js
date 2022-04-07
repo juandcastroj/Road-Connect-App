@@ -223,11 +223,10 @@ export const BtnHomeStyle = styled(Button)`
 
 ///porfile///7
 export const Rout = styled.p`
-  margin: 40px 270px 7px 270px;
-  font-weight: 500;
+  margin: 8%;
   box-shadow: 0px 0px 20px 20px;
   -webkit-box-shadow: 0px 0px 10px 10px #0030b7;
-  padding: 5px;
+  padding: 4%;
 `;
 
 export const RoutCont = styled(Button)`

@@ -11,7 +11,7 @@ import swal from "sweetalert";
 const Events = () => {
 
   const mostrarAlerta = () => {
-    swal(" Felicidades prontó el Organizador se pondra en contacto contigo!!!");
+    swal(" Felicidades, pronto el Organizador se comunicará contigo. ");
   }
 
   return (
@@ -25,7 +25,7 @@ const Events = () => {
             <Image
               style={{ webkitBoxShadow: "0px 0px 10px 10px #0030b7" }}
               src={event1}
-              width={600}
+              width='60%'
             ></Image>
             <Card.Text>
               <h2 style={{ margin: "25px" }}>
@@ -62,7 +62,7 @@ const Events = () => {
             <Image
               style={{ webkitBoxShadow: "0px 0px 10px 10px #0030b7" }}
               src={event2}
-              width={600}
+              width='60%'
             ></Image>
             <Card.Text>
               <h2 style={{ margin: "25px" }}>
@@ -98,7 +98,7 @@ const Events = () => {
         <Card className="text-center">
           <CardEvent>Organizado por: Parceros MTB Chía</CardEvent>
           <Card.Body >
-            <Image style={{ webkitBoxShadow: "0px 0px 10px 10px #0030b7" }} src={event3} width={600}></Image>
+            <Image style={{ webkitBoxShadow: "0px 0px 10px 10px #0030b7" }} src={event3} width='60%'></Image>
             <Card.Text>
               <h2 style={{ margin: "25px" }}>
                 Tobia, Utica, Quebradanegra, Tobia,

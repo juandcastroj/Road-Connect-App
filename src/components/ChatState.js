@@ -21,7 +21,7 @@ const ChatState = () => {
   return (
     <div>
         <Naveg/>
-        <ContHomeRoad style={{padding: '15rem  20rem 5rem'}} >          
+        <ContHomeRoad style={{padding: '20% 20% 5%'}} >          
             { mostrar ?
             <div style={{ backgroundColor:'#B0C4DE' ,color:'darkBlue' ,padding:'1.5rem' ,borderRadius:'25px'}}  >
            <div ><h4>Tu:</h4><h2 >{message}</h2></div><br></br><p>Ahora</p> 

@@ -6,6 +6,7 @@ import { ContHomeRoad ,Logos, Carrera, BtnHomeStyle} from '../styles/styles'
 import Naveg from './Naveg'
 import logo from "../images/cicla.png";
 import Footer from './Footer'
+import { Link } from 'react-router-dom'
 
 const MyRoutes = () => {
 
@@ -28,7 +29,7 @@ const MyRoutes = () => {
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="me-auto">   
-                            <Nav.Link  style={{fontWeight:'900', margin:'10px'}}  href="/addRoute">Agregar Nueva ruta</Nav.Link>                         
+                            <Nav.Link  style={{fontWeight:'900', margin:'10px'}}><Link to={'/addRoute'} style={{textDecoration:'none'}}>Agregar Nueva ruta</Link></Nav.Link>                         
                         </Nav>
                     </Navbar.Collapse>
                 </Container>
