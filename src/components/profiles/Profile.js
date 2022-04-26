@@ -16,19 +16,18 @@ import medalla from '../../images/ciclismo.png'
 import { useSelector } from "react-redux";
 
 
-
 const Profile = () => {
 
   const { user } = useSelector((store) => store.user)
   //console.log( user );
 
   const name = user.length === 0
-      ? " Tu perfil "
-      :  user.displayname 
+    ? " Tu perfil "
+    : user.displayname
 
-  const profileImg = user.length === 0 
-      ? "Tu foto" 
-      : user.photo 
+  const profileImg = user.length === 0
+    ? "Tu foto"
+    : user.photo
 
 
   return (
@@ -36,21 +35,21 @@ const Profile = () => {
       <Naveg />
       <ContHomeRoad>
         {/* <Card className="text-center" width="40%"> */}
-          <CardProfile>
-            <img src={profileImg} style={{borderRadius:'25%'}}  alt='profile' width="35%" /> 
-            <br></br>
-            <h1>{name}</h1>
-            <Birthday src={birthday} width="3%" alt="epa"></Birthday>
-            <h5 style={{ display: "inline-block", margin: "5px" }}>
-              Fecha de Nacimiento
-            </h5>
-            <h4>27 Enero 1998</h4>
-            <h5>
-              Hija de padres aficionados del ciclismo. Por tanto, esa pasión por
-              las montañas <br></br>y el deporte me fue transmitido desde muy niña,
-               y ahora recorro cada lugar por donde ellos cruzarón pero busco compañía en mi zona.
-            </h5>
-            {/* <Rout variant="warning"> <h4>Rutas Realizadas</h4>
+        <CardProfile>
+          <img src={profileImg} style={{ borderRadius: '50%' }} alt='profile' width="34%" />
+          <br></br>
+          <h1>{name}</h1>
+          <Birthday src={birthday} width="3%" alt="epa"></Birthday>
+          <h6 style={{ display: "inline-block", margin: "5px" }}>
+            Fecha de Nacimiento
+          </h6>
+          <h4>17 Enero 1995</h4>
+          <h5>
+            Amante del ciclismo, Por eso mi pasión por
+            las montañas. El deporte me fue transmitido desde siempre,
+            recorro cada lugar por donde sea permitido, busco compañía en mi zona para montar .
+          </h5>
+          {/* <Rout variant="warning"> <h4>Rutas Realizadas</h4>
 
               <img src={medalla} width="7%" alt="epa"></img>
 
@@ -67,8 +66,8 @@ const Profile = () => {
                 </Nav.Link>
               </strong>
             </Rout> */}
-          </CardProfile>
-          {/* <CardHeader className="text-muted">MTB y Ruta</CardHeader> */}
+        </CardProfile>
+        {/* <CardHeader className="text-muted">MTB y Ruta</CardHeader> */}
         {/* </Card> */}
       </ContHomeRoad>
       <Footer />

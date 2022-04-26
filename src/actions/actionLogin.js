@@ -70,9 +70,10 @@ export const registroEmailPasswordNombre = (email, password, displayname, image 
     const auth = getAuth();
     createUserWithEmailAndPassword(auth, email, password)
       .then(async ({ user }) => {
-         
-        await updateProfile(auth.currentUser, { displayName: displayname, photoURL: image  });
-        dispatch( loginSincrono( user.uid, user.displayName, user.photoURL ))
+  
+        await updateProfile(auth.currentUser, { displayName: displayname, photoURL: image });
+        dispatch( loginSincrono( user.uid, user.displayName, user.photoURL  ))
+        alert('se ha creado tu usuario, '+ user.displayName)
         })
         .catch(e =>{
             console.log(e)
