@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Button, Card, Col, Container, Nav, Navbar, Row } from 'react-bootstrap'
+import { Card, Col, Container, Nav, Navbar, Row } from 'react-bootstrap'
 import { useDispatch, useSelector } from 'react-redux'
 import { deleteAsync, listRouteAsync } from '../actions/actionRoutes'
 import { ContHomeRoad ,Logos, Carrera, BtnHomeStyle} from '../styles/styles'
@@ -49,7 +49,7 @@ const MyRoutes = () => {
                                              <h6>Tiempo promedio:</h6> <h5> {e.tiempo}</h5>
                                         </Card.Text>
                                         <BtnHomeStyle variant='outline-danger' onClick={() => dispatch(deleteAsync(e.nombre))} >Quitar de mi lista</BtnHomeStyle>
-                                        <BtnHomeStyle href='initallocation' >Empezar</BtnHomeStyle>
+                                        <BtnHomeStyle > <Link to={'/location'} style={{ textDecoration: 'none', color:'white' }} >empezar </Link> </BtnHomeStyle>
                                     </Card.Body>
                                 </Carrera>
                             </Col>
