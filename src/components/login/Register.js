@@ -24,8 +24,8 @@ export const Register = () => {
 
     const handleRegistro = (e) => {
         e.preventDefault();
-       dispatch(registroEmailPasswordNombre( formValues ))
-       console.log( {formValues} );
+       dispatch(registroEmailPasswordNombre( email, password, name, image  ))
+       //console.log( { name, email, password, image  });
     }
 
     // const handleFileChange =(e)=>{

@@ -1,6 +1,6 @@
 import { types } from "../types/types";
 
-export const userReducer = (state = {user:[]}, action) => {
+export const userReducer = (state = { user: [] }, action) => {
   switch (action.type) {
     case types.login:
 
@@ -8,12 +8,18 @@ export const userReducer = (state = {user:[]}, action) => {
         ...state,
         user: action.payload
       };
-      case types.logout:
+    case types.register:
+
+      return {
+        ...state,
+        user: action.payload
+      };
+    case types.logout:
 
       return {
         ...state,
         user: []
-       }
+      }
 
     default:
       return state;
