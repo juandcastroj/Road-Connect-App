@@ -2,7 +2,7 @@ import React from 'react'
 import { Button } from 'react-bootstrap'
 import { DivAuth, Form, Header, Input, Label, Separator } from '../../styles/styles'
 import { useDispatch } from 'react-redux';
-import { registroEmailPasswordNombre } from '../../actions/actionRegister';
+import { registroEmailPasswordNombre } from '../../actions/actionLogin';
 import useForm from '../../hooks/useForm';
 import { fileUpload } from '../../helpers/fileUpload';
 import Footer from '../Footer';
@@ -14,32 +14,32 @@ export const Register = () => {
     const dispatch = useDispatch();
 
     const [formValues, handleInputChange] = useForm({
-        nombre: '',
-        apellido: '',
-        telefono: '',
+        name: '',
         email: '',
         password: '',
-        imagen:'',
+        image:'',
         
     });
-    const { nombre, apellido, email, password, imagen} = formValues;
+    const { name, email, password, image } = formValues;
 
     const handleRegistro = (e) => {
         e.preventDefault();
-       dispatch(registroEmailPasswordNombre(email,password,nombre))
+       dispatch(registroEmailPasswordNombre( formValues ))
+       console.log( {formValues} );
     }
 
-    const handleFileChange =(e)=>{
-        const file = e.target.files[0]
-        fileUpload(file)
-            .then(resp =>{
-               formValues.imagen = resp
-                console.log(resp)
-            })
-            .catch(error =>{
-                console.log(error.message)
-            })
-    }
+    // const handleFileChange =(e)=>{
+    //     const file = e.target.files[0]
+    //     fileUpload(file)
+    //         .then(resp =>{
+    //            formValues.image = resp
+    //             console.log(resp)
+    //         })
+    //         .catch(error =>{
+    //             console.log(error.message)
+    //         })
+    // }
+
     return (
         <div>
             <Naveg/>
@@ -49,28 +49,16 @@ export const Register = () => {
             </Header>
             <Separator />
                 <Form>
-                    <Label htmlFor="inputEmail">
-                        Nombre
+                    <Label htmlFor="inputName">
+                        Nombre Completo
                         <Input
                             type="text"
-                            name="nombre"
+                            name="name"
                             id="inputName"
                             placeholder="Ingrese su nombre"
                             required
-                            value={nombre}
+                            value={name}
                             onChange={handleInputChange}
-                        />
-                    </Label>
-                     <Label htmlFor="inputEmail">
-                        Apellido
-                        <Input
-                            type="text"
-                            name="apellido"
-                            id="inputName"
-                            placeholder="Ingrese su nombre apellido"
-                            required
-                            value={apellido}
-                        onChange={handleInputChange}
                         />
                     </Label>
                     <Label htmlFor="inputEmail">
@@ -79,7 +67,7 @@ export const Register = () => {
                             type="email"
                             name="email"
                             id="inputEmail"
-                            placeholder="Ingrese su correo electrónico"
+                            placeholder="Ingrese su email"
                             required
                             value={email}
                             onChange={handleInputChange}
@@ -97,16 +85,15 @@ export const Register = () => {
                             onChange={handleInputChange}
                         />
                     </Label>
-                    <Label htmlFor="inputPassword">
+                    <Label>
                         Foto
-                        <Input
-                            type="file"
-                            name="imagen"
-                            id="image"
-                            placeholder="Agrega tu foto"
+                        <Input 
+                            type="text"
+                            name="image"
+                            value={image}
+                            placeholder="Ingrese url de su foto"
                             required
-                            value={imagen}
-                            onChange={handleFileChange}/>
+                            onChange={handleInputChange}/>
                     </Label>
                     <Button variant="warning" type="submit" >Registrarse</Button>
                 </Form>

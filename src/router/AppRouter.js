@@ -125,6 +125,16 @@ const AppRouter = () => {
               <Profile7 />
             </PrivateRoute>}
           />
+            <Route path="/location" element={
+            <PrivateRoute isAuthenticated={isLoggedIn}  >
+              <Location />
+            </PrivateRoute>}
+          />
+            <Route path="/createroute" element={
+            <PrivateRoute isAuthenticated={isLoggedIn}  >
+              <CreateRoute />
+            </PrivateRoute>}
+          />
         
           <Route path='/' element={<LoadPage />} />
           <Route path='/home' element={<Home />} />

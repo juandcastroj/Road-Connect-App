@@ -1,10 +1,11 @@
-import { getAuth, signInWithEmailAndPassword, signOut } from "firebase/auth";
+import { createUserWithEmailAndPassword, getAuth, signInWithEmailAndPassword, signOut, updateProfile } from "firebase/auth";
 import { google , facebook} from "../firebase/firebaseConfig";
 import { types } from "../types/types";
 import { signInWithPopup } from "firebase/auth";
 import { db } from "../firebase/firebaseConfig";
 import { v4 } from "uuid";
 import { setDoc, doc } from "firebase/firestore";
+
 
 export const loginEmailPassword = (email, password) => {
     return (dispatch) => {
@@ -27,8 +28,8 @@ export const loginGoogle= () =>{
         const auth =getAuth()
         signInWithPopup(auth,google)
         .then(({user}) =>{
-            dispatch(loginSincrono(user.uid, user.displayName))
-            console.log("holaa "+ user.displayName);
+            dispatch(loginSincrono(user.uid, user.displayName, user.photoURL))
+           //console.log(user.uid, user.displayName, user.photoURL);
         })
         .catch(e=>{
             console.log(e)
@@ -41,11 +42,13 @@ export const loginFacebook = () => {
     const auth = getAuth();
     signInWithPopup(auth, facebook)
       .then( async({ user }) => {
-        dispatch(loginSincrono(user.uid, user.displayName));
+        console.log( user );
+        dispatch(loginSincrono(user.uid, user.displayName, user.photoURL ));
         console.log(`Bienvenid@ ${user.displayName}`);
 
         const docRef = doc(db, "users", v4());
         const payload = {
+          foto: user.photoURL,
           nombre: user.displayName,
           correo: user.email,
           acceso: true,
@@ -59,12 +62,32 @@ export const loginFacebook = () => {
       });
   };
 };
-export const loginSincrono =(id, displayname) =>{
+
+
+export const registroEmailPasswordNombre = (email, password, displayname, image ) => {
+
+  return (dispatch) => {
+    const auth = getAuth();
+    createUserWithEmailAndPassword(auth, email, password)
+      .then(async ({ user }) => {
+         
+        await updateProfile(auth.currentUser, { displayName: displayname, photoURL: image  });
+        dispatch( loginSincrono( user.uid, user.displayName, user.photoURL ))
+        })
+        .catch(e =>{
+            console.log(e)
+        })
+      }
+  }
+
+  
+export const loginSincrono =(id, displayname, photo) =>{
     return{
             type: types.login,
             payload: {
                 id,
-                displayname
+                displayname,
+                photo
             }
     }
 

@@ -4,7 +4,7 @@ import { BtnHomeStyle, ContFirst, ContHomeRoad, DetailContainer, LogoStyle } fro
 import Naveg from './Naveg'
 import logo from "../images/cicla.png";
 import Footer from './Footer';
-import { Button } from 'react-bootstrap';
+
 const DetailRoute = () => {
 
     const { id } = useParams()
