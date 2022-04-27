@@ -245,9 +245,10 @@ export const Birthday = styled.img`
 `;
 export const CardProfile = styled.div`
   box-shadow: 0px 0px 20px 20px;
-  padding: 5% 20%;
-  border-radius: 10%;
+  padding: 3% 15%;
+  border-radius: 5%;
   background-color: #B0C4DE;
+  margin: 2% 18%
   
 `;
 export const CardHeader = styled.div`

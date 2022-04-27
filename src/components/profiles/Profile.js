@@ -34,7 +34,7 @@ const Profile = () => {
       <ContHomeRoad>
         {/* <Card className="text-center" width="40%"> */}
         <CardProfile>
-          <img src={profileImg} style={{ borderRadius: '50%' }} alt='profile' width="34%" />
+          <img src={profileImg} style={{ borderRadius: '50%' }} alt='profile' width="50%" />
           <br></br>
           <h1>{name}</h1>
           <h6 style={{ display: "inline-block", margin: "5px" }}>
