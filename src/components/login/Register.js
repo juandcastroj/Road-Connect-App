@@ -20,12 +20,11 @@ export const Register = () => {
         image:'',
         
     });
-    const { name, email, password, image } = formValues;
+    const { email, password, name, image } = formValues;
 
     const handleRegistro = (e) => {
         e.preventDefault();
-       dispatch(registroEmailPasswordNombre( email, password, name, image  ))
-       //console.log( { name, email, password, image  });
+       dispatch(registroEmailPasswordNombre(  email, password, name, image ))
     }
 
     // const handleFileChange =(e)=>{

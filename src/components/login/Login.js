@@ -26,8 +26,8 @@ import Naveg from "../Naveg.js";
 
 
 function Login() {
-  const dispatch = useDispatch();
 
+  const dispatch = useDispatch();
   const [values, handleInputChange] = useForm({
     email: "",
     password: "",
@@ -36,7 +36,7 @@ function Login() {
 
   const handleLogin = (e) => {
     e.preventDefault();
-    dispatch(loginEmailPassword(email, password));
+    dispatch( loginEmailPassword( email, password ));
   };
 
   const handleGoogle = () => {
@@ -55,21 +55,17 @@ function Login() {
           <Logo src={logo} alt="Logo" />
           <h3 style={{ color: "yellow" }}>Iniciar sesión</h3>
         </Header>
-       
         <DivForm>
-          
-          <Button variant="danger" bg="dark" onClick={handleGoogle}>
+          <Button variant="danger" bg="dark" type="button" onClick={handleGoogle}>
           <Icons src='https://i.ibb.co/mRP4XhZ/5847f9cbcef1014c0b5e48c8.png' alt="Logo" />
             {" "}
-            
             Continuar con Google{" "}
           </Button>
           <br></br>
-         
-          <Button variant="dark" onClick={handleFacebook}> 
+          <Button variant="dark" type="button" onClick={handleFacebook}> 
           <Icons src=' https://i.ibb.co/K9b54B9/800px-Facebook-logo-square.png' alt="Logo" />Continuar con Facebook </Button>
           <Separator />
-          <Form onSubmit={handleLogin}>
+          <Form onSubmit={handleLogin} >
             <Label htmlFor="inputEmail">
               Correo electrónico
               <Input

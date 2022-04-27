@@ -6,30 +6,26 @@ import { db } from "../firebase/firebaseConfig";
 import { v4 } from "uuid";
 import { setDoc, doc } from "firebase/firestore";
 
-
-export const loginEmailPassword = (email, password) => {
+export const loginEmailPassword = ( email, password ) => {
     return (dispatch) => {
       const auth = getAuth();
-      signInWithEmailAndPassword(auth, email, password)
+      signInWithEmailAndPassword(auth, email, password )
         .then(({ user }) => {
-          dispatch(loginSincrono(user.uid, user.displayName));
-          alert("Bienvenid@, "+ user.displayName);
+          dispatch(loginSincrono(user.uid, user.displayName, user.email, user.photoURL));
+          alert("BIENVENIDX, "+ user.displayName.toLocaleUpperCase() );
         })
         .catch((e) => {
-          //console.log("El usuario no existe");
+          console.log("El usuario no existe");
         });
     };
   };
 
-
 export const loginGoogle= () =>{
-
     return(dispatch) =>{
         const auth =getAuth()
         signInWithPopup(auth,google)
         .then(({user}) =>{
-            dispatch(loginSincrono(user.uid, user.displayName, user.photoURL))
-           //console.log(user.uid, user.displayName, user.photoURL);
+            dispatch(loginSincrono(user.uid, user.displayName, user.email, user.photoURL))
         })
         .catch(e=>{
             console.log(e)
@@ -42,10 +38,8 @@ export const loginFacebook = () => {
     const auth = getAuth();
     signInWithPopup(auth, facebook)
       .then( async({ user }) => {
-        console.log( user );
-        dispatch(loginSincrono(user.uid, user.displayName, user.photoURL ));
-        console.log(`Bienvenid@ ${user.displayName}`);
 
+        dispatch(loginSincrono(user.uid, user.displayName, user.email, user.photoURL ));
         const docRef = doc(db, "users", v4());
         const payload = {
           foto: user.photoURL,
@@ -63,16 +57,14 @@ export const loginFacebook = () => {
   };
 };
 
-
-export const registroEmailPasswordNombre = (email, password, displayname, image ) => {
-
+export const registroEmailPasswordNombre = ( email, password, displayname, image ) => {
   return (dispatch) => {
     const auth = getAuth();
     createUserWithEmailAndPassword(auth, email, password)
       .then(async ({ user }) => {
   
-        await updateProfile(auth.currentUser, { displayName: displayname, photoURL: image });
-        dispatch( loginSincrono( user.uid, user.displayName, user.photoURL  ))
+        await updateProfile(auth.currentUser, { displayName: displayname, photoURL: image, email: email });
+        dispatch( loginSincrono( user.uid, user.displayName, user.email, user.photoURL  ))
         alert('se ha creado tu usuario, '+ user.displayName)
         })
         .catch(e =>{
@@ -81,22 +73,21 @@ export const registroEmailPasswordNombre = (email, password, displayname, image 
       }
   }
 
-  
-export const loginSincrono =(id, displayname, photo) =>{
+export const loginSincrono =(id, displayname, email, photo) =>{
+  console.log( id, displayname, email, photo );
     return{
             type: types.login,
             payload: {
                 id,
                 displayname,
+                email,
                 photo
             }
     }
 
 }
 
-
 export const logout = () => {
-
   return(dispatch) => {
       const auth = getAuth();
       signOut(auth)
@@ -108,7 +99,6 @@ export const logout = () => {
       })
   }
 }
-
 
 export const logoutSync = () => {
  return{
