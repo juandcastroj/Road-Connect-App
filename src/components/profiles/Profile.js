@@ -1,20 +1,15 @@
 import React from "react";
 import {
-  Birthday,
-  CardHeader,
   CardProfile,
-  ContHomeRoad,
-  Rout
+  ContHomeRoad
 } from "../../styles/styles";
 import Footer from "../Footer";
 import Naveg from "../Naveg";
-import birthday from "../../images/icons8-fecha-de-nacimiento-50.png";
 import { useSelector } from "react-redux";
 
 const Profile = () => {
 
   const { user } = useSelector((store) => store.user)
-  //console.log( user );
 
   const name = user.length === 0
     ? " Tu perfil "
@@ -39,12 +34,10 @@ const Profile = () => {
           <h1>{name}</h1>
           <h6 style={{ display: "inline-block", margin: "5px" }}>
             <h3> {email}</h3>
-            Fecha de Nacimiento:
           </h6>
-          <h4>17 Enero 1995</h4>
+          {/* <h4>17 Enero 1995</h4> */}
           <h5>
-            Amante del ciclismo, Por eso mi pasión por
-            las montañas. El deporte me fue transmitido desde siempre,
+            Amante del ciclismo, y la montaña. El deporte me fue transmitido desde siempre,
             recorro cada lugar por donde sea permitido, busco compañía en mi zona para montar .
           </h5>
           {/* <Rout variant="warning"> <h4>Rutas Realizadas</h4>
