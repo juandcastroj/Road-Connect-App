@@ -6,8 +6,8 @@ Aplicación enfatizada a la seguridad para montar bicicleta deportivamente, ayud
 
 ## Despliege 🚀
 
-* [Despliegue Firebase](https://frontend8-6efb3.firebaseapp.com/)
-* * [Despliegue actualizado netifly](https://starlit-praline-12aea4.netlify.app)
+* [Despliegue Firebase]()
+* [Despliegue actualizado netifly](https://admirable-blancmange-3ee755.netlify.app)
 
 ##  Especificaciones técnicas 
 
