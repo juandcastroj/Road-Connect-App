@@ -9,13 +9,15 @@ const Naveg = () => {
 
     const dispatch = useDispatch()
     const navigate = useNavigate()
-
     const { user } = useSelector((store) => store.user)
-    //console.log( user );
 
     const name = user.length === 0
         ? "Hola, identificate"
         : 'Hola, ' + user.displayname 
+
+    const profileImg = user.length === 0
+        ? " "
+        : user.photo
 
     const handleLogout = () => {
         dispatch(logout());
@@ -33,6 +35,7 @@ const Naveg = () => {
                     </Nav>
                     <Nav className='hdr-identificacion'>
                         <h5 style={{margin:'8px'}} > {name}</h5>
+                        <img alt='' src={profileImg} style={{borderRadius: '50%', borderColor: 'black'}}  width='70px' />
                         {user.length === 0 &&
                          <Nav.Link href="/login" > <h5 style={{ fontWeight: '900', margin: '6px' }}  ><Link to={"/login"} style={{ textDecoration: 'none' }} >Iniciar sesión</Link></h5></Nav.Link>
                         }
