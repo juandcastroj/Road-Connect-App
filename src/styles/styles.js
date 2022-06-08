@@ -21,10 +21,10 @@ export const LogoStyle = styled.img`
 
 export const ContHomeRoad = styled.div`
   height: 100%;
-  background-color: #0045ad;
+  background-color: #0030b7;
   background-position: center;
   text-align: center;
-  padding: 2% 10%;
+  padding: 5% 10%;
 `;
 
 //RoadsHome style

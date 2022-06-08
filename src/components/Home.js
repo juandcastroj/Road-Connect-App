@@ -2,7 +2,7 @@ import React from 'react'
 import { ContHomeRoad, DivAuth } from '../styles/styles'
 import Naveg from './Naveg'
 import Footer from './Footer'
-import Carrusel from './Carrusel'
+import ButtonsHome from './ButtonsHome'
 
 const Home = () => {
   return (
@@ -10,14 +10,11 @@ const Home = () => {
       <Naveg />
       <DivAuth>
         <ContHomeRoad>
-          <Carrusel />
+          <ButtonsHome/>
         </ContHomeRoad>
         <Footer />
       </DivAuth>
     </div>
-
-
-
   );
 };
 
