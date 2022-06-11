@@ -19,42 +19,7 @@ const Events = () => {
       <Naveg />
       <ContHomeRoad>
         <h2 style={{ color: "yellow" }}>Próximos Eventos</h2>
-        <Card className="text-center">
-          <CardEvent>Organizado por: IDRD</CardEvent>
-          <Card.Body>
-            <Image
-              style={{ webkitBoxShadow: "0px 0px 10px 10px #0030b7" }}
-              src={event1}
-              width='60%'
-            ></Image>
-            <Card.Text>
-              <h2 style={{ margin: "25px" }}>
-                Villapinzón - Nacimiento del Río Bogotá
-              </h2>
-              <h4>Fecha: 02 Mayo 2022</h4>
-              <strong><h6>
-                Distancia: 18,88 km,
-                Desnivel positivo: 828 m,
-                Tiempo: 4 horas,
-                Dificultad: Avanzado
-              </h6></strong>
-              <h6>
-                Todo el trayecto estarás acompañado por ciclomontañistas
-                experimentados quienes estarán atentos a los requerimientos de
-                los participantes. <br></br>TRANSPORTE: Se prestará el servicio
-                de transporte en vans con racks para los participantes y sus
-                bicicletas.<br></br> La van saldrá en la mañana desde el punto
-                acordado en Bogotá hasta el sitio de inicio de la ruta y el
-                regreso.
-              </h6>
-            </Card.Text>
-            <BtnHomeStyle onClick={() => mostrarAlerta()} variant="primary">Participar</BtnHomeStyle>
-          </Card.Body>
-          <CardEvent className="text-muted">
-            {" "}
-            Publicado hace cuatro dias
-          </CardEvent>
-        </Card>
+       
         <hr></hr>
         <Card className="text-center">
           <CardEvent>Organizado por: Escarabajos Bogotá</CardEvent>
