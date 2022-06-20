@@ -4,11 +4,6 @@ Social network that helps recreational cyclists to find company for a ride and c
 
 Aplicación enfatizada a la seguridad para montar bicicleta deportivamente, ayudando a los biciusuarios a conseguir compañía, ya sea con comunidad de personas que vivan cerca a su residencia o con planes establecidos con anticipación, además de la posibilidad de compartir tu ubicación en tiempo real a tus contactos.
 
-## Despliege 🚀
-
-* [Despliegue Firebase]()
-* [Despliegue actualizado netifly](https://admirable-blancmange-3ee755.netlify.app)
-
 ##  Especificaciones técnicas 
 
 Dentro de los recursos técnicos utilizados para el desarrollo se encuentran:
