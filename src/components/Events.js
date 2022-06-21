@@ -2,7 +2,6 @@ import React from "react";
 import { Card, Image } from "react-bootstrap";
 import { BtnHomeStyle, CardEvent, ContHomeRoad } from "../styles/styles";
 import Naveg from "./Naveg";
-import event1 from "../images/evento1.jpg";
 import event2 from "../images/event02.jpg";
 import event3 from "../images/evento3.jpg";
 import Footer from "./Footer";

@@ -28,7 +28,7 @@ const Naveg = () => {
         <div>
             <Navbar bg="dark" variant="dark">
                 <Container>
-                    <Link to={"/home"}><img alt='logoNav' src={logoNav} style={{ marginRight: '15px' }} width={70} /></Link>
+                    <Link to={"/"}><img alt='logoNav' src={logoNav} style={{ marginRight: '15px' }} width={70} /></Link>
                     <Nav className="me-auto">
                         <Nav.Link style={{ fontWeight: '900', margin: '6px' }}><Link to={"/profile"} style={{ textDecoration: 'none' }} >Mi Perfil</Link></Nav.Link>
                         <Nav.Link style={{ fontWeight: '800', margin: '6px' }}><Link to={"/myroutes"} style={{ textDecoration: 'none' }} >Mis Rutas</Link></Nav.Link>

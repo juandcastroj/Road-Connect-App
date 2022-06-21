@@ -48,13 +48,13 @@ const AppRouter = () => {
     });
   }, [dispatch, setChecking, setIsLoggedIn])
 
-  if (checking) {
-    return (
-      <ContFirst>
-        <LogoStyle alt='first-logo' src={logo} />
-      </ContFirst>
-    )
-  }
+  // if (checking) {
+  //   return (
+  //     <ContFirst>
+  //       <LogoStyle alt='first-logo' src={logo} />
+  //     </ContFirst>
+  //   )
+  // }
 
 
   return (
@@ -136,8 +136,8 @@ const AppRouter = () => {
             </PrivateRoute>}
           />
         
-          <Route path='/' element={<LoadPage />} />
-          <Route path='/home' element={<Home />} />
+          {/* <Route path='/' element={<LoadPage />} /> */}
+          <Route path='/' element={<Home />} />
           <Route path='/routes' element={<RoutesHome />} />
           <Route path='/routes/:id' element={<DetailRoute />} />
           <Route path='/events' element={<Events />} />
